@@ -1,5 +1,5 @@
 <template>
-  <div class="transportation">
+  <div id="transportation">
     <h1>Transportation Page</h1>
   </div>
 </template>

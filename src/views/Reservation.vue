@@ -1,5 +1,5 @@
 <template>
-  <div class="reservation">
+  <div id="reservation">
     <h1>Reservation Page</h1>
   </div>
 </template>

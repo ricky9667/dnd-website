@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div id="home">
     <img src="../assets/dnd_background_img.jpg" alt="DnD background image">
 
     <div class="flex sm:flex-col lg:flex-row items-center justify-evenly mx-20 my-40">
