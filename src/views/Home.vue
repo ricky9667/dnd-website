@@ -61,8 +61,8 @@ export default {
 
 .home-info-image {
   @apply w-96 rounded-lg my-2;
-  @apply md:h-64 md:w-auto md:rounded-xl md:my-4;
-  @apply lg:h-80 lg:w-auto lg:rounded-xl lg:my-4;
+  @apply md:h-72 md:w-auto md:rounded-xl md:my-4;
+  @apply lg:h-80;
 }
 
 .home-info-header {
