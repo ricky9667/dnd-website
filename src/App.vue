@@ -2,7 +2,7 @@
   <nav class="flex items-center justify-around rounded-3xl z-10 m-8 fixed left-0 right-0 bg-gray-200 opacity-80">
     <div>
       <router-link class="h-12" to="/">
-        <img class="h-12 p-1" src="./assets/dnd_logo_color.png" alt="logo">
+        <img class="h-12" src="./assets/logo/dnd_logo_color.png" alt="首頁">
       </router-link>
     </div>
     <div v-for="item in navbarItems" :key="item.id">

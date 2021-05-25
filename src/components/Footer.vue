@@ -1,7 +1,7 @@
 <template>
   <footer id="footer" class="flex flex-col items-center justify-evenly bg-gray-200 h-60">
     <section class="flex flex-row items-center justify-center w-72">
-      <img class="h-10 mx-2" src="../assets/dnd_logo_black.png" alt="Logo Black">
+      <img class="h-10 mx-2" src="../assets/logo/dnd_logo_black.png" alt="Logo Black">
       <h4 class="text-lg font-bold mx-2">聯絡我們</h4>
     </section>
 
@@ -25,10 +25,10 @@
 
     <section class="flex flex-row justify-evenly w-60">
       <a class="scale-transition" href="https://www.facebook.com/daledory" target="_blank">
-        <img class="h-6" src="../assets/facebook.png" alt="FB">
+        <img class="h-6" src="../assets/logo/facebook.png" alt="FB">
       </a>
       <a class="scale-transition" href="https://line.me/R/ti/p/%40661wlbsv" target="_blank">
-        <img class="h-6" src="../assets/line.png" alt="Line">
+        <img class="h-6" src="../assets/logo/line.png" alt="Line">
       </a>
     </section>
 

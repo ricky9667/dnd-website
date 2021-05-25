@@ -1,9 +1,15 @@
 <template>
   <div id="home">
-    <img src="../assets/home_header.jpg" alt="DnD background image">
+    <img src="../assets/home/home_header.jpg" alt="DnD background image">
+
+    <h1 class="text-4xl my-12 font-bold">DnD Homestay</h1>
+    <svg xmlns="http://www.w3.org/2000/svg" class="animate-bounce center-x h-8 w-8" fill="none" viewBox="0 0 24 24"
+         stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6"/>
+    </svg>
 
     <section class="home-info">
-      <img class="home-info-image" src="../assets/dnd_logo_color.png" alt="Room example">
+      <img class="home-info-image" src="../assets/logo/dnd_logo_color.png" alt="Room example">
       <div class="flex flex-col items-start w-96 px-4">
         <h2 class="home-info-header">關於 DnD</h2>
         <p v-for="info in aboutDndInfo" :key="info.id" class="home-info-text text-left my-1">{{ info.text }}</p>
@@ -11,7 +17,7 @@
     </section>
 
     <section class="home-info">
-      <img class="home-info-image shadow-xl" src="../assets/home_surroundings.jpg" alt="Room example">
+      <img class="home-info-image shadow-xl" src="../assets/home/home_surroundings.jpg" alt="Room example">
       <div class="flex flex-col items-start w-96 px-4">
         <h2 class="home-info-header">DnD 環境</h2>
         <p v-for="info in surroundingsInfo" :key="info.id" class="home-info-text text-left my-4">{{ info.text }}</p>
@@ -23,7 +29,7 @@
     </section>
 
     <section class="home-info">
-      <img class="home-info-image shadow-xl" src="../assets/home_location.jpg" alt="Room example">
+      <img class="home-info-image shadow-xl" src="../assets/home/home_location.jpg" alt="Room example">
       <div class="flex flex-col items-start w-96 px-4">
         <h2 class="home-info-header">DnD 位置</h2>
         <p class="home-info-text text-left my-4">{{ locationInfoText }}</p>
