@@ -1,34 +1,34 @@
 <template>
   <div id="home">
-    <img src="../assets/dnd_background_img.jpg" alt="DnD background image">
+    <img src="../assets/home_header.jpg" alt="DnD background image">
 
     <section class="home-info">
       <img class="home-info-image" src="../assets/dnd_logo_color.png" alt="Room example">
       <div class="flex flex-col items-start w-96 px-4">
         <h2 class="home-info-header">關於 DnD</h2>
-        <p v-for="info in aboutDndTexts" :key="info.id" class="home-info-text text-left my-1">{{ info.text }}</p>
+        <p v-for="info in aboutDndInfo" :key="info.id" class="home-info-text text-left my-1">{{ info.text }}</p>
       </div>
     </section>
 
     <section class="home-info">
-      <img class="home-info-image" src="../assets/home_surroundings.jpg" alt="Room example">
+      <img class="home-info-image shadow-xl" src="../assets/home_surroundings.jpg" alt="Room example">
       <div class="flex flex-col items-start w-96 px-4">
         <h2 class="home-info-header">DnD 環境</h2>
         <p v-for="info in surroundingsInfo" :key="info.id" class="home-info-text text-left my-4">{{ info.text }}</p>
         <button type="button"
-                class="rounded-lg bg-yellow-200 hover:bg-yellow-400 transform duration-200 hover:scale-110 px-6 py-2 my-4 font-bold">
+                class="home-button bg-yellow-200 hover:bg-yellow-300 text-gray-600">
           <router-link class="h-12 md:h-8" to="/rooms">參觀客房</router-link>
         </button>
       </div>
     </section>
 
     <section class="home-info">
-      <img class="home-info-image" src="../assets/home_location.jpg" alt="Room example">
+      <img class="home-info-image shadow-xl" src="../assets/home_location.jpg" alt="Room example">
       <div class="flex flex-col items-start w-96 px-4">
         <h2 class="home-info-header">DnD 位置</h2>
         <p class="home-info-text text-left my-4">{{ locationInfoText }}</p>
         <button type="button"
-                class="rounded-lg bg-blue-300 hover:bg-blue-500 transform duration-200 hover:scale-110 px-6 py-2 my-4 font-bold">
+                class="home-button bg-blue-500 hover:bg-blue-600 text-gray-100">
           <router-link class="h-12 md:h-8" to="/tourism">查看景點</router-link>
         </button>
       </div>
@@ -78,10 +78,18 @@ export default {
 
 .home-info-header {
   @apply text-2xl font-bold pt-4;
-  @apply lg:text-3xl lg:pt-0;
+  @apply md:text-3xl;
+  @apply lg:text-4xl lg:pt-0;
 }
 
 .home-info-text {
-  @apply text-base;
+  @apply text-sm text-gray-600;
+  @apply md:text-base;
+}
+
+.home-button {
+  @apply inline-block rounded-lg transform duration-200 hover:scale-110 font-bold shadow-lg tracking-widest;
+  @apply text-sm px-6 py-2 my-2;
+  @apply md:text-base md:my-4;
 }
 </style>
