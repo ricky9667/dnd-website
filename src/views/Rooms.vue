@@ -1,9 +1,6 @@
 <template>
   <div id="rooms">
-    <Header title="客房介紹" />
-
-    <h1 class="text-4xl mt-16 font-bold">客房介紹</h1>
-    <h3 class="text-lg mb-12">Rooms Introduction</h3>
+    <Header title="客房介紹" subtitle="Rooms"/>
 
     <section class="flex flex-col w-112 center-x">
       <p v-for="info in roomInfo" :key="info.id" class="rooms-info-text text-left leading-6 py-1">{{ info.text }}</p>
@@ -17,8 +14,8 @@
 </template>
 
 <script>
+import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Header from "../components/Header";
 
 export default {
   name: 'Rooms',

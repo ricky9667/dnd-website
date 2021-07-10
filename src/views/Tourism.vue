@@ -1,12 +1,17 @@
 <template>
   <div id="tourism">
-    <h1>Tourism Page</h1>
+    <Header title="鄰近景點" subtitle="Tourism" />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
 export default {
-  name: 'Tourism'
+  name: 'Tourism',
+  components: {Header, Footer}
 }
 </script>
 

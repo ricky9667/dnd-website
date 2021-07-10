@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <Header title="DnD Homestay" />
+    <Header title="DnD 休閒民宿" subtitle="DnD Homestay"/>
 
     <ImageSection title="關於 DnD" :infos="aboutDndInfo">
       <img class="home-info-image" src="../assets/logo/dnd_logo_color.png" alt="Room example">
