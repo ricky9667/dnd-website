@@ -8,37 +8,17 @@
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6"/>
     </svg>
 
-    <section class="home-info">
+    <ImageSection title="關於 DnD" :infos="aboutDndInfo">
       <img class="home-info-image" src="../assets/logo/dnd_logo_color.png" alt="Room example">
-      <div class="flex flex-col items-start w-96 px-4">
-        <h2 class="home-info-header">關於 DnD</h2>
-        <p v-for="info in aboutDndInfo" :key="info.id" class="home-info-text text-left my-1">{{ info.text }}</p>
-      </div>
-    </section>
+    </ImageSection>
 
-    <section class="home-info">
+    <ImageSection title="DnD 環境" :infos="surroundingsInfo" :button="surroundingsButton">
       <img class="home-info-image shadow-xl" src="../assets/home/home_surroundings.jpg" alt="Room example">
-      <div class="flex flex-col items-start w-96 px-4">
-        <h2 class="home-info-header">DnD 環境</h2>
-        <p v-for="info in surroundingsInfo" :key="info.id" class="home-info-text text-left my-4">{{ info.text }}</p>
-        <button type="button"
-                class="home-button bg-yellow-200 hover:bg-yellow-300 text-gray-600">
-          <router-link class="h-12 md:h-8" to="/rooms">參觀客房</router-link>
-        </button>
-      </div>
-    </section>
+    </ImageSection>
 
-    <section class="home-info">
+    <ImageSection title="DnD 位置" :infos="locationInfo" :button="locationButton">
       <img class="home-info-image shadow-xl" src="../assets/home/home_location.jpg" alt="Room example">
-      <div class="flex flex-col items-start w-96 px-4">
-        <h2 class="home-info-header">DnD 位置</h2>
-        <p class="home-info-text text-left my-4">{{ locationInfoText }}</p>
-        <button type="button"
-                class="home-button bg-blue-500 hover:bg-blue-600 text-gray-100">
-          <router-link class="h-12 md:h-8" to="/tourism">查看景點</router-link>
-        </button>
-      </div>
-    </section>
+    </ImageSection>
 
     <Footer/>
   </div>
@@ -46,10 +26,11 @@
 
 <script>
 import Footer from '@/components/Footer';
+import ImageSection from "../components/ImageSection";
 
 export default {
   name: 'Home',
-  components: {Footer},
+  components: {ImageSection, Footer},
   setup() {
     const aboutDndInfo = [
       {id: 0, text: '這裡是宜蘭三星鄉的 DnD 民宿。'},
@@ -63,39 +44,22 @@ export default {
       {id: 0, text: '民宿 2F 共 3 間 客房，每間客房可容納 2-6 人住宿，全棟最大容量為住宿 16 人（2A、2C 最多 6 人，2B 最多 4 人）。'},
       {id: 1, text: '民宿室內禁煙，無法接待寵物、無法接待臨時增加的房客。客廳無卡拉 OK、無麻將桌。主人自用 1F 房間與廚房。'}
     ]
+    const surroundingsButton = {text: '參觀客房', theme: 'yellow', link: '/rooms',}
 
-    const locationInfoText = '農舍位於前往太平山、明池、武陵農場等地的入口，開車到太平山收費口約 50 分鐘，到武陵農場約 2 小時。附近有步行可達的公車站、咖啡簡餐，距離 1.5km 的三星市區有全聯社和各式餐廳。'
-    return {aboutDndInfo, surroundingsInfo, locationInfoText}
+    const locationInfo = [
+      {id: 0, text: '農舍位於前往太平山、明池、武陵農場等地的入口，開車到太平山收費口約 50 分鐘，到武陵農場約 2 小時。附近有步行可達的公車站、咖啡簡餐，距離 1.5km 的三星市區有全聯社和各式餐廳。'}
+    ]
+    const locationButton = {text: '查看景點', theme: 'blue', link: '/tourism',}
+
+    return {aboutDndInfo, surroundingsInfo, surroundingsButton, locationInfo, locationButton}
   }
 }
 </script>
 
 <style>
-.home-info {
-  @apply flex flex-col items-center justify-evenly mx-8 my-12;
-  @apply lg:flex-row lg:mx-20 lg:my-40;
-}
-
 .home-info-image {
   @apply w-96 rounded-lg my-2;
   @apply md:h-72 md:w-auto md:rounded-xl md:my-4;
   @apply lg:h-80;
-}
-
-.home-info-header {
-  @apply text-2xl font-bold pt-4;
-  @apply md:text-3xl;
-  @apply lg:text-4xl lg:pt-0;
-}
-
-.home-info-text {
-  @apply text-sm text-gray-600;
-  @apply md:text-base;
-}
-
-.home-button {
-  @apply inline-block rounded-lg transform duration-200 hover:scale-110 font-bold shadow-lg tracking-widest;
-  @apply text-sm px-6 py-2 my-2;
-  @apply md:text-base md:my-4;
 }
 </style>
