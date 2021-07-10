@@ -43,7 +43,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .info-row {
   @apply flex flex-row items-center justify-start;
 }

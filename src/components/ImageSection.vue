@@ -22,7 +22,7 @@ export default {
 <style>
 .home-info {
   @apply flex flex-col items-center justify-evenly mx-8 my-12;
-  @apply lg:flex-row lg:mx-20 lg:my-40;
+  @apply lg:flex-row lg:mx-20 lg:my-28;
 }
 
 .home-info-header {

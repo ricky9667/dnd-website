@@ -1,6 +1,6 @@
 <template>
   <div id="rooms">
-    <img src="../assets/rooms/rooms_header.jpg" alt="DnD background image">
+    <Header title="客房介紹" />
 
     <h1 class="text-4xl mt-16 font-bold">客房介紹</h1>
     <h3 class="text-lg mb-12">Rooms Introduction</h3>
@@ -17,11 +17,12 @@
 </template>
 
 <script>
-import Footer from '@/components/Footer';
+import Footer from '../components/Footer';
+import Header from "../components/Header";
 
 export default {
   name: 'Rooms',
-  components: {Footer},
+  components: {Header, Footer},
   setup() {
     const roomInfo = [
       {id: 0, text: '合法新建民宿，為獨棟農舍，周遭是稻米、青蔥種植區，遠處群山環繞，安靜、空氣好。'},

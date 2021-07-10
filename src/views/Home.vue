@@ -1,12 +1,6 @@
 <template>
   <div id="home">
-    <img src="../assets/home/home_header.jpg" alt="DnD background image">
-
-    <h1 class="text-4xl my-12 font-bold">DnD Homestay</h1>
-    <svg xmlns="http://www.w3.org/2000/svg" class="animate-bounce center-x h-8 w-8" fill="none" viewBox="0 0 24 24"
-         stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6"/>
-    </svg>
+    <Header title="DnD Homestay" />
 
     <ImageSection title="關於 DnD" :infos="aboutDndInfo">
       <img class="home-info-image" src="../assets/logo/dnd_logo_color.png" alt="Room example">
@@ -25,12 +19,13 @@
 </template>
 
 <script>
-import Footer from '@/components/Footer';
-import ImageSection from "../components/ImageSection";
+import ImageSection from '../components/ImageSection';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default {
   name: 'Home',
-  components: {ImageSection, Footer},
+  components: {Header, ImageSection, Footer},
   setup() {
     const aboutDndInfo = [
       {id: 0, text: '這裡是宜蘭三星鄉的 DnD 民宿。'},
@@ -58,7 +53,7 @@ export default {
 
 <style>
 .home-info-image {
-  @apply w-96 rounded-lg my-2;
+  @apply w-80 rounded-lg my-2;
   @apply md:h-72 md:w-auto md:rounded-xl md:my-4;
   @apply lg:h-80;
 }
