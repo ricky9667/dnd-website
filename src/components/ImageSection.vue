@@ -1,7 +1,7 @@
 <template>
   <div class="home-info">
     <slot></slot>
-    <div class="flex flex-col items-start w-112 px-4">
+    <div class="flex flex-col items-start home-info-content px-4">
       <h2 class="home-info-header">{{ title }}</h2>
       <p v-for="info in infos" :key="info.id" class="home-info-text text-left my-1">{{ info.text }}</p>
       <button v-if="button"
@@ -23,6 +23,12 @@ export default {
 .home-info {
   @apply flex flex-col items-center justify-evenly mx-8 my-12;
   @apply lg:flex-row lg:mx-20 lg:my-28;
+}
+
+.home-info-content {
+  @apply w-72 px-8;
+  @apply md:w-96;
+  @apply lg:w-108;
 }
 
 .home-info-header {

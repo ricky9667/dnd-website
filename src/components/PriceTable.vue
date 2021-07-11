@@ -10,9 +10,9 @@
       </thead>
       <tbody>
         <tr>
-          <td class="border-item">{{ price.weekday }}</td>
-          <td class="border-item">{{ price.weekend }}</td>
-          <td class="border-item">{{ price.holiday }}</td>
+          <td class="border-item">NT ${{ price.weekday }}</td>
+          <td class="border-item">NT ${{ price.weekend }}</td>
+          <td class="border-item">NT ${{ price.holiday }}</td>
         </tr>
       </tbody>
     </table>

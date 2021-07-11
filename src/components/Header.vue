@@ -18,7 +18,7 @@ export default {
 .bg-header {
   background-size: cover;
   background-position: center;
-  width: 100vw;
+  width: 100%;
   height: 50vw;
 }
 

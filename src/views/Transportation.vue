@@ -1,6 +1,6 @@
 <template>
   <div id="transportation">
-    <Header title="鄰近景點" subtitle="Tourism" />
+    <Header title="交通資訊" subtitle="Transportation" />
     <Footer />
   </div>
 </template>

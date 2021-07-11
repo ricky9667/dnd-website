@@ -1,8 +1,8 @@
 <template>
-  <nav class="flex items-center justify-around rounded-3xl z-10 m-8 fixed left-0 right-0 bg-gray-200 opacity-80">
+  <nav class="flex items-center justify-around z-10 m-8 fixed left-0 right-0 bg-gray-200 opacity-80 shadow-xl border-2 border-green-500">
     <div>
       <router-link class="h-12" to="/">
-        <img class="h-12" src="./assets/logo/dnd_logo_color.png" alt="首頁">
+        <img class="h-12 my-1" src="./assets/logo/dnd_logo_color.png" alt="首頁">
       </router-link>
     </div>
     <div v-for="item in navbarItems" :key="item.id">
@@ -41,6 +41,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+nav {
+  border-radius: 100px;
 }
 
 nav a {

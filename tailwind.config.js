@@ -8,11 +8,20 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      colors: {
-        emerald: color.emerald,
-        gray: color.trueGray
+      spacing: {
+        '84': '21rem',
+        '96': '24rem',
+        '108': '27rem',
+        '120': '30rem'
       }
     },
+    minHeight: {
+      '0': '0',
+      '1/4': '25%',
+      '1/2': '50%',
+      '3/4': '75%',
+      'full': '100%',
+    }
   },
   variants: {
     extend: {},

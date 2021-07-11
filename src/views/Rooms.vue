@@ -2,24 +2,52 @@
   <div id="rooms">
     <Header title="客房介紹" subtitle="Rooms"/>
 
-    <div class="h-20 text-gray-300">I am a container</div>
+    <div class="rooms-container">
+      <section class="flex flex-col relative room-card border-green-400">
+        <ImageSlider title="2A" subtitle="山景房">
+          <img src="../assets/rooms/2A.jpg" alt="2A"/>
+          <img src="../assets/rooms/2A-1.jpg" alt="2A-1"/>
+          <img src="../assets/rooms/2A-2.jpg" alt="2A-2"/>
+        </ImageSlider>
+        <div class="p-4 h-40">
+          <h2 class="card-title">{{ room2A.title }}</h2>
+          <p v-for="description in room2A.descriptions" :key="description.id" class="card-content">
+            {{ description.text }}
+          </p>
+        </div>
+        <PriceTable :price="room2A.price"/>
+      </section>
 
-    <section class="flex flex-col center-x room-card border-green-400 color-border">
-      <ImageSlider title="2A" subtitle="樓中樓山景房">
-        <img src="../assets/rooms/2A.jpg" alt="2A"/>
-        <img src="../assets/rooms/2A-1.jpg" alt="2A-1"/>
-        <img src="../assets/rooms/2A-2.jpg" alt="2A-2"/>
-      </ImageSlider>
-      <div class="p-4">
-        <h2 class="card-title">{{ room2A.title }}</h2>
-        <p v-for="description in room2A.descriptions" :key="description.id" class="card-content">
-          {{ description.text }}
-        </p>
-      </div>
-      <PriceTable :price="room2A.price"/>
-    </section>
+      <section class="flex flex-col relative room-card border-green-400">
+        <ImageSlider title="2B" subtitle="樓中樓山景房">
+          <img src="../assets/rooms/2B.jpg" alt="2B"/>
+          <img src="../assets/rooms/2B-1.jpg" alt="2B-1"/>
+          <img src="../assets/rooms/2B-2.jpg" alt="2B-2"/>
+        </ImageSlider>
+        <div class="p-4">
+          <h2 class="card-title">{{ room2B.title }}</h2>
+          <p v-for="description in room2B.descriptions" :key="description.id" class="card-content">
+            {{ description.text }}
+          </p>
+        </div>
+        <PriceTable :price="room2B.price"/>
+      </section>
 
-    <div class="h-20 text-gray-300">I am a container</div>
+      <section class="flex flex-col relative room-card border-green-400">
+        <ImageSlider title="2C" subtitle="樓中樓山景房">
+          <img src="../assets/rooms/2C.jpg" alt="2C"/>
+          <img src="../assets/rooms/2C-1.jpg" alt="2C-1"/>
+          <img src="../assets/rooms/2C-2.jpg" alt="2C-2"/>
+        </ImageSlider>
+        <div class="p-4">
+          <h2 class="card-title">{{ room2C.title }}</h2>
+          <p v-for="description in room2C.descriptions" :key="description.id" class="card-content">
+            {{ description.text }}
+          </p>
+        </div>
+        <PriceTable :price="room2C.price"/>
+      </section>
+    </div>
 
     <Footer/>
   </div>
@@ -50,21 +78,41 @@ export default {
       price: {weekday: 2880, weekend: 3280, holiday: 4920}
     }
 
-    return {roomInfo, room2A}
+    const room2B = {
+      title: '2B 樓中樓山景房',
+      descriptions: [
+        {id: 0, text: '房型 2B 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊。'}
+      ],
+      price: {weekday: 2680, weekend: 3080, holiday: 4620}
+    }
+
+    const room2C = {
+      title: '2C 樓中樓山景房',
+      descriptions: [
+        {id: 0, text: '房型 2C 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊，住宿 5 - 6 人使用沙發床。'}
+      ],
+      price: {weekday: 2780, weekend: 3180, holiday: 4770}
+    }
+
+    return {roomInfo, room2A, room2B, room2C}
   }
 }
 </script>
 
 <style>
-.rooms-info-text {
-  @apply text-sm text-gray-600;
-  @apply md:text-base;
+.rooms-container {
+  @apply flex flex-col flex-wrap;
 }
 
 .room-card {
-  @apply overflow-hidden pb-4 transform duration-300 hover:scale-110;
+  @apply overflow-hidden pb-4 border-2 mx-auto my-10 transform duration-500;
   @apply w-80 rounded-lg shadow-lg;
   @apply md:w-96 rounded-xl shadow-xl;
+  @apply lg:w-120;
+}
+
+.room-card:hover {
+  @apply border-4 scale-105;
 }
 
 .color-border {

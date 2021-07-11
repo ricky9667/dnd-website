@@ -1,19 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind screens;
 
 .center-x {
     margin: 0 auto;
-}
-
-.w-112 {
-    width: 28rem;
-}
-
-.w-128 {
-    width: 32rem;
-}
-
-.w-160 {
-    width: 40rem;
 }
