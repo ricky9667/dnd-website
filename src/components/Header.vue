@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-img bg-home flex">
+  <header class="bg-header bg-home flex">
     <span class="header-title-box m-auto">
       <h2 class="header-title mb-0 md:mb-2 lg:mb-4">{{ title }}</h2>
       <h4 class="header-subtitle">{{ subtitle }}</h4>
@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style>
-.bg-img {
+.bg-header {
   background-size: cover;
   background-position: center;
   width: 100vw;

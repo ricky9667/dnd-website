@@ -1,7 +1,7 @@
 <template>
   <div class="home-info">
     <slot></slot>
-    <div class="flex flex-col items-start w-96 px-4">
+    <div class="flex flex-col items-start w-112 px-4">
       <h2 class="home-info-header">{{ title }}</h2>
       <p v-for="info in infos" :key="info.id" class="home-info-text text-left my-1">{{ info.text }}</p>
       <button v-if="button"
