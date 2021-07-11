@@ -1,9 +1,9 @@
 <template>
   <header class="bg-header bg-home flex">
-    <span class="header-title-box m-auto">
+    <div class="header-title-box m-auto">
       <h2 class="header-title mb-0 md:mb-2 lg:mb-4">{{ title }}</h2>
       <h4 class="header-subtitle">{{ subtitle }}</h4>
-    </span>
+    </div>
   </header>
 </template>
 

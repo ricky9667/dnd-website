@@ -23,6 +23,9 @@ export default {
   width: 300%;
   margin: 0;
   left: 0;
+}
+
+.slider figure:hover {
   animation: 12s slider infinite;
 }
 
