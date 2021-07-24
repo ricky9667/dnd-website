@@ -2,14 +2,49 @@
   <div id="rooms">
     <Header title="客房介紹" subtitle="Rooms"/>
 
+    <div class="h-20"></div>
+
+    <div class="w-5/6 center-x text-left bg-gray-100 px-8 py-6 rounded-lg">
+      <img src="../assets/logo/dnd_logo_color.png" alt="" class="inline-block h-12 mr-4"/>
+      <h2 class="inline-block text-lg h-12 font-bold mb-2">客房與公共空間</h2>
+      <p v-for="info in roomInfo" :key="info.id">{{ info.text }}</p>
+      <div class="h-8"></div>
+
+      <img src="../assets/logo/dnd_logo_color.png" alt="" class="inline-block h-12 mr-4"/>
+      <h2 class="inline-block text-lg h-12 font-bold mb-2">增加人數價格</h2>
+
+      <h4 class="font-bold my-1">平日 & 假日</h4>
+      <ul class="list-disc list-inside">
+        <li>6 歲以上：600 元/人（含早餐及寢具）</li>
+        <li>3 ~ 6歲：300 元/人（含早餐、無寢具）</li>
+      </ul>
+
+      <h4 class="font-bold my-1">農曆過年</h4>
+      <ul class="list-disc list-inside">
+        <li>6 歲以上：800 元/人（含早餐及寢具）</li>
+        <li>3 ~ 6歲：400 元/人（含早餐、無寢具）</li>
+      </ul>
+    </div>
+
     <div class="rooms-container">
-      <section class="flex flex-col relative room-card border-green-400">
+      <section class="flex flex-col relative room-card border-purple-500">
+        <img src="../assets/home/home_header.jpg" alt="2C"/>
+        <div class="p-4">
+          <h2 class="card-title">{{ roomAll.title }}</h2>
+          <p v-for="description in roomAll.descriptions" :key="description.id" class="card-content">
+            {{ description.text }}
+          </p>
+        </div>
+        <PriceTable :price="roomAll.price"/>
+      </section>
+
+      <section class="flex flex-col relative room-card border-yellow-400">
         <ImageSlider title="2A" subtitle="山景房">
           <img src="../assets/rooms/2A.jpg" alt="2A"/>
           <img src="../assets/rooms/2A-1.jpg" alt="2A-1"/>
           <img src="../assets/rooms/2A-2.jpg" alt="2A-2"/>
         </ImageSlider>
-        <div class="p-4 h-40">
+        <div class="p-4">
           <h2 class="card-title">{{ room2A.title }}</h2>
           <p v-for="description in room2A.descriptions" :key="description.id" class="card-content">
             {{ description.text }}
@@ -18,7 +53,7 @@
         <PriceTable :price="room2A.price"/>
       </section>
 
-      <section class="flex flex-col relative room-card border-green-400">
+      <section class="flex flex-col relative room-card border-yellow-400">
         <ImageSlider title="2B" subtitle="樓中樓山景房">
           <img src="../assets/rooms/2B.jpg" alt="2B"/>
           <img src="../assets/rooms/2B-1.jpg" alt="2B-1"/>
@@ -33,7 +68,7 @@
         <PriceTable :price="room2B.price"/>
       </section>
 
-      <section class="flex flex-col relative room-card border-green-400">
+      <section class="flex flex-col relative room-card border-yellow-400">
         <ImageSlider title="2C" subtitle="樓中樓山景房">
           <img src="../assets/rooms/2C.jpg" alt="2C"/>
           <img src="../assets/rooms/2C-1.jpg" alt="2C-1"/>
@@ -64,10 +99,19 @@ export default {
   components: {PriceTable, ImageSlider, Header, Footer},
   setup() {
     const roomInfo = [
-      {id: 0, text: '合法新建民宿，為獨棟農舍，周遭是稻米、青蔥種植區，遠處群山環繞，安靜、空氣好。'},
+      {id: 0, text: 'DnD 為合法新建民宿，為獨棟農舍，周遭是稻米、青蔥種植區，遠處群山環繞，安靜、空氣好。'},
       {id: 1, text: '民宿 1 樓的公共空間有客廳與餐廳，2 樓則有 3 間住宿客房，每間客房可容納 2 - 6 人住宿，全棟最大容量為住宿 16 人。'},
-      {id: 2, text: '所有房間均有大面窗景，北歐風實木家具。餐廳有真正的材燒壁爐、懷舊木馬，客廳有積木火車軌道、各類書籍消遣時間。或者也可以喝杯咖啡，享受周遭滿滿的綠意。'}
+      {id: 2, text: '所有房間均有大面窗景，北歐風實木家具。餐廳有真正的材燒壁爐、懷舊木馬，客廳有積木火車軌道、各類書籍消遣時間。'},
+      {id: 3, text: '或者也可以喝杯咖啡，享受周遭滿滿的綠意。'}
     ]
+
+    const roomAll = {
+      title: '2F 包層',
+      descriptions: [
+        {id: 0, text: '包層可同時使用 3 間房間、每間房間均住宿 2 人，加人費用依照人數累加。'},
+      ],
+      price: {weekday: 8340, weekend: 9540, holiday: 14310}
+    }
 
     const room2A = {
       title: '2A 山景房',
@@ -94,32 +138,26 @@ export default {
       price: {weekday: 2780, weekend: 3180, holiday: 4770}
     }
 
-    return {roomInfo, room2A, room2B, room2C}
+    return {roomInfo, roomAll, room2A, room2B, room2C}
   }
 }
 </script>
 
 <style>
 .rooms-container {
-  @apply flex flex-col flex-wrap;
+  @apply flex flex-col;
+  @apply md:flex-row md:flex-wrap;
 }
 
 .room-card {
   @apply overflow-hidden pb-4 border-2 mx-auto my-10 transform duration-500;
-  @apply w-80 rounded-lg shadow-lg;
-  @apply md:w-96 rounded-xl shadow-xl;
-  @apply lg:w-120;
+  @apply w-72 rounded shadow;
+  @apply sm:w-80 sm:rounded-lg sm:shadow-lg;
+  @apply md:w-96 md:rounded-xl md:shadow-xl;
+  @apply lg:w-120 lg:rounded-2xl;
 }
 
 .room-card:hover {
-  @apply border-4 scale-105;
-}
-
-.color-border {
-  @apply border-2;
-}
-
-.color-border:hover {
   @apply border-4;
 }
 

@@ -1,6 +1,6 @@
 <template>
   <div class="price-table">
-    <table class="table-fixed w-4/5 center-x border-collapse border-item">
+    <table class="table-fixed w-5/6 center-x border-collapse border-item">
       <thead>
         <tr>
           <th class="w-1/3 border-item">平日</th>
@@ -10,9 +10,9 @@
       </thead>
       <tbody>
         <tr>
-          <td class="border-item">NT ${{ price.weekday }}</td>
-          <td class="border-item">NT ${{ price.weekend }}</td>
-          <td class="border-item">NT ${{ price.holiday }}</td>
+          <td class="border-item">${{ price.weekday }} 元</td>
+          <td class="border-item">${{ price.weekend }} 元</td>
+          <td class="border-item">${{ price.holiday }} 元</td>
         </tr>
       </tbody>
     </table>
@@ -28,6 +28,6 @@ export default {
 
 <style>
 .border-item {
-  @apply border border-green-400;
+  @apply border border-gray-300;
 }
 </style>
