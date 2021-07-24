@@ -2,32 +2,13 @@
   <div id="rooms">
     <Header title="客房介紹" subtitle="Rooms"/>
 
-    <div class="h-20"></div>
-
-    <div class="w-5/6 center-x text-left bg-gray-100 px-8 py-6 rounded-lg">
-      <img src="../assets/logo/dnd_logo_color.png" alt="" class="inline-block h-12 mr-4"/>
-      <h2 class="inline-block text-lg h-12 font-bold mb-2">客房與公共空間</h2>
+    <section class="rooms-description">
+      <CustomTitle title="客房與公共空間" />
       <p v-for="info in roomInfo" :key="info.id">{{ info.text }}</p>
-      <div class="h-8"></div>
+    </section>
 
-      <img src="../assets/logo/dnd_logo_color.png" alt="" class="inline-block h-12 mr-4"/>
-      <h2 class="inline-block text-lg h-12 font-bold mb-2">增加人數價格</h2>
-
-      <h4 class="font-bold my-1">平日 & 假日</h4>
-      <ul class="list-disc list-inside">
-        <li>6 歲以上：600 元/人（含早餐及寢具）</li>
-        <li>3 ~ 6歲：300 元/人（含早餐、無寢具）</li>
-      </ul>
-
-      <h4 class="font-bold my-1">農曆過年</h4>
-      <ul class="list-disc list-inside">
-        <li>6 歲以上：800 元/人（含早餐及寢具）</li>
-        <li>3 ~ 6歲：400 元/人（含早餐、無寢具）</li>
-      </ul>
-    </div>
-
-    <div class="rooms-container">
-      <section class="flex flex-col relative room-card border-purple-500">
+    <section class="rooms-container">
+      <div class="flex flex-col relative room-card border-purple-500">
         <img src="../assets/home/home_header.jpg" alt="2C"/>
         <div class="p-4">
           <h2 class="card-title">{{ roomAll.title }}</h2>
@@ -36,9 +17,9 @@
           </p>
         </div>
         <PriceTable :price="roomAll.price"/>
-      </section>
+      </div>
 
-      <section class="flex flex-col relative room-card border-yellow-400">
+      <div class="flex flex-col relative room-card border-yellow-400">
         <ImageSlider title="2A" subtitle="山景房">
           <img src="../assets/rooms/2A.jpg" alt="2A"/>
           <img src="../assets/rooms/2A-1.jpg" alt="2A-1"/>
@@ -51,9 +32,9 @@
           </p>
         </div>
         <PriceTable :price="room2A.price"/>
-      </section>
+      </div>
 
-      <section class="flex flex-col relative room-card border-yellow-400">
+      <div class="flex flex-col relative room-card border-yellow-400">
         <ImageSlider title="2B" subtitle="樓中樓山景房">
           <img src="../assets/rooms/2B.jpg" alt="2B"/>
           <img src="../assets/rooms/2B-1.jpg" alt="2B-1"/>
@@ -66,9 +47,9 @@
           </p>
         </div>
         <PriceTable :price="room2B.price"/>
-      </section>
+      </div>
 
-      <section class="flex flex-col relative room-card border-yellow-400">
+      <div class="flex flex-col relative room-card border-yellow-400">
         <ImageSlider title="2C" subtitle="樓中樓山景房">
           <img src="../assets/rooms/2C.jpg" alt="2C"/>
           <img src="../assets/rooms/2C-1.jpg" alt="2C-1"/>
@@ -81,8 +62,22 @@
           </p>
         </div>
         <PriceTable :price="room2C.price"/>
-      </section>
-    </div>
+      </div>
+    </section>
+
+    <section class="rooms-description">
+      <CustomTitle title="增加人數價格" />
+      <h4 class="font-bold my-1">平日 & 假日</h4>
+      <ul class="list-disc list-inside">
+        <li>３歲以上：600 元/人（含早餐及寢具）</li>
+        <li>３～６歲：300 元/人（含早餐、無寢具）</li>
+      </ul>
+      <h4 class="font-bold my-1">農曆過年</h4>
+      <ul class="list-disc list-inside">
+        <li>３歲以上：800 元/人（含早餐及寢具）</li>
+        <li>３～６歲：400 元/人（含早餐、無寢具）</li>
+      </ul>
+    </section>
 
     <Footer/>
   </div>
@@ -93,10 +88,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ImageSlider from '../components/ImageSlider';
 import PriceTable from '../components/PriceTable';
+import CustomTitle from '../components/CustomTitle';
 
 export default {
   name: 'Rooms',
-  components: {PriceTable, ImageSlider, Header, Footer},
+  components: {CustomTitle, PriceTable, ImageSlider, Header, Footer},
   setup() {
     const roomInfo = [
       {id: 0, text: 'DnD 為合法新建民宿，為獨棟農舍，周遭是稻米、青蔥種植區，遠處群山環繞，安靜、空氣好。'},
@@ -144,6 +140,13 @@ export default {
 </script>
 
 <style>
+.rooms-description {
+  @apply w-5/6 px-8 py-6 mx-auto text-left bg-gray-100 hover:bg-gray-200 transform duration-200;
+  @apply my-8 rounded;
+  @apply sm:my-12 sm:rounded-lg;
+  @apply lg:my-20 lg:rounded-xl;
+}
+
 .rooms-container {
   @apply flex flex-col;
   @apply md:flex-row md:flex-wrap;
