@@ -4,11 +4,11 @@
 
     <h3 class="m-auto text-xl font-bold mt-12 mb-6">敬請閱讀注意事項後再付訂金</h3>
 
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17l-4 4m0 0l-4-4m4 4V3" />
     </svg>
 
-    <div class="reservation-description">
+    <div class="content-block">
       <CustomTitle title="訂房說明" />
       <ol class="list-decimal list-inside">
         <li v-for="info in reservationInfo" :key="info.id" class="mb-1">{{ info.text }}</li>
@@ -45,12 +45,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.reservation-description {
-  @apply w-5/6 px-8 py-6 mx-auto text-left bg-gray-100 hover:bg-gray-200 transform duration-200;
-  @apply my-8 rounded;
-  @apply sm:rounded-lg;
-  @apply lg:rounded-xl;
-}
-</style>

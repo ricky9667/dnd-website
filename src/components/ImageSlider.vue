@@ -1,5 +1,5 @@
 <template>
-  <div class="slider center-x">
+  <div class="slider mx-auto">
     <figure>
       <slot></slot>
     </figure>

@@ -14,7 +14,3 @@ export default {
   components: {Header, Footer}
 }
 </script>
-
-<style scoped>
-
-</style>

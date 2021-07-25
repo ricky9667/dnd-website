@@ -1,6 +1,6 @@
 <template>
   <div class="price-table">
-    <table class="table-fixed w-5/6 center-x border-collapse border-item">
+    <table class="table-fixed w-5/6 mx-auto border-collapse border-item">
       <thead>
         <tr>
           <th class="w-1/3 border-item">平日</th>

@@ -2,7 +2,7 @@
   <div id="rooms">
     <Header title="客房介紹" subtitle="Rooms"/>
 
-    <section class="rooms-description">
+    <section class="content-block">
       <CustomTitle title="客房與公共空間" />
       <p v-for="info in roomInfo" :key="info.id">{{ info.text }}</p>
     </section>
@@ -65,7 +65,7 @@
       </div>
     </section>
 
-    <section class="rooms-description">
+    <section class="content-block">
       <CustomTitle title="增加人數價格" />
       <h4 class="font-bold my-1">平日 & 假日</h4>
       <ul class="list-disc list-inside">
@@ -140,13 +140,6 @@ export default {
 </script>
 
 <style>
-.rooms-description {
-  @apply w-5/6 px-8 py-6 mx-auto text-left bg-gray-100 hover:bg-gray-200 transform duration-200;
-  @apply my-8 rounded;
-  @apply sm:my-12 sm:rounded-lg;
-  @apply lg:my-20 lg:rounded-xl;
-}
-
 .rooms-container {
   @apply flex flex-col;
   @apply md:flex-row md:flex-wrap;

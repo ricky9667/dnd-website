@@ -1,8 +1,8 @@
 <template>
   <header class="bg-header bg-home flex">
     <div class="header-title-box m-auto">
-      <h2 class="header-title mb-0 md:mb-2 lg:mb-4">{{ title }}</h2>
-      <h4 class="header-subtitle">{{ subtitle }}</h4>
+      <h1 class="header-title mb-0 md:mb-2 lg:mb-4">{{ title }}</h1>
+      <h3 class="header-subtitle">{{ subtitle }}</h3>
     </div>
   </header>
 </template>
@@ -19,7 +19,7 @@ export default {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 50vw;
+  height: calc((50vw + 100vh) / 2);
 }
 
 .bg-home {

@@ -2,8 +2,8 @@
   <div class="home-info">
     <slot></slot>
     <div class="flex flex-col items-start home-info-content px-4">
-      <h2 class="home-info-header">{{ title }}</h2>
-      <p v-for="info in infos" :key="info.id" class="home-info-text text-left my-1">{{ info.text }}</p>
+      <h2 class="pt-4 lg:pt-0 mb-4">{{ title }}</h2>
+      <p v-for="info in infos" :key="info.id" class="my-1">{{ info.text }}</p>
       <button v-if="button"
               :class="{'home-button': true, 'button-yellow': button.theme === 'yellow', 'button-blue': button.theme === 'blue'}">
         <router-link :to="button.link">{{ button.text }}</router-link>
@@ -21,25 +21,15 @@ export default {
 
 <style>
 .home-info {
-  @apply flex flex-col items-center justify-evenly mx-8 my-12;
+  @apply flex flex-col items-center justify-evenly mx-8 my-12 gap-4;
   @apply lg:flex-row lg:mx-20 lg:my-28;
 }
 
 .home-info-content {
   @apply w-72 px-8;
-  @apply md:w-96;
-  @apply lg:w-108;
-}
-
-.home-info-header {
-  @apply text-2xl font-bold pt-4 mb-4;
-  @apply md:text-3xl;
-  @apply lg:text-4xl lg:pt-0;
-}
-
-.home-info-text {
-  @apply text-sm text-gray-600;
-  @apply md:text-base;
+  @apply sm:w-96;
+  @apply md:w-108;
+  @apply lg:w-120;
 }
 
 .home-button {
