@@ -2,9 +2,9 @@
   <div id="reservation">
     <Header title="訂房資訊" subtitle="Reservation"/>
 
-    <h3 class="m-auto text-xl font-bold mt-12 mb-6">敬請閱讀注意事項後再付訂金</h3>
+    <h4 class="m-auto mt-12 mb-6">敬請閱讀注意事項後再付訂金</h4>
 
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17l-4 4m0 0l-4-4m4 4V3" />
     </svg>
 

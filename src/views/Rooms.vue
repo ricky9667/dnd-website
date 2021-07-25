@@ -4,7 +4,7 @@
 
     <section class="content-block">
       <CustomTitle title="客房與公共空間" />
-      <p v-for="info in roomInfo" :key="info.id">{{ info.text }}</p>
+      <p v-for="info in roomInfo" :key="info.id" class="my-1">{{ info.text }}</p>
     </section>
 
     <section class="rooms-container">

@@ -3,6 +3,10 @@
 @tailwind utilities;
 @tailwind screens;
 
+body {
+    min-height: 100vh;
+}
+
 h2 {
     @apply text-2xl font-bold;
     @apply md:text-3xl;
