@@ -7,10 +7,23 @@ body {
     min-height: 100vh;
 }
 
+h1 {
+    @apply text-3xl font-bold;
+    @apply sm:text-4xl;
+    @apply md:text-5xl;
+    @apply lg:text-6xl;
+}
+
 h2 {
     @apply text-2xl font-bold;
     @apply md:text-3xl;
     @apply lg:text-4xl;
+}
+
+h3 {
+    @apply text-lg;
+    @apply sm:text-xl;
+    @apply lg:text-2xl;
 }
 
 h4 {

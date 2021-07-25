@@ -1,8 +1,8 @@
 <template>
   <header class="bg-header bg-home flex">
     <div class="header-title-box m-auto">
-      <h1 class="header-title mb-0 md:mb-2 lg:mb-4">{{ title }}</h1>
-      <h3 class="header-subtitle">{{ subtitle }}</h3>
+      <h1 class="text-white mb-0 md:mb-2 lg:mb-4">{{ title }}</h1>
+      <h3 class="text-white">{{ subtitle }}</h3>
     </div>
   </header>
 </template>
@@ -30,17 +30,5 @@ export default {
   @apply px-2 py-0;
   @apply md:px-6 py-1;
   @apply lg:px-12 py-4;
-}
-
-.header-title {
-  @apply text-2xl font-bold text-white;
-  @apply md:text-4xl;
-  @apply lg:text-6xl
-}
-
-.header-subtitle {
-  @apply text-sm text-white;
-  @apply md:text-lg;
-  @apply lg:text-2xl;
 }
 </style>
