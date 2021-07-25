@@ -6,11 +6,11 @@
       </router-link>
 
       <div @click="toggleNavbar" class="md:hidden float-right icon-container nav-hover">
-        <svg v-if="!openNavbar" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-800" fill="none" viewBox="0 0 24 24"
+        <svg v-if="!openNavbar" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-900" fill="none" viewBox="0 0 24 24"
              stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
-        <svg v-if="openNavbar" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg v-if="openNavbar" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </div>
@@ -54,7 +54,7 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', 'Noto Sans TC', Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -89,10 +89,10 @@ nav {
 }
 
 .nav-hover {
-  @apply transform duration-100 hover:bg-yellow-100 hover:text-yellow-800;
+  @apply transform duration-100 hover:bg-yellow-100 hover:text-yellow-900;
 }
 
 nav .nav-item.router-link-exact-active {
-  @apply text-yellow-200 bg-yellow-800;
+  @apply text-yellow-200 bg-yellow-900;
 }
 </style>

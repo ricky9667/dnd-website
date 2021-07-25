@@ -7,7 +7,7 @@
       <p v-for="info in roomInfo" :key="info.id" class="my-1">{{ info.text }}</p>
     </section>
 
-    <section class="rooms-container">
+    <section class="rooms-container w-5/6 mx-auto gap-12">
       <div class="flex flex-col relative room-card border-purple-500">
         <img src="../assets/home/home_header.jpg" alt="2C"/>
         <div class="p-4">
