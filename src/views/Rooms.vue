@@ -9,21 +9,19 @@
 
     <section class="rooms-container w-5/6 mx-auto gap-12">
       <div class="flex flex-col relative room-card border-purple-500">
-        <img src="../assets/home/home_header.jpg" alt="2C"/>
+        <img v-for="image in room2F.images" :key="image.id" :src="image.imgSrc" alt="2F"/>
         <div class="p-4">
-          <h2 class="card-title">{{ roomAll.title }}</h2>
-          <p v-for="description in roomAll.descriptions" :key="description.id" class="card-content">
+          <h2 class="card-title">{{ room2F.title }}</h2>
+          <p v-for="description in room2F.descriptions" :key="description.id" class="card-content">
             {{ description.text }}
           </p>
         </div>
-        <PriceTable :price="roomAll.price"/>
+        <PriceTable :price="room2F.price"/>
       </div>
 
       <div class="flex flex-col relative room-card border-yellow-400">
         <ImageSlider title="2A" subtitle="山景房">
-          <img src="../assets/rooms/2A.jpg" alt="2A"/>
-          <img src="../assets/rooms/2A-1.jpg" alt="2A-1"/>
-          <img src="../assets/rooms/2A-2.jpg" alt="2A-2"/>
+          <img v-for="image in room2A.images" :key="image.id" :src="image.imgSrc" alt="2A"/>
         </ImageSlider>
         <div class="p-4">
           <h2 class="card-title">{{ room2A.title }}</h2>
@@ -36,9 +34,7 @@
 
       <div class="flex flex-col relative room-card border-yellow-400">
         <ImageSlider title="2B" subtitle="樓中樓山景房">
-          <img src="../assets/rooms/2B.jpg" alt="2B"/>
-          <img src="../assets/rooms/2B-1.jpg" alt="2B-1"/>
-          <img src="../assets/rooms/2B-2.jpg" alt="2B-2"/>
+          <img v-for="image in room2B.images" :key="image.id" :src="image.imgSrc" alt="2B"/>
         </ImageSlider>
         <div class="p-4">
           <h2 class="card-title">{{ room2B.title }}</h2>
@@ -51,9 +47,7 @@
 
       <div class="flex flex-col relative room-card border-yellow-400">
         <ImageSlider title="2C" subtitle="樓中樓山景房">
-          <img src="../assets/rooms/2C.jpg" alt="2C"/>
-          <img src="../assets/rooms/2C-1.jpg" alt="2C-1"/>
-          <img src="../assets/rooms/2C-2.jpg" alt="2C-2"/>
+          <img v-for="image in room2C.images" :key="image.id" :src="image.imgSrc" alt="2C"/>
         </ImageSlider>
         <div class="p-4">
           <h2 class="card-title">{{ room2C.title }}</h2>
@@ -101,8 +95,11 @@ export default {
       {id: 3, text: '或者也可以喝杯咖啡，享受周遭滿滿的綠意。'}
     ]
 
-    const roomAll = {
+    const room2F = {
       title: '2F 包層',
+      images: [
+        {id: 0, imgSrc: 'https://i.imgur.com/B76LE0S.jpg'}
+      ],
       descriptions: [
         {id: 0, text: '包層可同時使用 3 間房間、每間房間均住宿 2 人，加人費用依照人數累加。'},
       ],
@@ -111,6 +108,11 @@ export default {
 
     const room2A = {
       title: '2A 山景房',
+      images: [
+        {id: 0, imgSrc: 'https://i.imgur.com/UHxUVHA.jpg'},
+        {id: 1, imgSrc: 'https://i.imgur.com/lJAioO9.jpg'},
+        {id: 2, imgSrc: 'https://i.imgur.com/0H6pIzi.jpg'}
+      ],
       descriptions: [
         {id: 0, text: '房型 2A 有一張加大雙人床，和 2 張沙發。'},
         {id: 1, text: '4 人住宿時使用一張乳膠墊沙發床，6 人住宿時使用 2 張乳膠墊沙發床。'}
@@ -120,6 +122,11 @@ export default {
 
     const room2B = {
       title: '2B 樓中樓山景房',
+      images: [
+        {id: 0, imgSrc: 'https://i.imgur.com/YEeqngr.jpg'},
+        {id: 1, imgSrc: 'https://i.imgur.com/DzH1qkY.jpg'},
+        {id: 2, imgSrc: 'https://i.imgur.com/QF8aCB5.jpg'}
+      ],
       descriptions: [
         {id: 0, text: '房型 2B 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊。'}
       ],
@@ -128,13 +135,18 @@ export default {
 
     const room2C = {
       title: '2C 樓中樓山景房',
+      images: [
+        {id: 0, imgSrc: 'https://i.imgur.com/a3VaT8t.jpg'},
+        {id: 1, imgSrc: 'https://i.imgur.com/V8smQxY.jpg'},
+        {id: 2, imgSrc: 'https://i.imgur.com/CMD9joE.jpg'}
+      ],
       descriptions: [
         {id: 0, text: '房型 2C 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊，住宿 5 - 6 人使用沙發床。'}
       ],
       price: {weekday: 2780, weekend: 3180, holiday: 4770}
     }
 
-    return {roomInfo, roomAll, room2A, room2B, room2C}
+    return {roomInfo, room2F, room2A, room2B, room2C}
   }
 }
 </script>

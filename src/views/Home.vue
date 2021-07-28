@@ -7,11 +7,11 @@
     </ImageSection>
 
     <ImageSection title="DnD 環境" :infos="surroundingsInfo" :button="surroundingsButton">
-      <img class="home-info-image shadow-xl" src="../assets/home/home_surroundings.jpg" alt="Room example">
+      <img class="home-info-image shadow-xl" src="https://i.imgur.com/DzH1qkY.jpg" alt="Room example">
     </ImageSection>
 
     <ImageSection title="DnD 位置" :infos="locationInfo" :button="locationButton">
-      <img class="home-info-image shadow-xl" src="../assets/home/home_location.jpg" alt="Room example">
+      <img class="home-info-image shadow-xl" src="https://i.imgur.com/Bfq9o2y.jpg" alt="Room example">
     </ImageSection>
 
     <Footer/>

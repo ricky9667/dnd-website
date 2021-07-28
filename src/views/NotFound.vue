@@ -48,7 +48,7 @@ export default {
 
 <style>
 .bg-not-found {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/others/not_found.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://i.imgur.com/xgYLPDU.jpg');
 }
 
 .icon-button {

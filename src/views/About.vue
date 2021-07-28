@@ -3,7 +3,7 @@
     <Header title="關於我們" subtitle="About us"/>
 
     <ImageSection title="關於我們" :infos="aboutUsInfo">
-      <img class="home-info-image shadow-xl" src="../assets/others/random_landscape.jpg" alt="Room example">
+      <img class="home-info-image shadow-xl" src="https://i.imgur.com/xgYLPDU.jpg" alt="Room example">
     </ImageSection>
 
     <Footer />
