@@ -5,19 +5,19 @@
         <img class="h-12 md:h-16 px-4 py-1" src="./assets/logo/dnd_logo_color.png" alt="首頁">
       </router-link>
 
-      <div @click="toggleNavbar" class="md:hidden float-right icon-container nav-hover">
-        <svg v-if="!openNavbar" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-900" fill="none" viewBox="0 0 24 24"
+      <div @click="toggleNavbar" class="md:hidden float-right icon-container nav-item">
+        <svg v-if="!openNavbar" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
              stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
-        <svg v-if="openNavbar" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg v-if="openNavbar" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </div>
     </div>
 
     <div class="nav-links">
-      <router-link v-for="item in navbarItems" :key="item.id" :to="item.path" class="nav-item nav-hover">
+      <router-link v-for="item in navbarItems" :key="item.id" :to="item.path" class="nav-item">
         {{ item.title }}
       </router-link>
     </div>
@@ -66,13 +66,19 @@ nav a {
 
 nav {
   @apply fixed z-10 left-0 right-0;
-  @apply bg-yellow-200 shadow-lg;
+  @apply shadow-lg;
+  background-color: #e5edd3;
 }
 
 .nav-item {
   @apply flex flex-row justify-center items-center px-2 font-bold;
-  @apply h-10 w-full ;
+  @apply h-10 w-full;
   @apply md:h-16 md:w-24;
+}
+
+.nav-item:hover {
+  color: #335443;
+  background-color: #eee;
 }
 
 .nav-links {
@@ -93,6 +99,7 @@ nav {
 }
 
 nav .nav-item.router-link-exact-active {
-  @apply text-yellow-200 bg-yellow-900;
+  color: #eee;
+  background-color: #335443;
 }
 </style>

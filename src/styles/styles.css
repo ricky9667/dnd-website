@@ -3,40 +3,46 @@
 @tailwind utilities;
 @tailwind screens;
 
-body {
-    min-height: 100vh;
-}
+@layer base {
+    body {
+        min-height: 100vh;
+    }
 
-h1 {
-    @apply text-3xl font-bold;
-    @apply sm:text-4xl;
-    @apply md:text-5xl;
-    @apply lg:text-6xl;
-}
+    h1 {
+        @apply text-3xl font-bold;
+        @apply sm:text-4xl;
+        @apply md:text-5xl;
+        @apply lg:text-6xl;
+    }
 
-h2 {
-    @apply text-2xl font-bold;
-    @apply md:text-3xl;
-    @apply lg:text-4xl;
-}
+    h2 {
+        color: #3e3a39;
+        @apply text-2xl font-bold;
+        @apply md:text-3xl;
+        @apply lg:text-4xl;
+    }
 
-h3 {
-    @apply text-lg;
-    @apply sm:text-xl;
-    @apply lg:text-2xl;
-}
+    h3 {
+        color: #3e3a39;
+        @apply text-lg;
+        @apply sm:text-xl;
+        @apply lg:text-2xl;
+    }
 
-h4 {
-    @apply text-base font-bold;
-    @apply sm:text-lg;
-    @apply lg:text-xl;
-}
+    h4 {
+        color: #3e3a39;
+        @apply text-base font-bold;
+        @apply sm:text-lg;
+        @apply lg:text-xl;
+    }
 
-p, li {
-    @apply text-left text-gray-600;
-    @apply text-sm;
-    @apply md:text-base;
-    @apply xl:text-lg
+    p, li {
+        color: #595757;
+        @apply text-left;
+        @apply text-sm;
+        @apply md:text-base;
+        @apply xl:text-lg
+    }
 }
 
 .content-block {

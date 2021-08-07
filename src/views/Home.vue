@@ -3,15 +3,15 @@
     <Header title="DnD 休閒民宿" subtitle="DnD Homestay"/>
 
     <ImageSection title="關於 DnD" :infos="aboutDndInfo">
-      <img class="home-info-image" src="../assets/logo/dnd_logo_color.png" alt="Room example">
+      <img class="image-block" src="../assets/logo/dnd_logo_color.png" alt="Room example">
     </ImageSection>
 
     <ImageSection title="DnD 環境" :infos="surroundingsInfo" :button="surroundingsButton">
-      <img class="home-info-image shadow-xl" src="https://i.imgur.com/DzH1qkY.jpg" alt="Room example">
+      <img class="image-block" src="https://i.imgur.com/DzH1qkY.jpg" alt="Room example">
     </ImageSection>
 
     <ImageSection title="DnD 位置" :infos="locationInfo" :button="locationButton">
-      <img class="home-info-image shadow-xl" src="https://i.imgur.com/Bfq9o2y.jpg" alt="Room example">
+      <img class="image-block" src="https://i.imgur.com/Bfq9o2y.jpg" alt="Room example">
     </ImageSection>
 
     <Footer/>
@@ -51,10 +51,4 @@ export default {
 }
 </script>
 
-<style>
-.home-info-image {
-  @apply w-80 rounded-lg my-2;
-  @apply md:h-72 md:w-auto md:rounded-xl md:my-4;
-  @apply lg:h-80;
-}
-</style>
+<style></style>

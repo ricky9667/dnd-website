@@ -1,13 +1,15 @@
 <template>
   <div class="home-info">
     <slot></slot>
-    <div class="flex flex-col items-start home-info-content px-4">
-      <h2 class="pt-4 lg:pt-0 mb-4">{{ title }}</h2>
-      <p v-for="info in infos" :key="info.id" class="my-1">{{ info.text }}</p>
-      <button v-if="button"
-              :class="{'home-button': true, 'button-yellow': button.theme === 'yellow', 'button-blue': button.theme === 'blue'}">
-        <router-link :to="button.link">{{ button.text }}</router-link>
-      </button>
+    <div class="flex flex-col items-start home-info-content px-1 divide-y divide-gray-300">
+      <h2 class="pt-0 pb-4">{{ title }}</h2>
+      <div class="flex flex-col items-start pt-4">
+        <p v-for="info in infos" :key="info.id" class="my-1">{{ info.text }}</p>
+        <button v-if="button"
+                :class="{'home-button': true, 'button-yellow': button.theme === 'yellow', 'button-blue': button.theme === 'blue'}">
+          <router-link :to="button.link">{{ button.text }}</router-link>
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -15,21 +17,26 @@
 <script>
 export default {
   name: 'ImageSection',
-  props: ['title', 'infos', 'button'],
+  props: ['title', 'infos','button'],
 }
 </script>
 
 <style>
 .home-info {
-  @apply flex flex-col items-center justify-evenly mx-8 my-12 gap-4;
-  @apply lg:flex-row lg:mx-20 lg:my-28;
+  @apply flex flex-col items-center justify-evenly mx-8 my-8 gap-6;
+  @apply lg:flex-row lg:mx-16 lg:my-28;
 }
 
 .home-info-content {
-  @apply w-72 px-8;
-  @apply sm:w-96;
-  @apply md:w-108;
-  @apply lg:w-120;
+  @apply w-11/12 sm:w-5/6 md:w-3/4;
+  @apply lg:h-80 lg:w-120 xl:h-96;
+}
+
+.image-block {
+  @apply w-11/12 sm:w-5/6 rounded-lg;
+  @apply md:w-3/4;
+  @apply lg:h-80 lg:w-auto;
+  @apply xl:h-96;
 }
 
 .home-button {

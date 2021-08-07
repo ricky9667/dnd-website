@@ -1,5 +1,3 @@
-const color = require('tailwindcss/colors')
-
 module.exports = {
   purge: {
     'mode': 'layers',
