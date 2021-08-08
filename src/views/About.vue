@@ -1,8 +1,10 @@
 <template>
   <div id="about">
-    <Header title="關於我們" subtitle="About us"/>
+    <Header title="關於我們" subtitle="About us">
+      <img class="header-image" src="https://i.imgur.com/B76LE0S.jpg" alt="Room example">
+    </Header>
 
-    <ImageSection title="關於我們" :infos="aboutUsInfo">
+    <ImageSection title="DnD 的由來" :infos="aboutUsInfo">
       <img class="image-block shadow-xl" src="https://i.imgur.com/xgYLPDU.jpg" alt="Room example">
     </ImageSection>
 

@@ -1,17 +1,19 @@
 <template>
   <div id="home">
-    <Header title="DnD 休閒民宿" subtitle="DnD Homestay"/>
+    <Header title="DnD 休閒民宿" subtitle="DnD Homestay">
+      <img class="header-image" src="https://i.imgur.com/B76LE0S.jpg" alt="Room example">
+    </Header>
 
     <ImageSection title="關於 DnD" :infos="aboutDndInfo">
-      <img class="image-block" src="../assets/logo/dnd_logo_color.png" alt="Room example">
+      <img class="image-block" src="../assets/logo/dnd_logo_color.png" alt="About DnD">
     </ImageSection>
 
     <ImageSection title="DnD 環境" :infos="surroundingsInfo" :button="surroundingsButton">
-      <img class="image-block" src="https://i.imgur.com/DzH1qkY.jpg" alt="Room example">
+      <img class="image-block" src="https://i.imgur.com/DzH1qkY.jpg" alt="DnD Surroundings">
     </ImageSection>
 
     <ImageSection title="DnD 位置" :infos="locationInfo" :button="locationButton">
-      <img class="image-block" src="https://i.imgur.com/Bfq9o2y.jpg" alt="Room example">
+      <img class="image-block" src="https://i.imgur.com/Bfq9o2y.jpg" alt="DnD Location">
     </ImageSection>
 
     <Footer/>

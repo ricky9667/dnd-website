@@ -1,12 +1,11 @@
 <template>
-  <div class="home-info">
+  <div class="image-section">
     <slot></slot>
-    <div class="flex flex-col items-start home-info-content px-1 divide-y divide-gray-300">
+    <div class="image-section-content px-1">
       <h2 class="pt-0 pb-4">{{ title }}</h2>
-      <div class="flex flex-col items-start pt-4">
+      <div class="flex flex-col text-left items-start pt-4">
         <p v-for="info in infos" :key="info.id" class="my-1">{{ info.text }}</p>
-        <button v-if="button"
-                :class="{'home-button': true, 'button-yellow': button.theme === 'yellow', 'button-blue': button.theme === 'blue'}">
+        <button v-if="button" class="image-section-button mt-2 lg:mt-4">
           <router-link :to="button.link">{{ button.text }}</router-link>
         </button>
       </div>
@@ -17,17 +16,18 @@
 <script>
 export default {
   name: 'ImageSection',
-  props: ['title', 'infos','button'],
+  props: ['title', 'infos', 'button'],
 }
 </script>
 
 <style>
-.home-info {
+.image-section {
   @apply flex flex-col items-center justify-evenly mx-8 my-8 gap-6;
   @apply lg:flex-row lg:mx-16 lg:my-28;
 }
 
-.home-info-content {
+.image-section-content {
+  @apply flex flex-col items-start divide-y divide-gray-300;
   @apply w-11/12 sm:w-5/6 md:w-3/4;
   @apply lg:h-80 lg:w-120 xl:h-96;
 }
@@ -39,17 +39,17 @@ export default {
   @apply xl:h-96;
 }
 
-.home-button {
-  @apply inline-block rounded-lg transform duration-200 hover:scale-110 font-bold shadow-lg tracking-widest;
+.image-section-button {
+  @apply inline-block rounded-full transform duration-200 font-bold;
   @apply text-sm px-6 py-2 my-2;
   @apply md:text-base md:my-4;
+
+  border: 2px solid #335443;
+  background-color: #e5edd3;
 }
 
-.button-yellow {
-  @apply bg-yellow-200 hover:bg-yellow-300 text-gray-600;
-}
-
-.button-blue {
-  @apply bg-blue-500 hover:bg-blue-600 text-gray-100;
+.image-section-button:hover {
+  color: white;
+  background-color: #335443;
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <div id="reservation">
-    <Header title="訂房資訊" subtitle="Reservation"/>
+    <Header title="訂房資訊" subtitle="Reservation">
+      <img class="header-image" src="https://i.imgur.com/B76LE0S.jpg" alt="Room example">
+    </Header>
 
     <h4 class="m-auto mt-12 mb-6">敬請閱讀注意事項後再付訂金</h4>
 
