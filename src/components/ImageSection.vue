@@ -5,9 +5,7 @@
       <h2 class="pt-0 pb-4">{{ title }}</h2>
       <div class="flex flex-col text-left items-start pt-4">
         <p v-for="info in infos" :key="info.id" class="my-1">{{ info.text }}</p>
-        <button v-if="button" class="image-section-button mt-2 lg:mt-4">
-          <router-link :to="button.link">{{ button.text }}</router-link>
-        </button>
+        <router-link v-if="button" class="image-section-button mt-2 lg:mt-4" :to="button.link">{{ button.text }}</router-link>
       </div>
     </div>
   </div>
