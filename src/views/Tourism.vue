@@ -3,6 +3,7 @@
     <Header title="鄰近景點" subtitle="Tourism">
       <img class="header-image" src="https://i.imgur.com/B76LE0S.jpg" alt="Room example">
     </Header>
+
     <Footer />
   </div>
 </template>
@@ -13,6 +14,6 @@ import Footer from '../components/Footer';
 
 export default {
   name: 'Tourism',
-  components: {Header, Footer}
+  components: {Header, Footer},
 }
 </script>

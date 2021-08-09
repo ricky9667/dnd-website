@@ -6,18 +6,12 @@
       </router-link>
 
       <div @click="toggleNavbar" class="md:hidden float-right icon-container nav-item">
-        <svg v-if="!openNavbar" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-             stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-        <svg v-if="openNavbar" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
+        <HamburgerButton ref="hamburger" :open="isOpenNavbar" />
       </div>
     </div>
 
     <div class="nav-links">
-      <router-link v-for="item in navbarItems" :key="item.id" :to="item.path" class="nav-item">
+      <router-link v-for="item in navbarItems" :key="item.id" :to="item.path" class="nav-item" @click="closeNavbar">
         {{ item.title }}
       </router-link>
     </div>
@@ -27,10 +21,12 @@
 </template>
 
 <script>
-import {ref} from 'vue'
+import {onMounted, ref} from 'vue'
+import HamburgerButton from './components/HamburgerButton';
 
 export default {
   name: 'App',
+  components: {HamburgerButton},
   setup() {
     const navbarItems = [
       {id: 0, path: '/', title: '首頁'},
@@ -40,14 +36,26 @@ export default {
       {id: 4, path: '/transportation', title: '交通資訊'},
       {id: 5, path: '/tourism', title: '鄰近景點'}
     ]
+    const navbarRef = ref({})
+    const hamburger = ref({})
+    const isOpenNavbar = ref(false)
 
-    const openNavbar = ref(false)
+    onMounted(() => {
+      navbarRef.value = document.getElementsByClassName('nav-links')[0]
+    })
+
     const toggleNavbar = () => {
-      document.getElementsByClassName('nav-links')[0].classList.toggle('active')
-      openNavbar.value = !openNavbar.value
+      navbarRef.value.classList.toggle('active')
+      isOpenNavbar.value = !isOpenNavbar.value
+      hamburger.value.toggleClass()
     }
 
-    return {navbarItems, openNavbar, toggleNavbar}
+    const closeNavbar = () => {
+      navbarRef.value.classList.remove('active')
+      hamburger.value.removeClass()
+    }
+
+    return {navbarItems, isOpenNavbar, toggleNavbar, closeNavbar, hamburger}
   }
 }
 </script>
@@ -76,11 +84,6 @@ nav {
   @apply md:h-16 md:w-24;
 }
 
-.nav-item:hover {
-  color: #335443;
-  background-color: #eee;
-}
-
 .nav-links {
   @apply right-0 top-0 hidden md:flex md:flex-row flex-col;
 }
@@ -92,10 +95,6 @@ nav {
 .icon-container {
   @apply h-12 w-12;
   @apply flex justify-center items-center;
-}
-
-.nav-hover {
-  @apply transform duration-100 hover:bg-yellow-100 hover:text-yellow-900;
 }
 
 nav .nav-item.router-link-exact-active {
