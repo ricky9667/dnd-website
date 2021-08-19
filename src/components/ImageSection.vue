@@ -38,16 +38,9 @@ export default {
 }
 
 .image-section-button {
-  @apply inline-block rounded-full transform duration-200 font-bold;
   @apply text-sm px-6 py-2 my-2;
   @apply md:text-base md:my-4;
-
-  border: 2px solid #335443;
-  background-color: #e5edd3;
-}
-
-.image-section-button:hover {
-  color: white;
-  background-color: #335443;
+  @apply inline-block rounded-full border-2 border-primary bg-secondary;
+  @apply hover:text-white hover:bg-primary transform duration-200 font-bold;
 }
 </style>

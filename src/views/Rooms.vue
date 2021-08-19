@@ -4,65 +4,203 @@
       <img class="header-image" src="https://i.imgur.com/B76LE0S.jpg" alt="Room example">
     </Header>
 
-      <section class="content-block">
-      <CustomTitle title="客房與公共空間" />
+    <section class="content-block">
+      <CustomTitle title="客房與公共空間"/>
       <p v-for="info in roomInfo" :key="info.id" class="my-1">{{ info.text }}</p>
     </section>
 
-    <section class="rooms-container w-5/6 mx-auto gap-12">
-      <div class="flex flex-col relative room-card border-purple-500">
-        <img v-for="image in room2F.images" :key="image.id" :src="image.imgSrc" alt="2F"/>
-        <div class="p-4">
-          <h2 class="card-title">{{ room2F.title }}</h2>
-          <p v-for="description in room2F.descriptions" :key="description.id" class="card-content">
-            {{ description.text }}
-          </p>
-        </div>
-        <PriceTable :price="room2F.price"/>
+    <section class="rooms-section">
+      <div class="lg:col-span-2 px-4">
+        <swiper
+            class="rooms-swiper"
+            :effect="'fade'"
+            :navigation="true"
+            :loop="true"
+            :pagination='{"clickable": true}'
+        >
+          <swiper-slide
+              class="rounded-xl overflow-hidden"
+          >
+            <img class="swiper-image rounded-xl" :src="room2F.image" alt="2F"/>
+          </swiper-slide>
+        </swiper>
       </div>
 
-      <div class="flex flex-col relative room-card border-yellow-400">
-        <ImageSlider title="2A" subtitle="山景房">
-          <img v-for="image in room2A.images" :key="image.id" :src="image.imgSrc" alt="2A"/>
-        </ImageSlider>
-        <div class="p-4">
-          <h2 class="card-title">{{ room2A.title }}</h2>
-          <p v-for="description in room2A.descriptions" :key="description.id" class="card-content">
-            {{ description.text }}
-          </p>
+      <div class="rooms-content lg:order-first">
+        <h2 class="text-center lg:text-left">{{ room2F.title }}</h2>
+        <div>
+          <CustomTitle title="客房介紹"/>
+          <ul class="list-disc list-inside">
+            <li v-for="description in room2B.descriptions" :key="description.id">
+              {{ description.text }}
+            </li>
+          </ul>
         </div>
-        <PriceTable :price="room2A.price"/>
+
+        <div>
+          <CustomTitle title="定價"/>
+          <div class="price-table">
+            <div class="table-row bg-primary font-bold text-white">
+              <div class="price-table-cell">平日</div>
+              <div class="price-table-cell">假日</div>
+              <div class="price-table-cell">農曆過年</div>
+            </div>
+            <div class="table-row">
+              <div class="price-table-cell">${{ room2F.price.weekday }}</div>
+              <div class="price-table-cell">${{ room2F.price.weekend }}</div>
+              <div class="price-table-cell">${{ room2F.price.holiday }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rooms-section">
+      <div class="lg:col-span-2 px-4">
+        <swiper
+            class="rooms-swiper"
+            :effect="'fade'"
+            :navigation="true"
+            :loop="true"
+            :pagination='{"clickable": true}'
+        >
+          <swiper-slide 
+              v-for="(image, index) in room2A.images"
+              :key="index"
+              class="rounded-xl overflow-hidden"
+          >
+            <img class="swiper-image rounded-xl" :src="image" alt="2A"/>
+          </swiper-slide>
+        </swiper>
       </div>
 
-      <div class="flex flex-col relative room-card border-yellow-400">
-        <ImageSlider title="2B" subtitle="樓中樓山景房">
-          <img v-for="image in room2B.images" :key="image.id" :src="image.imgSrc" alt="2B"/>
-        </ImageSlider>
-        <div class="p-4">
-          <h2 class="card-title">{{ room2B.title }}</h2>
-          <p v-for="description in room2B.descriptions" :key="description.id" class="card-content">
-            {{ description.text }}
-          </p>
+      <div class="rooms-content">
+        <h2 class="text-center lg:text-left">{{ room2A.title }}</h2>
+        <div>
+          <CustomTitle title="客房介紹"/>
+          <ul class="list-disc list-inside">
+            <li v-for="description in room2A.descriptions" :key="description.id">
+              {{ description.text }}
+            </li>
+          </ul>
         </div>
-        <PriceTable :price="room2B.price"/>
+
+        <div>
+          <CustomTitle title="定價"/>
+          <div class="price-table">
+            <div class="table-row bg-primary font-bold text-white">
+              <div class="price-table-cell">平日</div>
+              <div class="price-table-cell">假日</div>
+              <div class="price-table-cell">農曆過年</div>
+            </div>
+            <div class="table-row">
+              <div class="price-table-cell">${{ room2A.price.weekday }}</div>
+              <div class="price-table-cell">${{ room2A.price.weekend }}</div>
+              <div class="price-table-cell">${{ room2A.price.holiday }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rooms-section">
+      <div class="lg:col-span-2 px-4">
+        <swiper
+            class="rooms-swiper"
+            :effect="'fade'"
+            :navigation="true"
+            :loop="true"
+            :pagination='{"clickable": true}'
+        >
+          <swiper-slide 
+              v-for="(image, index) in room2B.images"
+              :key="index"
+              class="rounded-xl overflow-hidden"
+          >
+            <img class="swiper-image rounded-xl" :src="image" alt="2B"/>
+          </swiper-slide>
+        </swiper>
       </div>
 
-      <div class="flex flex-col relative room-card border-yellow-400">
-        <ImageSlider title="2C" subtitle="樓中樓山景房">
-          <img v-for="image in room2C.images" :key="image.id" :src="image.imgSrc" alt="2C"/>
-        </ImageSlider>
-        <div class="p-4">
-          <h2 class="card-title">{{ room2C.title }}</h2>
-          <p v-for="description in room2C.descriptions" :key="description.id" class="card-content">
-            {{ description.text }}
-          </p>
+      <div class="rooms-content lg:order-first">
+        <h2 class="text-center lg:text-left">{{ room2B.title }}</h2>
+        <div>
+          <CustomTitle title="客房介紹"/>
+          <ul class="list-disc list-inside">
+            <li v-for="description in room2B.descriptions" :key="description.id">
+              {{ description.text }}
+            </li>
+          </ul>
         </div>
-        <PriceTable :price="room2C.price"/>
+
+        <div>
+          <CustomTitle title="定價"/>
+          <div class="price-table">
+            <div class="table-row bg-primary font-bold text-white">
+              <div class="price-table-cell">平日</div>
+              <div class="price-table-cell">假日</div>
+              <div class="price-table-cell">農曆過年</div>
+            </div>
+            <div class="table-row">
+              <div class="price-table-cell">${{ room2B.price.weekday }}</div>
+              <div class="price-table-cell">${{ room2B.price.weekend }}</div>
+              <div class="price-table-cell">${{ room2B.price.holiday }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rooms-section">
+      <div class="lg:col-span-2 px-4">
+        <swiper
+            class="rooms-swiper"
+            :effect="'fade'"
+            :navigation="true"
+            :loop="true"
+            :pagination='{"clickable": true}'
+        >
+          <swiper-slide 
+              v-for="(image, index) in room2C.images"
+              :key="index"
+              class="rounded-xl overflow-hidden"
+          >
+            <img class="swiper-image rounded-xl" :src="image" alt="2C"/>
+          </swiper-slide>
+        </swiper>
+      </div>
+
+      <div class="rooms-content">
+        <h2 class="text-center lg:text-left">{{ room2C.title }}</h2>
+        <div>
+          <CustomTitle title="客房介紹"/>
+          <ul class="list-disc list-inside">
+            <li v-for="description in room2C.descriptions" :key="description.id">
+              {{ description.text }}
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <CustomTitle title="定價"/>
+          <div class="price-table">
+            <div class="table-row bg-primary font-bold text-white">
+              <div class="price-table-cell">平日</div>
+              <div class="price-table-cell">假日</div>
+              <div class="price-table-cell">農曆過年</div>
+            </div>
+            <div class="table-row">
+              <div class="price-table-cell">${{ room2C.price.weekday }}</div>
+              <div class="price-table-cell">${{ room2C.price.weekend }}</div>
+              <div class="price-table-cell">${{ room2C.price.holiday }}</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="content-block">
-      <CustomTitle title="增加人數價格" />
+      <CustomTitle title="增加人數價格"/>
       <h4 class="font-bold my-1">平日 & 假日</h4>
       <ul class="list-disc list-inside">
         <li>３歲以上：600 元/人（含早餐及寢具）</li>
@@ -82,13 +220,12 @@
 <script>
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ImageSlider from '../components/ImageSlider';
-import PriceTable from '../components/PriceTable';
 import CustomTitle from '../components/CustomTitle';
+import {Swiper, SwiperSlide} from 'swiper/vue';
 
 export default {
   name: 'Rooms',
-  components: {CustomTitle, PriceTable, ImageSlider, Header, Footer},
+  components: {CustomTitle, Header, Footer, Swiper, SwiperSlide},
   setup() {
     const roomInfo = [
       {id: 0, text: 'DnD 為合法新建民宿，為獨棟農舍，周遭是稻米、青蔥種植區，遠處群山環繞，安靜、空氣好。'},
@@ -99,9 +236,7 @@ export default {
 
     const room2F = {
       title: '2F 包層',
-      images: [
-        {id: 0, imgSrc: 'https://i.imgur.com/B76LE0S.jpg'}
-      ],
+      image: 'https://i.imgur.com/B76LE0S.jpg',
       descriptions: [
         {id: 0, text: '包層可同時使用 3 間房間、每間房間均住宿 2 人，加人費用依照人數累加。'},
       ],
@@ -111,9 +246,9 @@ export default {
     const room2A = {
       title: '2A 山景房',
       images: [
-        {id: 0, imgSrc: 'https://i.imgur.com/UHxUVHA.jpg'},
-        {id: 1, imgSrc: 'https://i.imgur.com/lJAioO9.jpg'},
-        {id: 2, imgSrc: 'https://i.imgur.com/0H6pIzi.jpg'}
+        'https://i.imgur.com/UHxUVHA.jpg',
+        'https://i.imgur.com/lJAioO9.jpg',
+        'https://i.imgur.com/0H6pIzi.jpg'
       ],
       descriptions: [
         {id: 0, text: '房型 2A 有一張加大雙人床，和 2 張沙發。'},
@@ -125,9 +260,9 @@ export default {
     const room2B = {
       title: '2B 樓中樓山景房',
       images: [
-        {id: 0, imgSrc: 'https://i.imgur.com/YEeqngr.jpg'},
-        {id: 1, imgSrc: 'https://i.imgur.com/DzH1qkY.jpg'},
-        {id: 2, imgSrc: 'https://i.imgur.com/QF8aCB5.jpg'}
+        'https://i.imgur.com/YEeqngr.jpg',
+        'https://i.imgur.com/DzH1qkY.jpg',
+        'https://i.imgur.com/QF8aCB5.jpg'
       ],
       descriptions: [
         {id: 0, text: '房型 2B 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊。'}
@@ -137,10 +272,9 @@ export default {
 
     const room2C = {
       title: '2C 樓中樓山景房',
-      images: [
-        {id: 0, imgSrc: 'https://i.imgur.com/a3VaT8t.jpg'},
-        {id: 1, imgSrc: 'https://i.imgur.com/V8smQxY.jpg'},
-        {id: 2, imgSrc: 'https://i.imgur.com/CMD9joE.jpg'}
+      images: ['https://i.imgur.com/a3VaT8t.jpg',
+        'https://i.imgur.com/V8smQxY.jpg',
+        'https://i.imgur.com/CMD9joE.jpg'
       ],
       descriptions: [
         {id: 0, text: '房型 2C 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊，住宿 5 - 6 人使用沙發床。'}
@@ -154,6 +288,38 @@ export default {
 </script>
 
 <style>
+.rooms-section {
+  @apply grid grid-cols-1 lg:grid-cols-3 lg:gap-8;
+  @apply max-w-screen-2xl mx-auto px-4 md:px-8 lg:px-12 py-8 md:py-12 lg:py-20;
+}
+
+.rooms-content {
+  @apply px-4 text-left divide-y divide-gray-300;
+}
+
+.rooms-content > * {
+  @apply py-4;
+}
+
+.rooms-swiper {
+  @apply w-full lg:w-auto;
+  @apply h-48 sm:h-60 md:h-72 lg:h-108;
+}
+
+.swiper-image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.price-table {
+  @apply table w-full sm:w-4/5 lg:w-full mx-auto text-center rounded bg-secondary border-2 border-primary;
+}
+
+.price-table-cell {
+  @apply table-cell py-1;
+}
+
 .rooms-container {
   @apply flex flex-col;
   @apply md:flex-row md:flex-wrap;

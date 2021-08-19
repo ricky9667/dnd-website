@@ -74,8 +74,7 @@ nav a {
 
 nav {
   @apply fixed z-10 left-0 right-0;
-  @apply shadow-lg;
-  background-color: #e5edd3;
+  @apply bg-secondary shadow-lg;
 }
 
 .nav-item {
@@ -98,7 +97,6 @@ nav {
 }
 
 nav .nav-item.router-link-exact-active {
-  color: #eee;
-  background-color: #335443;
+  @apply text-white bg-primary;
 }
 </style>

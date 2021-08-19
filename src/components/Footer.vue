@@ -25,10 +25,10 @@
 
     <section class="flex flex-row justify-evenly w-60">
       <a class="scale-transition" href="https://www.facebook.com/daledory" target="_blank">
-        <img class="h-6" src="../assets/logo/facebook.png" alt="FB">
+        <img class="h-6 footer-icon" src="../assets/logo/facebook.png" alt="FB">
       </a>
       <a class="scale-transition" href="https://line.me/R/ti/p/%40661wlbsv" target="_blank">
-        <img class="h-6" src="../assets/logo/line.png" alt="Line">
+        <img class="h-6 footer-icon" src="../assets/logo/line.png" alt="Line">
       </a>
     </section>
 

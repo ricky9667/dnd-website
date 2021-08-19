@@ -43,6 +43,10 @@
         @apply md:text-base;
         @apply xl:text-lg
     }
+
+    hr {
+        border-top: 1px solid #ccc;
+    }
 }
 
 .content-block {

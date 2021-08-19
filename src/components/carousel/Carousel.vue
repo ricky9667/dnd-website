@@ -20,6 +20,7 @@ export default {
       this.$emit('prev')
     }
   }
+
 }
 </script>
 

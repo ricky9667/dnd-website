@@ -15,6 +15,12 @@ module.exports = {
         '144': '36rem',
         '156': '39rem',
         '168': '42rem'
+      },
+      colors: {
+        primary: '#335443',
+        secondary: '#e5edd3',
+        title: '#3e3a39',
+        content: '#595757'
       }
     },
     minHeight: {
