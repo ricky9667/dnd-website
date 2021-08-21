@@ -2,7 +2,7 @@
   <div id="tourism">
     <Header title="鄰近景點" subtitle="Tourism">
       <img class="header-image" src="https://i.imgur.com/B76LE0S.jpg" alt="Room example" />
-    </Header>
+      </Header>
 
     <Footer />
   </div>

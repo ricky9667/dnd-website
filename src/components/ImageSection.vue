@@ -42,5 +42,6 @@ export default {
   @apply md:text-base md:my-4;
   @apply inline-block rounded-full border-2 border-primary bg-secondary;
   @apply hover:text-white hover:bg-primary transform duration-200 font-bold;
+  @apply focus:text-white focus:bg-primary;
 }
 </style>

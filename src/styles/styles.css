@@ -43,6 +43,11 @@
         @apply md:text-base;
         @apply xl:text-lg
     }
+    
+    svg {
+        @apply h-6 w-6;
+        fill: #335443;
+    }
 
     hr {
         border-top: 1px solid #ccc;

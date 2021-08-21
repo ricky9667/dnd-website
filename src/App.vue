@@ -11,8 +11,29 @@
     </div>
 
     <div class="nav-links">
-      <router-link v-for="item in navbarItems" :key="item.id" :to="item.path" class="nav-item" @click="closeNavbar">
-        {{ item.title }}
+      <router-link to="/" class="nav-item nav-link" @click="closeNavbar">
+        <HomeIcon />
+        <div class="">首頁</div>
+      </router-link>
+      <router-link to="/about" class="nav-item nav-link" @click="closeNavbar">
+        <AboutIcon />
+        <div>關於我們</div>
+      </router-link>
+      <router-link to="/rooms" class="nav-item nav-link" @click="closeNavbar">
+        <RoomsIcon />
+        <div>客房介紹</div>
+      </router-link>
+      <router-link to="/reservation" class="nav-item nav-link" @click="closeNavbar">
+        <ReservationIcon />
+        <div>訂房資訊</div>
+      </router-link>
+      <router-link to="/transportation" class="nav-item nav-link" @click="closeNavbar">
+        <TransportationIcon />
+        <div>交通資訊</div>
+      </router-link>
+      <router-link to="/tourism" class="nav-item nav-link" @click="closeNavbar">
+        <TourismIcon />
+        <div>鄰近景點</div>
       </router-link>
     </div>
   </nav>
@@ -22,11 +43,26 @@
 
 <script>
 import {onMounted, ref} from 'vue'
-import HamburgerButton from './components/HamburgerButton';
+import HamburgerButton from './components/HamburgerButton'
+import HomeIcon from './components/icons/HomeIcon'
+import AboutIcon from './components/icons/AboutIcon'
+import RoomsIcon from './components/icons/RoomsIcon'
+import ReservationIcon from './components/icons/ReservationIcon'
+import TransportationIcon from './components/icons/TransportationIcon'
+import TourismIcon from './components/icons/TourismIcon'
+
 
 export default {
   name: 'App',
-  components: {HamburgerButton},
+  components: {
+    HamburgerButton, 
+    HomeIcon, 
+    AboutIcon, 
+    RoomsIcon, 
+    ReservationIcon,
+    TransportationIcon,
+    TourismIcon
+  },
   setup() {
     const navbarItems = [
       {id: 0, path: '/', title: '首頁'},
@@ -77,18 +113,31 @@ nav {
   @apply bg-secondary shadow-lg;
 }
 
-.nav-item {
-  @apply flex flex-row justify-center items-center px-2 font-bold;
-  @apply h-10 w-full;
-  @apply md:h-16 md:w-24;
-}
-
 .nav-links {
-  @apply right-0 top-0 hidden md:flex md:flex-row flex-col;
+  @apply md:right-0 md:top-0 hidden md:flex md:flex-row;
 }
 
 .nav-links.active {
-  @apply flex;
+  @apply flex flex-row flex-wrap;
+}
+
+.nav-item {
+  @apply flex flex-row justify-center items-center px-2 text-primary font-bold;
+  @apply md:h-16;
+}
+
+.nav-link {
+  @apply h-10 md:h-auto w-full sm:w-1/3 md:w-28 lg:w-36 xl:w-44 md:mx-px;
+
+  background-image: linear-gradient(#335443, #335443);
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size .25s ease;
+}
+
+.nav-link:hover {
+  background-size: 100% 3px;
 }
 
 .icon-container {
@@ -96,7 +145,7 @@ nav {
   @apply flex justify-center items-center;
 }
 
-nav .nav-item.router-link-exact-active {
-  @apply text-white bg-primary;
+.nav-item.router-link-exact-active {
+  background-size: 100% 3px;
 }
 </style>
