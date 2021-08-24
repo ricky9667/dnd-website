@@ -1,11 +1,7 @@
 <template>
   <div id="transportation">
     <Header title="交通資訊" subtitle="Transportation">
-      <img
-        class="header-image"
-        src="https://i.imgur.com/B76LE0S.jpg"
-        alt="Room example"
-      />
+      <img class="header-image" :src="headerImage" alt="Room example" />
     </Header>
 
     <section class="content-block">
@@ -36,12 +32,15 @@ export default {
   name: "Transportation",
   components: { Header, Footer },
   setup() {
+    const headerImage =
+      "https://ik.imagekit.io/pxhytijjnsj/transportation-min_8kPkJfs1K.jpg?updatedAt=1629825926470";
+
     const transportationInfo = [
       "民宿位在三星市中心和天送埤中間，是前往太平山、明池、棲蘭、武陵農場與福壽山農場等地的入口。羅東轉運站、羅東市中心有公車 1792、1793 可搭乘至茶廠站，下車後步行約 3 分鐘到達民宿。",
       "雖遠離塵囂，但不會遺世獨立，附近有步行可達的公車站、超市、咖啡簡餐。距離三星市區1.5km，有全聯社、餐廳、知名老店白雪冰店、米粉湯等。距離天送埤1.5km，有知名小吃味珍香卜肉、蔥油餅。",
     ];
 
-    return { transportationInfo };
+    return { headerImage, transportationInfo };
   },
 };
 </script>

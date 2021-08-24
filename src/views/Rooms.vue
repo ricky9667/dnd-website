@@ -1,11 +1,7 @@
 <template>
   <div id="rooms">
     <Header title="客房介紹" subtitle="Rooms">
-      <img
-        class="header-image"
-        src="https://i.imgur.com/B76LE0S.jpg"
-        alt="Room example"
-      />
+      <img class="header-image" :src="headerImage" alt="Room example" />
     </Header>
 
     <section class="content-block">
@@ -295,6 +291,9 @@ export default {
   name: "Rooms",
   components: { CustomTitle, Header, Footer, Swiper, SwiperSlide },
   setup() {
+    const headerImage =
+      "https://ik.imagekit.io/pxhytijjnsj/rooms-min_AALKbld4y.jpg?updatedAt=1629825934506";
+
     const roomInfo = [
       {
         id: 0,
@@ -330,9 +329,9 @@ export default {
     const room2A = {
       title: "2A 山景房",
       images: [
-        "https://i.imgur.com/UHxUVHA.jpg",
-        "https://i.imgur.com/lJAioO9.jpg",
-        "https://i.imgur.com/0H6pIzi.jpg",
+        "https://ik.imagekit.io/pxhytijjnsj/2A-min_27Jx4BE4o.jpg?updatedAt=1629827328394",
+        "https://ik.imagekit.io/pxhytijjnsj/2A-1-min_w-mEUCtL6.jpg?updatedAt=1629827341285",
+        "hhttps://ik.imagekit.io/pxhytijjnsj/2A-2-min_XNgmaH1cg.jpg?updatedAt=1629827322020",
       ],
       descriptions: [
         { id: 0, text: "房型 2A 有一張加大雙人床，和 2 張沙發。" },
@@ -347,9 +346,9 @@ export default {
     const room2B = {
       title: "2B 樓中樓山景房",
       images: [
-        "https://i.imgur.com/YEeqngr.jpg",
-        "https://i.imgur.com/DzH1qkY.jpg",
-        "https://i.imgur.com/QF8aCB5.jpg",
+        "https://ik.imagekit.io/pxhytijjnsj/2B-min_YowtIH-uR.jpg?updatedAt=1629827265086",
+        "https://ik.imagekit.io/pxhytijjnsj/2B-1-min_In3RJ-iPY.jpg?updatedAt=1629827332433",
+        "https://ik.imagekit.io/pxhytijjnsj/2B-2-min_a_0sU7ZX0.jpg?updatedAt=1629827336601",
       ],
       descriptions: [
         {
@@ -363,9 +362,9 @@ export default {
     const room2C = {
       title: "2C 樓中樓山景房",
       images: [
-        "https://i.imgur.com/a3VaT8t.jpg",
-        "https://i.imgur.com/V8smQxY.jpg",
-        "https://i.imgur.com/CMD9joE.jpg",
+        "https://ik.imagekit.io/pxhytijjnsj/2C-min__kD5lO_A2.jpg?updatedAt=1629827310074",
+        "https://ik.imagekit.io/pxhytijjnsj/2C-1-min_bjN09h9GP.jpg?updatedAt=1629827317689",
+        "https://ik.imagekit.io/pxhytijjnsj/2C-2-min_qqPYWaKI4.jpg?updatedAt=1629827312429",
       ],
       descriptions: [
         {
@@ -376,7 +375,7 @@ export default {
       price: { weekday: 2780, weekend: 3180, holiday: 4770 },
     };
 
-    return { roomInfo, room2F, room2A, room2B, room2C };
+    return { headerImage, roomInfo, room2F, room2A, room2B, room2C };
   },
 };
 </script>
