@@ -15,10 +15,9 @@ jobs:
           node-version: "16"
 
       - name: Install and Build
-        run: |
-          npm install -g yarn
-          npm install -g @vue/cli
-          yarn build
+        run: npm install -g yarn
+        run: yarn global add @vue/cli
+        run: yarn build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
