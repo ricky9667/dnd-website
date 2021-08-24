@@ -9,14 +9,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.1
 
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
       - name: Install and Build
         run: |
           npm install -g yarn
-          yarn global add @vue/cli
+          yarn install --frozen-lockfile
           yarn build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
-          folder: build
+          folder: ./dist
+          clean: false
