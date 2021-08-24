@@ -2,10 +2,17 @@
   <nav class="flex flex-col md:flex-row justify-between">
     <div class="flex flex-row justify-between">
       <router-link to="/">
-        <img class="h-12 md:h-16 px-4 py-1" src="./assets/logo/dnd_logo_color.png" alt="首頁">
+        <img
+          class="h-12 md:h-16 px-4 py-1"
+          src="./assets/logo/dnd_logo_color.png"
+          alt="首頁"
+        />
       </router-link>
 
-      <div @click="toggleNavbar" class="md:hidden float-right icon-container nav-item">
+      <div
+        @click="toggleNavbar"
+        class="md:hidden float-right icon-container nav-item"
+      >
         <HamburgerButton ref="hamburger" :open="isOpenNavbar" />
       </div>
     </div>
@@ -23,11 +30,19 @@
         <RoomsIcon />
         <div>客房介紹</div>
       </router-link>
-      <router-link to="/reservation" class="nav-item nav-link" @click="closeNavbar">
+      <router-link
+        to="/reservation"
+        class="nav-item nav-link"
+        @click="closeNavbar"
+      >
         <ReservationIcon />
         <div>訂房資訊</div>
       </router-link>
-      <router-link to="/transportation" class="nav-item nav-link" @click="closeNavbar">
+      <router-link
+        to="/transportation"
+        class="nav-item nav-link"
+        @click="closeNavbar"
+      >
         <TransportationIcon />
         <div>交通資訊</div>
       </router-link>
@@ -38,67 +53,66 @@
     </div>
   </nav>
 
-  <router-view/>
+  <router-view />
 </template>
 
 <script>
-import {onMounted, ref} from 'vue'
-import HamburgerButton from './components/HamburgerButton'
-import HomeIcon from './components/icons/HomeIcon'
-import AboutIcon from './components/icons/AboutIcon'
-import RoomsIcon from './components/icons/RoomsIcon'
-import ReservationIcon from './components/icons/ReservationIcon'
-import TransportationIcon from './components/icons/TransportationIcon'
-import TourismIcon from './components/icons/TourismIcon'
-
+import { onMounted, ref } from "vue";
+import HamburgerButton from "./components/HamburgerButton";
+import HomeIcon from "./components/icons/HomeIcon";
+import AboutIcon from "./components/icons/AboutIcon";
+import RoomsIcon from "./components/icons/RoomsIcon";
+import ReservationIcon from "./components/icons/ReservationIcon";
+import TransportationIcon from "./components/icons/TransportationIcon";
+import TourismIcon from "./components/icons/TourismIcon";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HamburgerButton, 
-    HomeIcon, 
-    AboutIcon, 
-    RoomsIcon, 
+    HamburgerButton,
+    HomeIcon,
+    AboutIcon,
+    RoomsIcon,
     ReservationIcon,
     TransportationIcon,
-    TourismIcon
+    TourismIcon,
   },
   setup() {
     const navbarItems = [
-      {id: 0, path: '/', title: '首頁'},
-      {id: 1, path: '/about', title: '關於我們'},
-      {id: 2, path: '/rooms', title: '客房介紹'},
-      {id: 3, path: '/reservation', title: '訂房資訊'},
-      {id: 4, path: '/transportation', title: '交通資訊'},
-      {id: 5, path: '/tourism', title: '鄰近景點'}
-    ]
-    const navbarRef = ref({})
-    const hamburger = ref({})
-    const isOpenNavbar = ref(false)
+      { id: 0, path: "/", title: "首頁" },
+      { id: 1, path: "/about", title: "關於我們" },
+      { id: 2, path: "/rooms", title: "客房介紹" },
+      { id: 3, path: "/reservation", title: "訂房資訊" },
+      { id: 4, path: "/transportation", title: "交通資訊" },
+      { id: 5, path: "/tourism", title: "鄰近景點" },
+    ];
+    const navbarRef = ref({});
+    const hamburger = ref({});
+    const isOpenNavbar = ref(false);
 
     onMounted(() => {
-      navbarRef.value = document.getElementsByClassName('nav-links')[0]
-    })
+      navbarRef.value = document.getElementsByClassName("nav-links")[0];
+    });
 
     const toggleNavbar = () => {
-      navbarRef.value.classList.toggle('active')
-      isOpenNavbar.value = !isOpenNavbar.value
-      hamburger.value.toggleClass()
-    }
+      navbarRef.value.classList.toggle("active");
+      isOpenNavbar.value = !isOpenNavbar.value;
+      hamburger.value.toggleClass();
+    };
 
     const closeNavbar = () => {
-      navbarRef.value.classList.remove('active')
-      hamburger.value.removeClass()
-    }
+      navbarRef.value.classList.remove("active");
+      hamburger.value.removeClass();
+    };
 
-    return {navbarItems, isOpenNavbar, toggleNavbar, closeNavbar, hamburger}
-  }
-}
+    return { navbarItems, isOpenNavbar, toggleNavbar, closeNavbar, hamburger };
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Open Sans', 'Noto Sans TC', Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Noto Sans TC", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -133,7 +147,7 @@ nav {
   background-size: 0% 3px;
   background-repeat: no-repeat;
   background-position: left bottom;
-  transition: background-size .25s ease;
+  transition: background-size 0.25s ease;
 }
 
 .nav-link:hover {
