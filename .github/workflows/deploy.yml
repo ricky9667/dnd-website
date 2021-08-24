@@ -1,9 +1,6 @@
 name: Build and Deploy
 
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
 jobs:
   build-and-deploy:
@@ -20,5 +17,5 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          branch: gh-pages
+          branch: gh-pages-test
           folder: build
