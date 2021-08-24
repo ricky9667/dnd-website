@@ -6,8 +6,8 @@
 
     <section class="content-block">
       <CustomTitle title="客房與公共空間" />
-      <p v-for="info in roomInfo" :key="info.id" class="my-1">
-        {{ info.text }}
+      <p v-for="(info, index) in roomInfo" :key="index" class="my-1">
+        {{ info }}
       </p>
     </section>
 
@@ -20,8 +20,12 @@
           :loop="true"
           :pagination="{ clickable: true }"
         >
-          <swiper-slide class="rounded-xl overflow-hidden">
-            <img class="swiper-image rounded-xl" :src="room2F.image" alt="2F" />
+          <swiper-slide
+            v-for="(image, index) in room2F.images"
+            :key="index"
+            class="rounded-xl overflow-hidden"
+          >
+            <img class="swiper-image rounded-xl" :src="image" alt="2F" />
           </swiper-slide>
         </swiper>
       </div>
@@ -32,16 +36,16 @@
           <CustomTitle title="客房介紹" />
           <ul class="list-disc list-inside">
             <li
-              v-for="description in room2F.descriptions"
-              :key="description.id"
+              v-for="(description, index) in room2F.descriptions"
+              :key="index"
             >
-              {{ description.text }}
+              {{ description }}
             </li>
           </ul>
         </div>
 
         <div>
-          <CustomTitle title="定價" />
+          <CustomTitle title="定價（６人）" />
           <div class="price-table">
             <div class="table-row bg-primary font-bold text-white">
               <div class="price-table-cell">平日</div>
@@ -64,7 +68,7 @@
                 hover:animate-bounce
               "
             >
-              ＋ 新增房客
+              ＋ 查看增加人數價格
             </p>
           </a>
         </div>
@@ -96,16 +100,16 @@
           <CustomTitle title="客房介紹" />
           <ul class="list-disc list-inside">
             <li
-              v-for="description in room2A.descriptions"
-              :key="description.id"
+              v-for="(description, index) in room2A.descriptions"
+              :key="index"
             >
-              {{ description.text }}
+              {{ description }}
             </li>
           </ul>
         </div>
 
         <div>
-          <CustomTitle title="定價" />
+          <CustomTitle title="定價（２人）" />
           <div class="price-table">
             <div class="table-row bg-primary font-bold text-white">
               <div class="price-table-cell">平日</div>
@@ -128,7 +132,7 @@
                 hover:animate-bounce
               "
             >
-              ＋ 新增房客
+              ＋ 查看增加人數價格
             </p>
           </a>
         </div>
@@ -160,16 +164,16 @@
           <CustomTitle title="客房介紹" />
           <ul class="list-disc list-inside">
             <li
-              v-for="description in room2B.descriptions"
-              :key="description.id"
+              v-for="(description, index) in room2B.descriptions"
+              :key="index"
             >
-              {{ description.text }}
+              {{ description }}
             </li>
           </ul>
         </div>
 
         <div>
-          <CustomTitle title="定價" />
+          <CustomTitle title="定價（２人）" />
           <div class="price-table">
             <div class="table-row bg-primary font-bold text-white">
               <div class="price-table-cell">平日</div>
@@ -192,7 +196,7 @@
                 hover:animate-bounce
               "
             >
-              ＋ 新增房客
+              ＋ 查看增加人數價格
             </p>
           </a>
         </div>
@@ -224,16 +228,16 @@
           <CustomTitle title="客房介紹" />
           <ul class="list-disc list-inside">
             <li
-              v-for="description in room2C.descriptions"
-              :key="description.id"
+              v-for="(description, index) in room2C.descriptions"
+              :key="index"
             >
-              {{ description.text }}
+              {{ description }}
             </li>
           </ul>
         </div>
 
         <div>
-          <CustomTitle title="定價" />
+          <CustomTitle title="定價（２人）" />
           <div class="price-table">
             <div class="table-row bg-primary font-bold text-white">
               <div class="price-table-cell">平日</div>
@@ -256,7 +260,7 @@
                 hover:animate-bounce
               "
             >
-              ＋ 新增房客
+              ＋ 查看增加人數價格
             </p>
           </a>
         </div>
@@ -295,33 +299,21 @@ export default {
       "https://ik.imagekit.io/pxhytijjnsj/rooms-min_AALKbld4y.jpg?updatedAt=1629825934506";
 
     const roomInfo = [
-      {
-        id: 0,
-        text: "DnD 為合法新建民宿，為獨棟農舍，周遭是稻米、青蔥種植區，遠處群山環繞，安靜、空氣好。",
-      },
-      {
-        id: 1,
-        text: "民宿 1 樓的公共空間有客廳與餐廳，2 樓則有 3 間住宿客房，每間客房可容納 2 - 6 人住宿，全棟最大容量為住宿 16 人。",
-      },
-      {
-        id: 2,
-        text: "所有房間均有大面窗景，北歐風實木家具。餐廳有真正的材燒壁爐、懷舊木馬，客廳有積木火車軌道、各類書籍消遣時間。",
-      },
-      { id: 3, text: "或者也可以喝杯咖啡，享受周遭滿滿的綠意。" },
+      "DnD 為合法新建民宿，為獨棟農舍，周遭是稻米、青蔥種植區，遠處群山環繞，安靜、空氣好。",
+      "民宿 1 樓的公共空間有客廳與餐廳，2 樓則有 3 間住宿客房，每間客房可容納 2 - 6 人住宿，全棟最大容量為住宿 16 人。",
+      "所有房間均有大面窗景，北歐風實木家具。餐廳有真正的材燒壁爐、懷舊木馬，客廳有積木火車軌道、各類書籍消遣時間。",
+      "或者也可以喝杯咖啡，享受周遭滿滿的綠意。",
     ];
 
     const room2F = {
       title: "2F 包層",
-      image: "https://i.imgur.com/B76LE0S.jpg",
+      images: [
+        "https://ik.imagekit.io/pxhytijjnsj/2F-min_huytqpMAp.jpg?updatedAt=1629828843089",
+        headerImage,
+      ],
       descriptions: [
-        {
-          id: 0,
-          text: "包層為同時預訂 2F 三間房間，當天不會有其他客人入住。",
-        },
-        {
-          id: 1,
-          text: "入住人數可為 6 - 16 人，費用依實際人數而有不同。當住宿人數為 6 人時收費如下表。",
-        },
+        "包層為同時預訂 2F 三間房間，當天不會有其他客人入住。",
+        "入住人數可為 6 - 16 人，費用依實際人數而有不同。當住宿人數為 6 人時收費如下表。",
       ],
       price: { weekday: 8340, weekend: 9540, holiday: 14310 },
     };
@@ -334,11 +326,8 @@ export default {
         "hhttps://ik.imagekit.io/pxhytijjnsj/2A-2-min_XNgmaH1cg.jpg?updatedAt=1629827322020",
       ],
       descriptions: [
-        { id: 0, text: "房型 2A 有一張加大雙人床，和 2 張沙發。" },
-        {
-          id: 1,
-          text: "4 人住宿時使用一張乳膠墊沙發床，6 人住宿時使用 2 張乳膠墊沙發床。",
-        },
+        "房型 2A 有一張加大雙人床，和 2 張沙發。",
+        "4 人住宿時使用一張乳膠墊沙發床，6 人住宿時使用 2 張乳膠墊沙發床。",
       ],
       price: { weekday: 2880, weekend: 3280, holiday: 4920 },
     };
@@ -351,10 +340,7 @@ export default {
         "https://ik.imagekit.io/pxhytijjnsj/2B-2-min_a_0sU7ZX0.jpg?updatedAt=1629827336601",
       ],
       descriptions: [
-        {
-          id: 0,
-          text: "房型 2B 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊。",
-        },
+        "房型 2B 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊。",
       ],
       price: { weekday: 2680, weekend: 3080, holiday: 4620 },
     };
@@ -367,10 +353,7 @@ export default {
         "https://ik.imagekit.io/pxhytijjnsj/2C-2-min_qqPYWaKI4.jpg?updatedAt=1629827312429",
       ],
       descriptions: [
-        {
-          id: 0,
-          text: "房型 2C 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊，住宿 5 - 6 人使用沙發床。",
-        },
+        "房型 2C 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊，住宿 5 - 6 人使用沙發床。",
       ],
       price: { weekday: 2780, weekend: 3180, holiday: 4770 },
     };
