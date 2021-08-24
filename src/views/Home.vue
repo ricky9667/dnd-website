@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <Header title="DnD 休閒民宿" subtitle="DnD Homestay">
+    <Header title="DnD 休閒民宿" subtitle="DnD Homestay" class="mb-16">
       <img
         class="header-image"
         src="https://i.imgur.com/B76LE0S.jpg"
@@ -8,9 +8,9 @@
       />
     </Header>
 
-    <ImageSection title="關於 DnD" :infos="aboutDndInfo">
+    <ImageSection title="來到 DnD" :infos="aboutDndInfo">
       <img
-        class="image-block"
+        class="hidden lg:block image-block"
         src="../assets/logo/dnd_logo_color.png"
         alt="About DnD"
       />

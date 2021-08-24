@@ -144,14 +144,14 @@ nav {
   @apply h-10 md:h-auto w-full sm:w-1/3 md:w-28 lg:w-36 xl:w-44 md:mx-px;
 
   background-image: linear-gradient(#335443, #335443);
-  background-size: 0% 3px;
+  background-size: 0% 4px;
   background-repeat: no-repeat;
   background-position: left bottom;
   transition: background-size 0.25s ease;
 }
 
 .nav-link:hover {
-  background-size: 100% 3px;
+  background-size: 100% 4px;
 }
 
 .icon-container {
@@ -160,6 +160,6 @@ nav {
 }
 
 .nav-item.router-link-exact-active {
-  background-size: 100% 3px;
+  background-size: 100% 4px;
 }
 </style>

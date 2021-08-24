@@ -5,7 +5,12 @@
       <h2 class="pt-0 pb-4">{{ title }}</h2>
       <div class="flex flex-col text-left items-start pt-4">
         <p v-for="info in infos" :key="info.id" class="my-1">{{ info.text }}</p>
-        <router-link v-if="button" class="image-section-button mt-2 lg:mt-4" :to="button.link">{{ button.text }}</router-link>
+        <router-link
+          v-if="button"
+          class="image-section-button mt-2 lg:mt-4"
+          :to="button.link"
+          >{{ button.text }}</router-link
+        >
       </div>
     </div>
   </div>
@@ -13,9 +18,9 @@
 
 <script>
 export default {
-  name: 'ImageSection',
-  props: ['title', 'infos', 'button'],
-}
+  name: "ImageSection",
+  props: ["title", "infos", "button"],
+};
 </script>
 
 <style>
@@ -38,7 +43,7 @@ export default {
 }
 
 .image-section-button {
-  @apply text-sm px-6 py-2 my-2;
+  @apply text-sm text-primary px-6 py-2 my-2;
   @apply md:text-base md:my-4;
   @apply inline-block rounded-full border-2 border-primary bg-secondary;
   @apply hover:text-white hover:bg-primary transform duration-200 font-bold;
