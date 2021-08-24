@@ -58,6 +58,19 @@
               <div class="price-table-cell">${{ room2F.price.holiday }}</div>
             </div>
           </div>
+          <a href="#add-tenant">
+            <p
+              class="
+                my-2
+                text-center
+                lg:text-left
+                hover:text-primary
+                hover:animate-bounce
+              "
+            >
+              ＋ 新增房客
+            </p>
+          </a>
         </div>
       </div>
     </section>
@@ -109,6 +122,19 @@
               <div class="price-table-cell">${{ room2A.price.holiday }}</div>
             </div>
           </div>
+          <a href="#add-tenant">
+            <p
+              class="
+                my-2
+                text-center
+                lg:text-left
+                hover:text-primary
+                hover:animate-bounce
+              "
+            >
+              ＋ 新增房客
+            </p>
+          </a>
         </div>
       </div>
     </section>
@@ -160,6 +186,19 @@
               <div class="price-table-cell">${{ room2B.price.holiday }}</div>
             </div>
           </div>
+          <a href="#add-tenant">
+            <p
+              class="
+                my-2
+                text-center
+                lg:text-left
+                hover:text-primary
+                hover:animate-bounce
+              "
+            >
+              ＋ 新增房客
+            </p>
+          </a>
         </div>
       </div>
     </section>
@@ -211,11 +250,24 @@
               <div class="price-table-cell">${{ room2C.price.holiday }}</div>
             </div>
           </div>
+          <a href="#add-tenant">
+            <p
+              class="
+                my-2
+                text-center
+                lg:text-left
+                hover:text-primary
+                hover:animate-bounce
+              "
+            >
+              ＋ 新增房客
+            </p>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="content-block">
+    <section id="add-tenant" class="content-block">
       <CustomTitle title="增加人數價格" />
       <h4 class="font-bold my-1">平日 & 假日</h4>
       <ul class="list-disc list-inside">
@@ -332,7 +384,7 @@ export default {
 <style>
 .rooms-section {
   @apply grid grid-cols-1 lg:grid-cols-3 lg:gap-8;
-  @apply max-w-screen-2xl mx-auto px-4 md:px-8 lg:px-12 py-8 md:py-12 lg:py-20;
+  @apply max-w-screen-2xl mx-auto px-4 md:px-8 lg:px-12 py-8 md:py-12;
 }
 
 .rooms-content {
@@ -359,7 +411,7 @@ export default {
 }
 
 .price-table-cell {
-  @apply table-cell py-1;
+  @apply table-cell py-1 w-1/4;
 }
 
 .rooms-container {
