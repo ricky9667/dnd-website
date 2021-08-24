@@ -16,7 +16,6 @@ jobs:
 
       - name: Install and Build
         run: npm install -g yarn
-        run: yarn global add @vue/cli
         run: yarn build
 
       - name: Deploy
