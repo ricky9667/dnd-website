@@ -4,7 +4,7 @@
       <div id="back-to-top-container">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6 text-primary"
+          class="h-4 w-4 lg:h-6 lg:w-6 text-primary"
           viewBox="0 0 24 24"
           stroke="currentColor"
         >
@@ -29,7 +29,7 @@ export default {
 
 <style>
 #back-to-top {
-  @apply w-min my-4;
+  @apply w-min my-4 z-10;
   @apply transform duration-300 hover:-translate-y-1.5;
 }
 
@@ -38,6 +38,6 @@ export default {
 }
 
 #back-to-top-text {
-  @apply text-base md:text-lg font-bold text-primary whitespace-nowrap;
+  @apply text-base md:text-lg font-bold text-primary whitespace-nowrap ml-1;
 }
 </style>

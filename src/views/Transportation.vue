@@ -1,8 +1,8 @@
 <template>
   <div id="transportation">
-    <Header title="交通資訊" subtitle="Transportation">
-      <img class="header-image" :src="headerImage" alt="Room example" />
-    </Header>
+    <custom-header title="交通資訊" subtitle="Transportation">
+      <img class="header-image" :src="headerImage" alt="Transportation" />
+    </custom-header>
 
     <section class="content-block">
       <p v-for="info in transportationInfo" :key="info" class="my-1">
@@ -20,17 +20,17 @@
       ></iframe>
     </div>
 
-    <Footer />
+    <custom-footer />
   </div>
 </template>
 
 <script>
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import CustomHeader from "../components/CustomHeader";
+import CustomFooter from "../components/CustomFooter";
 
 export default {
   name: "Transportation",
-  components: { Header, Footer },
+  components: { CustomHeader, CustomFooter },
   setup() {
     const headerImage =
       "https://ik.imagekit.io/pxhytijjnsj/transportation-min_8kPkJfs1K.jpg?updatedAt=1629825926470";

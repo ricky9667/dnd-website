@@ -13,21 +13,21 @@
         @click="toggleNavbar"
         class="md:hidden float-right icon-container nav-item"
       >
-        <HamburgerButton ref="hamburger" :open="isOpenNavbar" />
+        <hamburger-button ref="hamburger" :open="isOpenNavbar" />
       </div>
     </div>
 
     <div class="nav-links">
       <router-link to="/" class="nav-item nav-link" @click="closeNavbar">
-        <HomeIcon />
+        <home-icon />
         <div class="">首頁</div>
       </router-link>
       <router-link to="/about" class="nav-item nav-link" @click="closeNavbar">
-        <AboutIcon />
+        <about-icon />
         <div>關於我們</div>
       </router-link>
       <router-link to="/rooms" class="nav-item nav-link" @click="closeNavbar">
-        <RoomsIcon />
+        <rooms-icon />
         <div>客房介紹</div>
       </router-link>
       <router-link
@@ -35,7 +35,7 @@
         class="nav-item nav-link"
         @click="closeNavbar"
       >
-        <ReservationIcon />
+        <reservation-icon />
         <div>訂房資訊</div>
       </router-link>
       <router-link
@@ -43,11 +43,11 @@
         class="nav-item nav-link"
         @click="closeNavbar"
       >
-        <TransportationIcon />
+        <transportation-icon />
         <div>交通資訊</div>
       </router-link>
       <router-link to="/tourism" class="nav-item nav-link" @click="closeNavbar">
-        <TourismIcon />
+        <tourism-icon />
         <div>鄰近景點</div>
       </router-link>
     </div>

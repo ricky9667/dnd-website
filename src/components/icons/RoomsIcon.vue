@@ -1,6 +1,10 @@
 <template>
   <div class="mr-1">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <svg
+      id="rooms-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+    >
       <g>
         <g>
           <path
@@ -48,6 +52,12 @@
 
 <script>
 export default {
-  name: 'RoomsIcon',
+  name: "rooms-icon",
 };
 </script>
+
+<style>
+#rooms-icon {
+  fill: #335443;
+}
+</style>

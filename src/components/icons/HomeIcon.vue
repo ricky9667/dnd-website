@@ -1,6 +1,7 @@
 <template>
   <div class="mr-2">
     <svg
+      id="home-icon"
       xmlns="http://www.w3.org/2000/svg"
       height="511pt"
       width="511pt"
@@ -15,6 +16,12 @@
 
 <script>
 export default {
-  name: 'HomeIcon'
-}
+  name: "home-icon",
+};
 </script>
+
+<style>
+#home-icon {
+  fill: #335443;
+}
+</style>

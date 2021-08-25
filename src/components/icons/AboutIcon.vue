@@ -1,6 +1,10 @@
 <template>
   <div class="mr-1">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 330">
+    <svg
+      id="about-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 330 330"
+    >
       <g>
         <g>
           <g>
@@ -42,6 +46,12 @@
 
 <script>
 export default {
-  name: 'AboutIcon',
+  name: "about-icon",
 };
 </script>
+
+<style>
+#about-icon {
+  fill: #335443;
+}
+</style>

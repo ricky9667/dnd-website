@@ -1,18 +1,18 @@
 <template>
   <div id="home">
-    <Header title="DnD 民宿" subtitle="DnD Homestay" class="mb-16">
+    <custom-header title="DnD 民宿" subtitle="DnD Homestay">
       <img class="header-image" :src="headerImage" alt="Home" />
-    </Header>
+    </custom-header>
 
-    <ImageSection title="來到 DnD" :infos="aboutDndInfo">
+    <image-section title="來到 DnD" :infos="aboutDndInfo">
       <img
         class="hidden lg:block image-block"
         src="https://ik.imagekit.io/pxhytijjnsj/about-min_3s15cyzSe.jpg?updatedAt=1629827141935"
         alt="About DnD"
       />
-    </ImageSection>
+    </image-section>
 
-    <ImageSection
+    <image-section
       title="DnD 環境"
       :infos="surroundingsInfo"
       :button="surroundingsButton"
@@ -22,9 +22,9 @@
         src="https://ik.imagekit.io/pxhytijjnsj/surroundings-min_wXK6ocpfL.jpg?updatedAt=1629827088209"
         alt="DnD Surroundings"
       />
-    </ImageSection>
+    </image-section>
 
-    <ImageSection
+    <image-section
       title="DnD 位置"
       :infos="locationInfo"
       :button="locationButton"
@@ -34,20 +34,20 @@
         src="https://ik.imagekit.io/pxhytijjnsj/tourism-min_b7KnlkS6jw.jpg?updatedAt=1629825929111"
         alt="DnD Location"
       />
-    </ImageSection>
+    </image-section>
 
-    <Footer />
+    <custom-footer />
   </div>
 </template>
 
 <script>
+import CustomHeader from "../components/CustomHeader";
+import CustomFooter from "../components/CustomFooter";
 import ImageSection from "../components/ImageSection";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 export default {
   name: "Home",
-  components: { Header, ImageSection, Footer },
+  components: { CustomHeader, CustomFooter, ImageSection },
   setup() {
     const headerImage =
       "https://ik.imagekit.io/pxhytijjnsj/home-min_j91Rodc2s.jpg?updatedAt=1629825939747";

@@ -11,7 +11,7 @@
 import {ref, onMounted} from 'vue';
 
 export default {
-  name: 'HamburgerButton',
+  name: 'hamburger-button',
   props: [],
   setup() {
     const toggleButtonRef = ref({})
