@@ -1,6 +1,7 @@
 <template>
   <div class="mr-1">
     <svg
+      id="tourism-icon"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 480.1 480.1"
     >
@@ -62,6 +63,12 @@
 
 <script>
 export default {
-  name: 'TourismIcon',
+  name: "tourism-icon",
 };
 </script>
+
+<style>
+#tourism-icon {
+  fill: #335443;
+}
+</style>

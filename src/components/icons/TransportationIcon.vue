@@ -1,6 +1,10 @@
 <template>
   <div class="mr-1">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <svg
+      id="transportation-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+    >
       <g>
         <g>
           <path
@@ -42,6 +46,12 @@
 
 <script>
 export default {
-  name: 'TransportationIcon',
+  name: "transportation-icon",
 };
 </script>
+
+<style>
+#transportation-icon {
+  fill: #335443;
+}
+</style>

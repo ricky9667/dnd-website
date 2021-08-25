@@ -118,7 +118,9 @@
     </section>
 
     <section id="add-tenant" class="content-block">
-      <CustomTitle title="增加人數價格" />
+      <div class="">
+        <CustomTitle title="增加人數價格" />
+      </div>
       <h4 class="font-bold my-1">平日 & 假日</h4>
       <ul class="list-disc list-inside">
         <li>３歲以上：600 元/人（含早餐及寢具）</li>
