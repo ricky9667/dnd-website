@@ -47,6 +47,6 @@
 
 <script>
 export default {
-  name: 'ReservationIcon',
+  name: "ReservationIcon",
 };
 </script>
