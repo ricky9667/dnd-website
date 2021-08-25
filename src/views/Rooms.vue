@@ -1,8 +1,8 @@
 <template>
   <div id="rooms">
-    <Header title="客房介紹" subtitle="Rooms">
-      <img class="header-image" :src="headerImage" alt="Room example" />
-    </Header>
+    <custom-header title="客房介紹" subtitle="Rooms">
+      <img class="header-image" :src="headerImage" alt="Rooms" />
+    </custom-header>
 
     <section class="content-block">
       <CustomTitle title="客房與公共空間" />
@@ -281,19 +281,19 @@
       </ul>
     </section>
 
-    <Footer />
+    <custom-footer />
   </div>
 </template>
 
 <script>
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import CustomHeader from "../components/CustomHeader";
+import CustomFooter from "../components/CustomFooter";
 import CustomTitle from "../components/CustomTitle";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
 export default {
   name: "Rooms",
-  components: { CustomTitle, Header, Footer, Swiper, SwiperSlide },
+  components: { CustomTitle, CustomHeader, CustomFooter, Swiper, SwiperSlide },
   setup() {
     const headerImage =
       "https://ik.imagekit.io/pxhytijjnsj/rooms-min_AALKbld4y.jpg?updatedAt=1629825934506";

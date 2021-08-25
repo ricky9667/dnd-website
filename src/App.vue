@@ -13,7 +13,7 @@
         @click="toggleNavbar"
         class="md:hidden float-right icon-container nav-item"
       >
-        <HamburgerButton ref="hamburger" :open="isOpenNavbar" />
+        <hamburger-button ref="hamburger" :open="isOpenNavbar" />
       </div>
     </div>
 

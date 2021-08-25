@@ -1,29 +1,29 @@
 <template>
   <div id="about">
-    <Header title="關於我們" subtitle="About us">
-      <img class="header-image" :src="headerImage" alt="Room example" />
-    </Header>
+    <custom-header title="關於我們" subtitle="About us">
+      <img class="header-image" :src="headerImage" alt="About" />
+    </custom-header>
 
-    <ImageSection title="DnD 的由來" :infos="aboutUsInfo">
+    <image-section title="DnD 的由來" :infos="aboutUsInfo">
       <img
         class="image-block shadow-xl"
         src="https://ik.imagekit.io/pxhytijjnsj/about_lvyrBBCwj.jpg?updatedAt=1629827222671"
         alt="Room example"
       />
-    </ImageSection>
+    </image-section>
 
-    <Footer />
+    <custom-footer />
   </div>
 </template>
 
 <script>
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import CustomHeader from "../components/CustomHeader";
+import CustomFooter from "../components/CustomFooter";
 import ImageSection from "../components/ImageSection";
 
 export default {
   name: "About",
-  components: { ImageSection, Header, Footer },
+  components: { CustomHeader, CustomFooter, ImageSection },
   setup() {
     const headerImage =
       "https://ik.imagekit.io/pxhytijjnsj/about-min_BxEgc7tZz.jpg?updatedAt=1629825928432";

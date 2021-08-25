@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: "ImageSection",
+  name: "image-section",
   props: ["title", "infos", "button"],
 };
 </script>

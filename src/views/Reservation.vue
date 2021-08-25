@@ -1,8 +1,8 @@
 <template>
   <div id="reservation">
-    <Header title="訂房資訊" subtitle="Reservation">
-      <img class="header-image" :src="headerImage" alt="Room example" />
-    </Header>
+    <custom-header title="訂房資訊" subtitle="Reservation">
+      <img class="header-image" :src="headerImage" alt="Reservation" />
+    </custom-header>
 
     <h4 class="m-auto mt-12 mb-6">敬請閱讀注意事項後再付訂金</h4>
 
@@ -30,18 +30,18 @@
       </ol>
     </div>
 
-    <Footer />
+    <custom-footer />
   </div>
 </template>
 
 <script>
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import CustomHeader from "../components/CustomHeader";
+import CustomFooter from "../components/CustomFooter";
 import CustomTitle from "../components/CustomTitle";
 
 export default {
   name: "Reservation",
-  components: { CustomTitle, Header, Footer },
+  components: { CustomHeader, CustomFooter, CustomTitle },
   setup() {
     const headerImage =
       "https://ik.imagekit.io/pxhytijjnsj/reservation-min__fdSKobHi.jpg?updatedAt=1629825920542";
