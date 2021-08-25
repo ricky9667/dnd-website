@@ -9,6 +9,8 @@
     }
 
     body {
+        margin: 0;
+        padding: 0;
         min-height: 100vh;
     }
 
@@ -50,7 +52,6 @@
     
     svg {
         @apply h-6 w-6;
-        fill: #335443;
     }
 
     hr {

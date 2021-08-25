@@ -53,6 +53,7 @@
     </div>
   </nav>
 
+  <BackToTop class="fixed right-4 bottom-4 lg:right-8 lg:bottom-8" />
   <router-view />
 </template>
 
@@ -65,6 +66,7 @@ import RoomsIcon from "./components/icons/RoomsIcon";
 import ReservationIcon from "./components/icons/ReservationIcon";
 import TransportationIcon from "./components/icons/TransportationIcon";
 import TourismIcon from "./components/icons/TourismIcon";
+import BackToTop from "./components/BackToTop";
 
 export default {
   name: "App",
@@ -76,6 +78,7 @@ export default {
     ReservationIcon,
     TransportationIcon,
     TourismIcon,
+    BackToTop,
   },
   setup() {
     const navbarItems = [
