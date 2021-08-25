@@ -30,49 +30,12 @@
         </swiper>
       </div>
 
-      <div class="rooms-content lg:order-first">
-        <h2 class="text-center lg:text-left">{{ room2F.title }}</h2>
-        <div>
-          <CustomTitle title="客房介紹" />
-          <ul class="list-disc list-inside">
-            <li
-              v-for="(description, index) in room2F.descriptions"
-              :key="index"
-            >
-              {{ description }}
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <CustomTitle title="定價（６人）" />
-          <div class="price-table">
-            <div class="table-row bg-primary font-bold text-white">
-              <div class="price-table-cell">平日</div>
-              <div class="price-table-cell">假日</div>
-              <div class="price-table-cell">農曆過年</div>
-            </div>
-            <div class="table-row">
-              <div class="price-table-cell">${{ room2F.price.weekday }}</div>
-              <div class="price-table-cell">${{ room2F.price.weekend }}</div>
-              <div class="price-table-cell">${{ room2F.price.holiday }}</div>
-            </div>
-          </div>
-          <a href="#add-tenant">
-            <p
-              class="
-                my-2
-                text-center
-                lg:text-left
-                hover:text-primary
-                hover:animate-bounce
-              "
-            >
-              ＋ 查看增加人數價格
-            </p>
-          </a>
-        </div>
-      </div>
+      <room-content
+        class="lg:order-first"
+        :title="room2F.title"
+        :descriptions="room2F.descriptions"
+        :price="room2F.price"
+      />
     </section>
 
     <section class="rooms-section">
@@ -94,49 +57,11 @@
         </swiper>
       </div>
 
-      <div class="rooms-content">
-        <h2 class="text-center lg:text-left">{{ room2A.title }}</h2>
-        <div>
-          <CustomTitle title="客房介紹" />
-          <ul class="list-disc list-inside">
-            <li
-              v-for="(description, index) in room2A.descriptions"
-              :key="index"
-            >
-              {{ description }}
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <CustomTitle title="定價（２人）" />
-          <div class="price-table">
-            <div class="table-row bg-primary font-bold text-white">
-              <div class="price-table-cell">平日</div>
-              <div class="price-table-cell">假日</div>
-              <div class="price-table-cell">農曆過年</div>
-            </div>
-            <div class="table-row">
-              <div class="price-table-cell">${{ room2A.price.weekday }}</div>
-              <div class="price-table-cell">${{ room2A.price.weekend }}</div>
-              <div class="price-table-cell">${{ room2A.price.holiday }}</div>
-            </div>
-          </div>
-          <a href="#add-tenant">
-            <p
-              class="
-                my-2
-                text-center
-                lg:text-left
-                hover:text-primary
-                hover:animate-bounce
-              "
-            >
-              ＋ 查看增加人數價格
-            </p>
-          </a>
-        </div>
-      </div>
+      <room-content
+        :title="room2A.title"
+        :descriptions="room2A.descriptions"
+        :price="room2A.price"
+      />
     </section>
 
     <section class="rooms-section">
@@ -158,49 +83,12 @@
         </swiper>
       </div>
 
-      <div class="rooms-content lg:order-first">
-        <h2 class="text-center lg:text-left">{{ room2B.title }}</h2>
-        <div>
-          <CustomTitle title="客房介紹" />
-          <ul class="list-disc list-inside">
-            <li
-              v-for="(description, index) in room2B.descriptions"
-              :key="index"
-            >
-              {{ description }}
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <CustomTitle title="定價（２人）" />
-          <div class="price-table">
-            <div class="table-row bg-primary font-bold text-white">
-              <div class="price-table-cell">平日</div>
-              <div class="price-table-cell">假日</div>
-              <div class="price-table-cell">農曆過年</div>
-            </div>
-            <div class="table-row">
-              <div class="price-table-cell">${{ room2B.price.weekday }}</div>
-              <div class="price-table-cell">${{ room2B.price.weekend }}</div>
-              <div class="price-table-cell">${{ room2B.price.holiday }}</div>
-            </div>
-          </div>
-          <a href="#add-tenant">
-            <p
-              class="
-                my-2
-                text-center
-                lg:text-left
-                hover:text-primary
-                hover:animate-bounce
-              "
-            >
-              ＋ 查看增加人數價格
-            </p>
-          </a>
-        </div>
-      </div>
+      <room-content
+        class="lg:order-first"
+        :title="room2B.title"
+        :descriptions="room2B.descriptions"
+        :price="room2B.price"
+      />
     </section>
 
     <section class="rooms-section">
@@ -222,49 +110,11 @@
         </swiper>
       </div>
 
-      <div class="rooms-content">
-        <h2 class="text-center lg:text-left">{{ room2C.title }}</h2>
-        <div>
-          <CustomTitle title="客房介紹" />
-          <ul class="list-disc list-inside">
-            <li
-              v-for="(description, index) in room2C.descriptions"
-              :key="index"
-            >
-              {{ description }}
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <CustomTitle title="定價（２人）" />
-          <div class="price-table">
-            <div class="table-row bg-primary font-bold text-white">
-              <div class="price-table-cell">平日</div>
-              <div class="price-table-cell">假日</div>
-              <div class="price-table-cell">農曆過年</div>
-            </div>
-            <div class="table-row">
-              <div class="price-table-cell">${{ room2C.price.weekday }}</div>
-              <div class="price-table-cell">${{ room2C.price.weekend }}</div>
-              <div class="price-table-cell">${{ room2C.price.holiday }}</div>
-            </div>
-          </div>
-          <a href="#add-tenant">
-            <p
-              class="
-                my-2
-                text-center
-                lg:text-left
-                hover:text-primary
-                hover:animate-bounce
-              "
-            >
-              ＋ 查看增加人數價格
-            </p>
-          </a>
-        </div>
-      </div>
+      <room-content
+        :title="room2C.title"
+        :descriptions="room2C.descriptions"
+        :price="room2C.price"
+      />
     </section>
 
     <section id="add-tenant" class="content-block">
@@ -289,11 +139,19 @@
 import CustomHeader from "../components/CustomHeader";
 import CustomFooter from "../components/CustomFooter";
 import CustomTitle from "../components/CustomTitle";
+import RoomContent from "../components/RoomContent";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
 export default {
   name: "Rooms",
-  components: { CustomTitle, CustomHeader, CustomFooter, Swiper, SwiperSlide },
+  components: {
+    CustomTitle,
+    CustomHeader,
+    CustomFooter,
+    RoomContent,
+    Swiper,
+    SwiperSlide,
+  },
   setup() {
     const headerImage =
       "https://ik.imagekit.io/pxhytijjnsj/rooms-min_AALKbld4y.jpg?updatedAt=1629825934506";
