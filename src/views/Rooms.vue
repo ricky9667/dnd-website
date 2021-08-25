@@ -323,7 +323,7 @@ export default {
       images: [
         "https://ik.imagekit.io/pxhytijjnsj/2A-min_27Jx4BE4o.jpg?updatedAt=1629827328394",
         "https://ik.imagekit.io/pxhytijjnsj/2A-1-min_w-mEUCtL6.jpg?updatedAt=1629827341285",
-        "hhttps://ik.imagekit.io/pxhytijjnsj/2A-2-min_XNgmaH1cg.jpg?updatedAt=1629827322020",
+        "https://ik.imagekit.io/pxhytijjnsj/2A-2-min_XNgmaH1cg.jpg?updatedAt=1629827322020",
       ],
       descriptions: [
         "房型 2A 有一張加大雙人床，和 2 張沙發。",

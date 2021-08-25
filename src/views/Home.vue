@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <Header title="DnD 休閒民宿" subtitle="DnD Homestay" class="mb-16">
+    <Header title="DnD 民宿" subtitle="DnD Homestay" class="mb-16">
       <img class="header-image" :src="headerImage" alt="Home" />
     </Header>
 

@@ -10,21 +10,22 @@
 
 <script>
 export default {
-  name: 'Header',
-  props: ['title', 'subtitle']
-}
+  name: "Header",
+  props: ["title", "subtitle"],
+};
 </script>
 
 <style>
 header {
   position: relative;
   width: 100%;
+  white-space: nowrap;
 }
 
 .header-image {
   width: 100%;
   height: calc((50vw + 50vh) / 2);
-  filter: brightness(.75);
+  filter: brightness(0.75);
   object-fit: cover;
 }
 
