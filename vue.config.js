@@ -9,7 +9,7 @@ module.exports = {
       config.plugins.push(
         new PrerenderSPAPlugin({
           staticDir: path.join(__dirname, 'dist'),
-          routes: ['/', '/about', '/rooms', '/reservation', '/transportation', 'tourism'],
+          routes: ['/', '/about', '/rooms', '/reservation', '/transportation', '/tourism'],
           renderer: new Renderer({
             renderAfterDocumentEvent: 'render-event',
           }),
