@@ -31,6 +31,17 @@ import CustomFooter from "../components/CustomFooter";
 export default {
   name: "Transportation",
   components: { CustomHeader, CustomFooter },
+  metaInfo() {
+    return {
+      title: "DnD 休閒民宿 - 交通資訊",
+      meta: [
+        { name: "description", content: "DnD 休閒民宿 - 交通資訊" },
+        { property: "og:title", content: "DnD 休閒民宿 - 交通資訊" },
+        { property: "og:site_name", content: "DnD 休閒民宿" },
+        { property: "og:type", content: "website" },
+      ],
+    };
+  },
   setup() {
     const headerImage =
       "https://ik.imagekit.io/pxhytijjnsj/transportation-min_8kPkJfs1K.jpg?updatedAt=1629825926470";
