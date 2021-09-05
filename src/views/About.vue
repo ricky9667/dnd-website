@@ -24,17 +24,6 @@ import ImageSection from "../components/ImageSection";
 export default {
   name: "About",
   components: { CustomHeader, CustomFooter, ImageSection },
-  metaInfo() {
-    return {
-      title: "DnD 休閒民宿 - 關於我們",
-      meta: [
-        { name: "description", content: "DnD 休閒民宿 - 關於我們" },
-        { property: "og:title", content: "DnD 休閒民宿 - 關於我們" },
-        { property: "og:site_name", content: "DnD 休閒民宿" },
-        { property: "og:type", content: "website" },
-      ],
-    };
-  },
   setup() {
     const headerImage =
       "https://ik.imagekit.io/pxhytijjnsj/about-min_BxEgc7tZz.jpg?updatedAt=1629825928432";

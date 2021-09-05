@@ -154,17 +154,6 @@ export default {
     Swiper,
     SwiperSlide,
   },
-  metaInfo() {
-    return {
-      title: "DnD 休閒民宿 - 客房介紹",
-      meta: [
-        { name: "description", content: "DnD 休閒民宿 - 客房介紹" },
-        { property: "og:title", content: "DnD 休閒民宿 - 客房介紹" },
-        { property: "og:site_name", content: "DnD 休閒民宿" },
-        { property: "og:type", content: "website" },
-      ],
-    };
-  },
   setup() {
     const headerImage =
       "https://ik.imagekit.io/pxhytijjnsj/rooms-min_AALKbld4y.jpg?updatedAt=1629825934506";

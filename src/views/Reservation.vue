@@ -42,17 +42,6 @@ import CustomTitle from "../components/CustomTitle";
 export default {
   name: "Reservation",
   components: { CustomHeader, CustomFooter, CustomTitle },
-  metaInfo() {
-    return {
-      title: "DnD 休閒民宿 - 訂房資訊",
-      meta: [
-        { name: "description", content: "DnD 休閒民宿 - 訂房資訊" },
-        { property: "og:title", content: "DnD 休閒民宿 - 訂房資訊" },
-        { property: "og:site_name", content: "DnD 休閒民宿" },
-        { property: "og:type", content: "website" },
-      ],
-    };
-  },
   setup() {
     const headerImage =
       "https://ik.imagekit.io/pxhytijjnsj/reservation-min__fdSKobHi.jpg?updatedAt=1629825920542";
