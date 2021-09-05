@@ -4,7 +4,7 @@
       <div id="back-to-top-container">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-4 w-4 lg:h-6 lg:w-6 text-primary"
+          class="h-6 w-6 text-primary"
           viewBox="0 0 24 24"
           stroke="currentColor"
         >
@@ -34,10 +34,11 @@ export default {
 }
 
 #back-to-top-container {
-  @apply flex flex-row items-center bg-secondary px-4 py-2 rounded-full shadow-lg;
+  @apply flex flex-row items-center bg-secondary rounded-full shadow;
+  @apply p-3 md:px-4 md:py-2;
 }
 
 #back-to-top-text {
-  @apply text-base md:text-lg font-bold text-primary whitespace-nowrap ml-1;
+  @apply hidden md:inline text-lg font-bold text-primary whitespace-nowrap pl-1;
 }
 </style>
