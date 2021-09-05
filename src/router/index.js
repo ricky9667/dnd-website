@@ -5,7 +5,6 @@ import Rooms from '../views/Rooms.vue'
 import Reservation from '../views/Reservation.vue'
 import Transportation from '../views/Transportation.vue'
 import Tourism from '../views/Tourism.vue'
-import NotFound from '../views/NotFound.vue'
 
 
 const routes = [
@@ -44,12 +43,6 @@ const routes = [
     name: 'Tourism',
     component: Tourism,
     meta: {title: 'DnD 休閒民宿 - 鄰近景點'}
-  },
-  {
-    path: '/:catchAll(.*)',
-    name: 'NotFound',
-    component: NotFound,
-    meta: {title: 'Page Not Found'}
   }
 ]
 

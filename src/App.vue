@@ -94,6 +94,7 @@ export default {
     const isOpenNavbar = ref(false);
 
     onMounted(() => {
+      document.dispatchEvent(new Event("render-event"));
       navbarRef.value = document.getElementsByClassName("nav-links")[0];
     });
 

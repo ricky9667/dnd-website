@@ -10,4 +10,7 @@ import 'swiper/components/navigation/navigation.min.css'
 import SwiperCore, {EffectFade, Navigation, Pagination} from 'swiper/core';
 
 SwiperCore.use([EffectFade, Navigation, Pagination]);
-createApp(App).use(router).mount('#app')
+
+createApp(App)
+  .use(router)
+  .mount('#app')
