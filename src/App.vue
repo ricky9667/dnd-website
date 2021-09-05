@@ -80,9 +80,6 @@ export default {
     TourismIcon,
     BackToTop,
   },
-  mounted() {
-    document.dispatchEvent(new Event("render-event"));
-  },
   setup() {
     const navbarItems = [
       { id: 0, path: "/", title: "首頁" },
@@ -97,6 +94,7 @@ export default {
     const isOpenNavbar = ref(false);
 
     onMounted(() => {
+      document.dispatchEvent(new Event("render-event"));
       navbarRef.value = document.getElementsByClassName("nav-links")[0];
     });
 
