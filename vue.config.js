@@ -42,6 +42,15 @@ module.exports = {
             renderAfterDocumentEvent: 'render-event',
             headless: true,
           }),
+          minify: {
+            collapseBooleanAttributes: true,
+            collapseWhitespace: true,
+            decodeEntities: true,
+            keepClosingSlash: true,
+            sortAttributes: true,
+            minifyCSS: true,
+            minifyJS: true
+          }
         })
       );
     }
