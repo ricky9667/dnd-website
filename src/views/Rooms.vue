@@ -5,7 +5,22 @@
     </custom-header>
 
     <section class="content-block">
-      <CustomTitle title="客房與公共空間" />
+      <custom-title title="客房與公共空間">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="title-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"
+          />
+        </svg>
+      </custom-title>
       <p v-for="(info, index) in roomInfo" :key="index" class="my-1">
         {{ info }}
       </p>
@@ -118,9 +133,22 @@
     </section>
 
     <section id="add-tenant" class="content-block">
-      <div class="">
-        <CustomTitle title="增加人數價格" />
-      </div>
+      <custom-title title="增加客房人數">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="title-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+          />
+        </svg>
+      </custom-title>
       <h4 class="font-bold my-1">平日 & 假日</h4>
       <ul class="list-disc list-inside">
         <li>３歲以上：600 元/人（含早餐及寢具）</li>
@@ -254,30 +282,5 @@ export default {
 
 .price-table-cell {
   @apply table-cell py-1 w-1/4;
-}
-
-.rooms-container {
-  @apply flex flex-col;
-  @apply md:flex-row md:flex-wrap;
-}
-
-.room-card {
-  @apply overflow-hidden pb-4 border-2 mx-auto my-10 transform duration-500;
-  @apply w-72 rounded shadow;
-  @apply sm:w-80 sm:rounded-lg sm:shadow-lg;
-  @apply md:w-96 md:rounded-xl md:shadow-xl;
-  @apply lg:w-120 lg:rounded-2xl;
-}
-
-.room-card:hover {
-  @apply border-4;
-}
-
-.card-title {
-  @apply text-2xl font-bold mb-2;
-}
-
-.card-content {
-  @apply text-base text-left px-1;
 }
 </style>

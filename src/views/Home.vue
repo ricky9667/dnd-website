@@ -31,7 +31,7 @@
     >
       <img
         class="image-block"
-        src="https://ik.imagekit.io/pxhytijjnsj/tourism-min_b7KnlkS6jw.jpg?updatedAt=1629825929111"
+        src="https://ik.imagekit.io/pxhytijjnsj/location-min_c-xn6PSTmVf.png?updatedAt=1631021140412"
         alt="DnD Location"
       />
     </image-section>

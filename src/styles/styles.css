@@ -47,7 +47,7 @@
         @apply text-left;
         @apply text-sm;
         @apply md:text-base;
-        @apply xl:text-lg
+        @apply xl:text-lg;
     }
     
     svg {
@@ -60,8 +60,14 @@
 }
 
 .content-block {
-    @apply w-5/6 px-8 py-6 mx-auto text-left bg-gray-100 hover:bg-gray-200 transform duration-200;
-    @apply my-8 rounded;
+    @apply w-5/6 max-w-screen-2xl text-left;
+    @apply bg-gray-100 hover:bg-gray-200 transform duration-200;
+    @apply px-8 py-6 mx-auto my-8 rounded;
     @apply sm:my-12 sm:rounded-lg;
     @apply lg:my-16 lg:rounded-xl;
+}
+
+.title-icon {
+    @apply inline-block text-title;
+    @apply h-6 w-6 lg:h-8 lg:w-8;
 }
