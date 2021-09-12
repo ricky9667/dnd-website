@@ -4,7 +4,7 @@
       <img class="header-image" :src="headerImage" alt="Rooms" />
     </custom-header>
 
-    <section class="content-block" v-if="false">
+    <section class="content-block" v-if="true">
       <custom-title title="客房與公共空間">
         <svg
           xmlns="http://www.w3.org/2000/svg"
