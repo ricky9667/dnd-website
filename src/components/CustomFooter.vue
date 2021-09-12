@@ -88,6 +88,10 @@ export default {
 </script>
 
 <style>
+footer {
+  margin-top: 4rem;
+}
+
 .info-row {
   @apply flex flex-row items-center justify-start;
 }

@@ -20,6 +20,7 @@ header {
   position: relative;
   width: 100%;
   white-space: nowrap;
+  margin-bottom: 4rem;
 }
 
 .header-image {
