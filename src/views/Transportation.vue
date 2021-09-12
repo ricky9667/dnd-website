@@ -4,7 +4,11 @@
       <img class="header-image" :src="headerImage" alt="Transportation" />
     </custom-header>
 
-    <image-section title="民宿位置與交通方式" :infos="transportationInfo">
+    <image-section
+      title="民宿位置與交通方式"
+      :infos="transportationInfo"
+      :button="mapsButton"
+    >
       <iframe
         class="google-map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.0145504468114!2d121.62952617259401!3d24.664709691543308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467e1e860fc55b1%3A0xc8bfd294046ef68e!2zRG5EIOawkeWuvy8gRG5EIEImQg!5e0!3m2!1szh-TW!2stw!4v1627232105031!5m2!1szh-TW!2stw"
@@ -35,7 +39,12 @@ export default {
       "雖遠離塵囂，但不會遺世獨立，附近有步行可達的公車站、超市、咖啡簡餐。距離三星市區1.5km，有全聯社、餐廳、知名老店白雪冰店、米粉湯等。距離天送埤1.5km，有知名小吃味珍香卜肉、蔥油餅。",
     ];
 
-    return { headerImage, transportationInfo };
+    const mapsButton = {
+      text: "查看景點",
+      link: "/tourism",
+    };
+
+    return { headerImage, transportationInfo, mapsButton };
   },
 };
 </script>

@@ -47,8 +47,8 @@ export default {
 .image-section-button {
   @apply text-sm text-primary px-6 py-2 my-2;
   @apply md:text-base md:my-4;
-  @apply inline-block rounded-full border-2 border-primary bg-secondary;
-  @apply hover:text-white hover:bg-primary transform duration-200 font-bold;
+  @apply inline-block rounded-full bg-secondary;
+  @apply hover:text-white hover:bg-primary hover:-translate-y-1 transform duration-300 font-bold;
   @apply focus:text-white focus:bg-primary;
 }
 </style>
