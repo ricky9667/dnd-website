@@ -4,7 +4,7 @@
       <img class="header-image" :src="headerImage" alt="Rooms" />
     </custom-header>
 
-    <section class="content-block">
+    <section class="content-block" v-if="false">
       <custom-title title="客房與公共空間">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -133,32 +133,13 @@
     </section>
 
     <section id="add-tenant" class="content-block">
-      <custom-title title="增加客房人數">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="title-icon"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-          />
-        </svg>
-      </custom-title>
-      <h4 class="font-bold my-1">平日 & 假日</h4>
-      <ul class="list-disc list-inside">
-        <li>３歲以上：600 元/人（含早餐及寢具）</li>
-        <li>３～６歲：300 元/人（含早餐、無寢具）</li>
-      </ul>
-      <h4 class="font-bold my-1">農曆過年</h4>
-      <ul class="list-disc list-inside">
-        <li>３歲以上：800 元/人（含早餐及寢具）</li>
-        <li>３～６歲：400 元/人（含早餐、無寢具）</li>
-      </ul>
+      <h2 class="text-center my-6">增加客房人數</h2>
+
+      <div class="flex flex-col md:flex-row gap-4">
+        <add-tenant-card title="平日" threeToSix="300" overSix="600" />
+        <add-tenant-card title="假日" threeToSix="300" overSix="600" />
+        <add-tenant-card title="農曆過年" threeToSix="400" overSix="800" />
+      </div>
     </section>
 
     <custom-footer />
@@ -170,6 +151,7 @@ import CustomHeader from "../components/CustomHeader";
 import CustomFooter from "../components/CustomFooter";
 import CustomTitle from "../components/CustomTitle";
 import RoomContent from "../components/RoomContent";
+import AddTenantCard from "../components/AddTenantCard";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
 export default {
@@ -179,6 +161,7 @@ export default {
     CustomHeader,
     CustomFooter,
     RoomContent,
+    AddTenantCard,
     Swiper,
     SwiperSlide,
   },

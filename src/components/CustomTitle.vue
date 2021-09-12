@@ -14,6 +14,6 @@ export default {
 
 <style>
 .custom-title {
-  @apply mb-4;
+  @apply mb-2;
 }
 </style>

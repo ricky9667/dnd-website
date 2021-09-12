@@ -60,11 +60,8 @@
 }
 
 .content-block {
-    @apply w-5/6 max-w-screen-2xl text-left;
-    @apply bg-gray-100 hover:bg-gray-200 transform duration-200;
-    @apply px-8 py-6 mx-auto my-8 rounded;
-    @apply sm:my-12 sm:rounded-lg;
-    @apply lg:my-16 lg:rounded-xl;
+    @apply w-5/6 max-w-screen-xl text-left;
+    @apply mx-auto;
 }
 
 .title-icon {

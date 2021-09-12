@@ -21,10 +21,26 @@
       </svg>
     </custom-title>
 
+    <custom-title title="訂房說明">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="title-icon"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+    </custom-title>
+
     <div class="content-block">
-      <CustomTitle title="訂房說明" />
       <ol class="list-decimal list-inside ml-8">
-        <li v-for="(info, index) in reservationInfo" :key="index" class="mb-1">
+        <li v-for="(info, index) in reservationInfo" :key="index" class="my-1">
           {{ info }}
         </li>
       </ol>
@@ -52,9 +68,9 @@ export default {
       "室內一律禁煙，室外備有煙灰缸可使用。",
       "禁止攜帶寵物入住，若自行攜帶寵物將拒絕入住，房費無法退還。",
       "民宿無法接待臨時增加的房客，若有增加人數，無論是大人小孩都請在一天前通知民宿主人。",
-      "民宿 1F 的客廳與餐廳為公共空間，包層客人無使用時間限制，個別客房入住時請在 22:00 後降低音量，以免影響其他房客。",
+      "民宿 1F 的客廳與餐廳為公共空間，包層客人無使用時間限制，個別客房入住時請在晚間 22:00 後降低音量，以免影響其他房客。",
       "本民宿位於山谷中，室外聲音會傳送得很遠，故晚上 21:30 後在室外喧嘩會有警察巡邏，請房客 21:30 後在室外務必保持安靜，以免影響附近鄉民。",
-      "烤肉時間為 16:30 ~ 21:30，地點在民宿後院戶外烤肉區，烤肉需收1000元場地費。可借用烤肉架與代訂食材，烤肉網、鋁箔、木炭與免洗餐具等耗材需自備。",
+      "烤肉時間為 16:30 ~ 21:30，地點在民宿後院戶外烤肉區，烤肉需收 1000 元場地費。可借用烤肉架與代訂食材，烤肉網、鋁箔、木炭與免洗餐具等耗材需自備。",
       "廚房不外借，室內無法煮火鍋。另無提供電梯服務。",
       "取消訂房之扣款依觀光局規定辦理。",
     ];
