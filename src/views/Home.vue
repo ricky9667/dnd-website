@@ -31,7 +31,7 @@
     >
       <img
         class="image-block"
-        src="https://ik.imagekit.io/pxhytijjnsj/location-min_c-xn6PSTmVf.png?updatedAt=1631021140412"
+        src="https://ik.imagekit.io/pxhytijjnsj/DnD/location-min_c-xn6PSTmVf.png?updatedAt=1631443560198"
         alt="DnD Location"
       />
     </image-section>
