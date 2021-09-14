@@ -102,7 +102,7 @@ export default {
     SwiperSlide,
   },
   setup() {
-    const headerImage = "https://ik.imagekit.io/pxhytijjnsj/DnD/rooms-min_AALKbld4y.jpg?updatedAt=1631449561513";
+    const headerImage = "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/rooms-min_AALKbld4y.jpg?updatedAt=1631449561513";
 
     const roomInfo = [
       "DnD 為合法新建民宿，為獨棟農舍，周遭是稻米、青蔥種植區，遠處群山環繞，安靜、空氣好。",
@@ -113,7 +113,7 @@ export default {
 
     const room2F = {
       title: "2F 包層",
-      images: ["https://ik.imagekit.io/pxhytijjnsj/DnD/2F-min_huytqpMAp.jpg?updatedAt=1631443670017"],
+      images: ["https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/2F-min_huytqpMAp.jpg?updatedAt=1631443670017"],
       descriptions: ["包層為同時預訂 2F 三間房間，當天不會有其他客人入住。", "入住人數可為 6 - 16 人，費用依實際人數而有不同。當住宿人數為 6 人時收費如下表。"],
       price: { weekday: 8340, weekend: 9540, holiday: 14310 },
     };
@@ -121,9 +121,9 @@ export default {
     const room2A = {
       title: "2A 山景房",
       images: [
-        "https://ik.imagekit.io/pxhytijjnsj/DnD/2A-min_27Jx4BE4o.jpg?updatedAt=1631443756327",
-        "https://ik.imagekit.io/pxhytijjnsj/DnD/2A-1-min_w-mEUCtL6.jpg?updatedAt=1631443714977",
-        "https://ik.imagekit.io/pxhytijjnsj/DnD/2A-2-min_XNgmaH1cg.jpg?updatedAt=1631443771128",
+        "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/2A-min_27Jx4BE4o.jpg?updatedAt=1631443756327",
+        "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/2A-1-min_w-mEUCtL6.jpg?updatedAt=1631443714977",
+        "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/2A-2-min_XNgmaH1cg.jpg?updatedAt=1631443771128",
       ],
       descriptions: ["房型 2A 有一張加大雙人床，和 2 張沙發。", "4 人住宿時使用一張乳膠墊沙發床，6 人住宿時使用 2 張乳膠墊沙發床。"],
       price: { weekday: 2880, weekend: 3280, holiday: 4920 },
@@ -132,9 +132,9 @@ export default {
     const room2B = {
       title: "2B 樓中樓山景房",
       images: [
-        "https://ik.imagekit.io/pxhytijjnsj/DnD/2B-min_YowtIH-uR.jpg?updatedAt=1631443805815",
-        "https://ik.imagekit.io/pxhytijjnsj/DnD/2B-1-min_In3RJ-iPY.jpg?updatedAt=1631443745893",
-        "https://ik.imagekit.io/pxhytijjnsj/DnD/2B-2-min_a_0sU7ZX0.jpg?updatedAt=1631443723366",
+        "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/2B-min_YowtIH-uR.jpg?updatedAt=1631443805815",
+        "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/2B-1-min_In3RJ-iPY.jpg?updatedAt=1631443745893",
+        "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/2B-2-min_a_0sU7ZX0.jpg?updatedAt=1631443723366",
       ],
       descriptions: ["房型 2B 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊。"],
       price: { weekday: 2680, weekend: 3080, holiday: 4620 },
@@ -143,9 +143,9 @@ export default {
     const room2C = {
       title: "2C 樓中樓山景房",
       images: [
-        "https://ik.imagekit.io/pxhytijjnsj/DnD/2C-min__kD5lO_A2.jpg?updatedAt=1631443801357",
-        "https://ik.imagekit.io/pxhytijjnsj/DnD/2C-1-min_bjN09h9GP.jpg?updatedAt=1631443784771",
-        "https://ik.imagekit.io/pxhytijjnsj/DnD/2C-2-min_qqPYWaKI4.jpg?updatedAt=1631443798589",
+        "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/2C-min__kD5lO_A2.jpg?updatedAt=1631443801357",
+        "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/2C-1-min_bjN09h9GP.jpg?updatedAt=1631443784771",
+        "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/2C-2-min_qqPYWaKI4.jpg?updatedAt=1631443798589",
       ],
       descriptions: ["房型 2C 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊，住宿 5 - 6 人使用沙發床。"],
       price: { weekday: 2780, weekend: 3180, holiday: 4770 },

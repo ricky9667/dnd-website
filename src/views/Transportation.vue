@@ -27,7 +27,7 @@ export default {
   name: "Transportation",
   components: { CustomHeader, CustomFooter, ImageSection },
   setup() {
-    const headerImage = "https://ik.imagekit.io/pxhytijjnsj/DnD/transportation-min_8kPkJfs1K.jpg?updatedAt=1631449627555";
+    const headerImage = "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/transportation-min_8kPkJfs1K.jpg?updatedAt=1631449627555";
 
     const transportationInfo = [
       "民宿位在三星市中心和天送埤中間，是前往太平山、明池、棲蘭、武陵農場與福壽山農場等地的入口。羅東轉運站、羅東市中心有公車 1792、1793 可搭乘至茶廠站，下車後步行約 3 分鐘到達民宿。",

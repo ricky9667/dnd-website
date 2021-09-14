@@ -34,7 +34,7 @@ export default {
   name: "Reservation",
   components: { CustomHeader, CustomFooter, CustomTitle },
   setup() {
-    const headerImage = "https://ik.imagekit.io/pxhytijjnsj/DnD/reservation-min__fdSKobHi.jpg?updatedAt=1631449643827";
+    const headerImage = "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/reservation-min__fdSKobHi.jpg?updatedAt=1631449643827";
 
     const reservationInfo = [
       "民宿房費皆為現金付款或匯款，無法刷卡。民宿入住時間為 15:00 ~ 22:00，退房時間為隔日 11:00。若因故住宿當日抵達時間晚於 22:00，請提前告知我們。",
