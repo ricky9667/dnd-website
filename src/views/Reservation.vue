@@ -6,19 +6,8 @@
 
     <div class="w-2/3 mx-auto bg-secondary rounded-lg p-4 mb-8">
       <custom-title title="敬請閱讀注意事項後再付訂金">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="title-icon"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
+        <svg xmlns="http://www.w3.org/2000/svg" class="title-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       </custom-title>
     </div>
@@ -45,10 +34,7 @@ export default {
   name: "Reservation",
   components: { CustomHeader, CustomFooter, CustomTitle },
   setup() {
-    const headerImage =
-      "https://ik.imagekit.io/pxhytijjnsj/reservation-min__fdSKobHi.jpg?updatedAt=1629825920542";
-
-    const typedText = ["敬請閱讀注意事項後再付訂金"];
+    const headerImage = "https://ik.imagekit.io/pxhytijjnsj/DnD/reservation-min__fdSKobHi.jpg?updatedAt=1631449643827";
 
     const reservationInfo = [
       "民宿房費皆為現金付款或匯款，無法刷卡。民宿入住時間為 15:00 ~ 22:00，退房時間為隔日 11:00。若因故住宿當日抵達時間晚於 22:00，請提前告知我們。",
@@ -63,7 +49,7 @@ export default {
       "取消訂房之扣款依觀光局規定辦理。",
     ];
 
-    return { headerImage, reservationInfo, typedText };
+    return { headerImage, reservationInfo };
   },
 };
 </script>

@@ -16,8 +16,7 @@ export default {
   name: "Tourism",
   components: { CustomHeader, CustomFooter },
   setup() {
-    const headerImage =
-      "https://ik.imagekit.io/pxhytijjnsj/tourism-min_b7KnlkS6jw.jpg?updatedAt=1629825929111";
+    const headerImage = "https://ik.imagekit.io/pxhytijjnsj/DnD/tourism-min_b7KnlkS6jw.jpg?updatedAt=1631449600838";
 
     return { headerImage };
   },
