@@ -2,52 +2,37 @@
   <nav class="flex flex-col md:flex-row justify-between">
     <div class="flex flex-row justify-between">
       <router-link to="/">
-        <img
-          class="h-12 md:h-16 px-4 py-1"
-          src="./assets/logo/dnd_logo_color.png"
-          alt="首頁"
-        />
+        <img class="h-12 md:h-16 px-4 py-1" src="./assets/logo/dnd_logo_color.png" alt="首頁" />
       </router-link>
 
-      <div
-        @click="toggleNavbar"
-        class="md:hidden float-right icon-container nav-item"
-      >
+      <div @click="toggleNavbar" class="md:hidden float-right icon-container nav-item">
         <hamburger-button ref="hamburger" :open="isOpenNavbar" />
       </div>
     </div>
 
     <div class="nav-links">
       <router-link to="/" class="nav-item nav-link" @click="closeNavbar">
-        <home-icon />
-        <div class="">首頁</div>
+        <HomeIcon />
+        <div>首頁</div>
       </router-link>
       <router-link to="/about" class="nav-item nav-link" @click="closeNavbar">
-        <about-icon />
+        <InformationCircleIcon />
         <div>關於我們</div>
       </router-link>
       <router-link to="/rooms" class="nav-item nav-link" @click="closeNavbar">
-        <rooms-icon />
+        <KeyIcon />
         <div>客房介紹</div>
       </router-link>
-      <router-link
-        to="/reservation"
-        class="nav-item nav-link"
-        @click="closeNavbar"
-      >
-        <reservation-icon />
+      <router-link to="/reservation" class="nav-item nav-link" @click="closeNavbar">
+        <TagIcon />
         <div>訂房資訊</div>
       </router-link>
-      <router-link
-        to="/transportation"
-        class="nav-item nav-link"
-        @click="closeNavbar"
-      >
-        <transportation-icon />
+      <router-link to="/transportation" class="nav-item nav-link" @click="closeNavbar">
+        <LocationMarkerIcon />
         <div>交通資訊</div>
       </router-link>
       <router-link to="/tourism" class="nav-item nav-link" @click="closeNavbar">
-        <tourism-icon />
+        <GlobeIcon />
         <div>鄰近景點</div>
       </router-link>
     </div>
@@ -59,25 +44,20 @@
 
 <script>
 import { onMounted, ref } from "vue";
+import { HomeIcon, InformationCircleIcon, KeyIcon, TagIcon, LocationMarkerIcon, GlobeIcon } from "@heroicons/vue/outline";
 import HamburgerButton from "./components/HamburgerButton";
-import HomeIcon from "./components/icons/HomeIcon";
-import AboutIcon from "./components/icons/AboutIcon";
-import RoomsIcon from "./components/icons/RoomsIcon";
-import ReservationIcon from "./components/icons/ReservationIcon";
-import TransportationIcon from "./components/icons/TransportationIcon";
-import TourismIcon from "./components/icons/TourismIcon";
 import BackToTop from "./components/BackToTop";
 
 export default {
   name: "App",
   components: {
-    HamburgerButton,
     HomeIcon,
-    AboutIcon,
-    RoomsIcon,
-    ReservationIcon,
-    TransportationIcon,
-    TourismIcon,
+    InformationCircleIcon,
+    KeyIcon,
+    TagIcon,
+    LocationMarkerIcon,
+    GlobeIcon,
+    HamburgerButton,
     BackToTop,
   },
   setup() {

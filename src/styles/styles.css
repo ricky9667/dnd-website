@@ -51,7 +51,7 @@
     }
     
     svg {
-        @apply h-6 w-6;
+        @apply inline-block h-6 w-6;
     }
 
     hr {
@@ -61,9 +61,4 @@
 
 .content-block {
     @apply w-5/6 max-w-screen-xl text-left mx-auto;
-}
-
-.title-icon {   
-    @apply inline-block text-title;
-    @apply h-6 w-6 lg:h-8 lg:w-8;
 }

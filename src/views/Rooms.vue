@@ -4,22 +4,6 @@
       <img class="header-image" :src="headerImage" alt="Rooms" />
     </custom-header>
 
-    <section class="content-block" v-if="true">
-      <custom-title title="客房與公共空間">
-        <svg xmlns="http://www.w3.org/2000/svg" class="title-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"
-          />
-        </svg>
-      </custom-title>
-      <p v-for="(info, index) in roomInfo" :key="index" class="my-1">
-        {{ info }}
-      </p>
-    </section>
-
     <section class="rooms-section">
       <div class="lg:col-span-2 px-4">
         <swiper class="rooms-swiper" :effect="'fade'" :navigation="true" :loop="true" :pagination="{ clickable: true }">
@@ -85,7 +69,6 @@
 <script>
 import CustomHeader from "../components/CustomHeader";
 import CustomFooter from "../components/CustomFooter";
-import CustomTitle from "../components/CustomTitle";
 import RoomContent from "../components/RoomContent";
 import AddTenantCard from "../components/AddTenantCard";
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -93,7 +76,6 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 export default {
   name: "Rooms",
   components: {
-    CustomTitle,
     CustomHeader,
     CustomFooter,
     RoomContent,
@@ -103,13 +85,6 @@ export default {
   },
   setup() {
     const headerImage = "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/rooms-min_AALKbld4y.jpg?updatedAt=1631449561513";
-
-    const roomInfo = [
-      "DnD 為合法新建民宿，為獨棟農舍，周遭是稻米、青蔥種植區，遠處群山環繞，安靜、空氣好。",
-      "民宿 1 樓的公共空間有客廳與餐廳，2 樓則有 3 間住宿客房，每間客房可容納 2 - 6 人住宿，全棟最大容量為住宿 16 人。",
-      "所有房間均有大面窗景，北歐風實木家具。餐廳有真正的材燒壁爐、懷舊木馬，客廳有積木火車軌道、各類書籍消遣時間。",
-      "或者也可以喝杯咖啡，享受周遭滿滿的綠意。",
-    ];
 
     const room2F = {
       title: "2F 包層",
@@ -151,7 +126,7 @@ export default {
       price: { weekday: 2780, weekend: 3180, holiday: 4770 },
     };
 
-    return { headerImage, roomInfo, room2F, room2A, room2B, room2C };
+    return { headerImage, room2F, room2A, room2B, room2C };
   },
 };
 </script>
