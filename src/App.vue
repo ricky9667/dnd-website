@@ -38,7 +38,7 @@
     </div>
   </nav>
 
-  <BackToTop class="fixed right-4 bottom-4 lg:right-8 lg:bottom-8" />
+  <BackToTop class="fixed right-2 bottom-2 sm:right-4 sm:bottom-4 lg:right-8 lg:bottom-8" />
   <router-view />
 </template>
 
@@ -50,16 +50,7 @@ import BackToTop from "./components/BackToTop";
 
 export default {
   name: "App",
-  components: {
-    HomeIcon,
-    InformationCircleIcon,
-    KeyIcon,
-    TagIcon,
-    LocationMarkerIcon,
-    GlobeIcon,
-    HamburgerButton,
-    BackToTop,
-  },
+  components: { HomeIcon, InformationCircleIcon, KeyIcon, TagIcon, LocationMarkerIcon, GlobeIcon, HamburgerButton, BackToTop },
   setup() {
     const navbarItems = [
       { id: 0, path: "/", title: "首頁" },
