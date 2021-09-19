@@ -7,12 +7,7 @@
         <p v-for="(info, index) in infos" :key="index" class="my-1">
           {{ info }}
         </p>
-        <router-link
-          v-if="button"
-          class="image-section-button mt-2 lg:mt-4"
-          :to="button.link"
-          >{{ button.text }}</router-link
-        >
+        <router-link v-if="button" class="image-section-button mt-2 lg:mt-4" :to="button.link">{{ button.text }}</router-link>
       </div>
     </div>
   </div>
@@ -48,7 +43,7 @@ export default {
   @apply text-sm text-primary px-6 py-2 my-2;
   @apply md:text-base md:my-4;
   @apply inline-block rounded-full bg-secondary;
-  @apply hover:text-white hover:bg-primary hover:-translate-y-1 transform duration-300 font-bold;
+  @apply hover:text-white hover:bg-primary hover:-translate-y-1 hover:shadow-lg transform duration-300 font-bold;
   @apply focus:text-white focus:bg-primary;
 }
 </style>

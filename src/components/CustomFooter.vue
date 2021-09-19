@@ -1,6 +1,6 @@
 <template>
   <footer id="footer">
-    <section class="mx-auto flex flex-row items-center justify-center w-72">
+    <section class="mx-auto flex flex-row items-center justify-center">
       <MailIcon class="h-6 w-6 text-white" />
       <h4 class="text-lg font-bold mx-2 text-white">聯絡我們</h4>
     </section>
@@ -58,7 +58,7 @@ footer {
 }
 
 .footer-text {
-  @apply text-white py-1;
+  @apply text-white py-1 whitespace-nowrap;
 }
 
 .scale-transition {

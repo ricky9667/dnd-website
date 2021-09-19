@@ -54,7 +54,7 @@
     }
     
     svg {
-        @apply inline-block h-6 w-6 m-1;
+        @apply inline-block h-6 w-6;
     }
 
     hr {
