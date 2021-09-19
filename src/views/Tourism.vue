@@ -1,12 +1,12 @@
 <template>
   <div id="tourism">
-    <custom-header title="鄰近景點" subtitle="Tourism">
+    <CustomHeader title="鄰近景點" subtitle="Tourism">
       <img class="header-image" :src="headerImage" alt="Tourism" />
-    </custom-header>
+    </CustomHeader>
 
     <under-construction />
 
-    <custom-footer />
+    <CustomFooter />
   </div>
 </template>
 

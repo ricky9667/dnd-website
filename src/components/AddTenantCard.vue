@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "add-tenant-card",
+  name: "AddTenantCard",
   props: ["title", "threeToSix", "overSix"],
 };
 </script>

@@ -47,7 +47,7 @@ import CustomTitle from "./CustomTitle.vue";
 import { HomeIcon, CurrencyDollarIcon, UserAddIcon } from "@heroicons/vue/outline";
 
 export default {
-  name: "room-content",
+  name: "RoomContent",
   components: { CustomTitle, HomeIcon, CurrencyDollarIcon, UserAddIcon },
   props: ["title", "descriptions", "price"],
 };

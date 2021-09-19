@@ -1,14 +1,14 @@
 <template>
   <div id="about">
-    <custom-header title="關於我們" subtitle="About us">
+    <CustomHeader title="關於我們" subtitle="About us">
       <img class="header-image" :src="headerImage" alt="About" />
-    </custom-header>
+    </CustomHeader>
 
-    <image-section title="DnD 的由來" :infos="aboutUsInfo">
+    <ImageSection title="DnD 的由來" :infos="aboutUsInfo">
       <img class="image-block shadow-xl" :src="aboutUsImage" alt="About us" />
-    </image-section>
+    </ImageSection>
 
-    <custom-footer />
+    <CustomFooter />
   </div>
 </template>
 

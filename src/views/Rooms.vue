@@ -1,8 +1,8 @@
 <template>
   <div id="rooms">
-    <custom-header title="客房介紹" subtitle="Rooms">
+    <CustomHeader title="客房介紹" subtitle="Rooms">
       <img class="header-image" :src="headerImage" alt="Rooms" />
-    </custom-header>
+    </CustomHeader>
 
     <section class="rooms-section">
       <div class="lg:col-span-2 px-4">
@@ -25,7 +25,7 @@
         </swiper>
       </div>
 
-      <room-content :title="room2A.title" :descriptions="room2A.descriptions" :price="room2A.price" />
+      <RoomContent :title="room2A.title" :descriptions="room2A.descriptions" :price="room2A.price" />
     </section>
 
     <section class="rooms-section">
@@ -37,7 +37,7 @@
         </swiper>
       </div>
 
-      <room-content class="lg:order-first" :title="room2B.title" :descriptions="room2B.descriptions" :price="room2B.price" />
+      <RoomContent class="lg:order-first" :title="room2B.title" :descriptions="room2B.descriptions" :price="room2B.price" />
     </section>
 
     <section class="rooms-section">
@@ -49,20 +49,20 @@
         </swiper>
       </div>
 
-      <room-content :title="room2C.title" :descriptions="room2C.descriptions" :price="room2C.price" />
+      <RoomContent :title="room2C.title" :descriptions="room2C.descriptions" :price="room2C.price" />
     </section>
 
     <section id="add-tenant" class="content-block">
       <h2 class="text-center my-6">增加客房人數</h2>
 
       <div class="flex flex-col md:flex-row gap-4">
-        <add-tenant-card title="平日" threeToSix="300" overSix="600" />
-        <add-tenant-card title="假日" threeToSix="300" overSix="600" />
-        <add-tenant-card title="農曆過年" threeToSix="400" overSix="800" />
+        <AddTenantCard title="假日" threeToSix="300" overSix="600" />
+        <AddTenantCard title="平日" threeToSix="300" overSix="600" />
+        <AddTenantCard title="農曆過年" threeToSix="400" overSix="800" />
       </div>
     </section>
 
-    <custom-footer />
+    <CustomFooter />
   </div>
 </template>
 
@@ -75,14 +75,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 
 export default {
   name: "Rooms",
-  components: {
-    CustomHeader,
-    CustomFooter,
-    RoomContent,
-    AddTenantCard,
-    Swiper,
-    SwiperSlide,
-  },
+  components: { CustomHeader, CustomFooter, RoomContent, AddTenantCard, Swiper, SwiperSlide },
   setup() {
     const headerImage = "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/rooms-min_AALKbld4y.jpg?updatedAt=1631449561513";
 

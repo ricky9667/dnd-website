@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: "image-section",
+  name: "ImageSection",
   props: ["title", "infos", "button"],
 };
 </script>

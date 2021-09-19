@@ -32,7 +32,7 @@
 import { MailIcon, PhoneOutgoingIcon, LocationMarkerIcon, FlagIcon, ChatIcon } from "@heroicons/vue/solid";
 
 export default {
-  name: "custom-footer",
+  name: "CustomFooter",
   components: { MailIcon, PhoneOutgoingIcon, LocationMarkerIcon, FlagIcon, ChatIcon },
   setup() {
     const copyright = "Copyright© DnD B&B Homestay";

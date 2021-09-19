@@ -8,35 +8,35 @@
 </template>
 
 <script>
-import {ref, onMounted} from 'vue';
+import { ref, onMounted } from "vue";
 
 export default {
-  name: 'hamburger-button',
+  name: "HamburgerButton",
   props: [],
   setup() {
-    const toggleButtonRef = ref({})
+    const toggleButtonRef = ref({});
 
     onMounted(() => {
-      toggleButtonRef.value = document.getElementById('hamburger-button')
-    })
+      toggleButtonRef.value = document.getElementById("hamburger-button");
+    });
 
     const toggleClass = () => {
-      toggleButtonRef.value.classList.toggle('open')
-    }
+      toggleButtonRef.value.classList.toggle("open");
+    };
 
     const removeClass = () => {
-      toggleButtonRef.value.classList.remove('open')
-    }
+      toggleButtonRef.value.classList.remove("open");
+    };
 
-    return {toggleButtonRef, toggleClass, removeClass}
-  }
-}
+    return { toggleButtonRef, toggleClass, removeClass };
+  },
+};
 </script>
 
 <style>
 #hamburger-button:hover {
   transform: scale(1.1);
-  transition-duration: .1s;
+  transition-duration: 0.1s;
 }
 
 #hamburger-button {
@@ -48,10 +48,10 @@ export default {
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 #hamburger-button span {
@@ -68,17 +68,18 @@ export default {
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 #hamburger-button span:nth-child(1) {
   top: 0;
 }
 
-#hamburger-button span:nth-child(2), #hamburger-button span:nth-child(3) {
+#hamburger-button span:nth-child(2),
+#hamburger-button span:nth-child(3) {
   top: 0.5rem;
 }
 

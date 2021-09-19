@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "custom-header",
+  name: "CustomHeader",
   props: ["title", "subtitle"],
 };
 </script>

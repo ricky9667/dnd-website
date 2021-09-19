@@ -1,16 +1,8 @@
 <template>
   <div id="reservation">
-    <custom-header title="訂房資訊" subtitle="Reservation">
+    <CustomHeader title="訂房資訊" subtitle="Reservation">
       <img class="header-image" :src="headerImage" alt="Reservation" />
-    </custom-header>
-
-    <div class="w-2/3 mx-auto bg-secondary rounded-lg p-4 mb-8">
-      <custom-title title="敬請閱讀注意事項後再付訂金">
-        <svg xmlns="http://www.w3.org/2000/svg" class="title-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      </custom-title>
-    </div>
+    </CustomHeader>
 
     <h2 class="mb-8">訂房說明</h2>
     <div class="content-block">
@@ -21,18 +13,17 @@
       </ol>
     </div>
 
-    <custom-footer />
+    <CustomFooter />
   </div>
 </template>
 
 <script>
 import CustomHeader from "../components/CustomHeader";
 import CustomFooter from "../components/CustomFooter";
-import CustomTitle from "../components/CustomTitle";
 
 export default {
   name: "Reservation",
-  components: { CustomHeader, CustomFooter, CustomTitle },
+  components: { CustomHeader, CustomFooter },
   setup() {
     const headerImage = "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/reservation-min__fdSKobHi.jpg?updatedAt=1631449643827";
 

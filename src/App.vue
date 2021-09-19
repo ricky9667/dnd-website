@@ -6,7 +6,7 @@
       </router-link>
 
       <div @click="toggleNavbar" class="md:hidden float-right icon-container nav-item">
-        <hamburger-button ref="hamburger" :open="isOpenNavbar" />
+        <HamburgerButton ref="hamburger" :open="isOpenNavbar" />
       </div>
     </div>
 

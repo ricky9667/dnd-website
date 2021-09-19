@@ -1,22 +1,22 @@
 <template>
   <div id="home">
-    <custom-header title="DnD 民宿" subtitle="DnD Homestay">
+    <CustomHeader title="DnD 民宿" subtitle="DnD Homestay">
       <img class="header-image" :src="headerImage" alt="Home" />
-    </custom-header>
+    </CustomHeader>
 
-    <image-section title="來到 DnD" :infos="aboutDndInfo">
+    <ImageSection title="來到 DnD" :infos="aboutDndInfo">
       <img class="hidden lg:block image-block" :src="aboutImage" alt="About DnD" />
-    </image-section>
+    </ImageSection>
 
-    <image-section title="DnD 環境" :infos="surroundingsInfo" :button="surroundingsButton">
+    <ImageSection title="DnD 環境" :infos="surroundingsInfo" :button="surroundingsButton">
       <img class="image-block" :src="surroundingsImage" alt="DnD Surroundings" />
-    </image-section>
+    </ImageSection>
 
-    <image-section title="DnD 位置" :infos="locationInfo" :button="locationButton">
+    <ImageSection title="DnD 位置" :infos="locationInfo" :button="locationButton">
       <img class="image-block" :src="locationImage" alt="DnD Location" />
-    </image-section>
+    </ImageSection>
 
-    <custom-footer />
+    <CustomFooter />
   </div>
 </template>
 
