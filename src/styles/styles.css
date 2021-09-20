@@ -61,7 +61,3 @@
         border-top: 1px solid #ccc;
     }
 }
-
-.content-block {
-    @apply w-5/6 max-w-screen-xl text-left mx-auto;
-}
