@@ -52,12 +52,12 @@
       <RoomContent :title="room2C.title" :descriptions="room2C.descriptions" :price="room2C.price" />
     </section>
 
-    <section id="add-tenant" class="content-block">
+    <section id="add-tenant" class="max-w-screen-xl mx-auto px-4">
       <h2 class="text-center my-6">增加客房人數</h2>
 
-      <div class="flex flex-col md:flex-row gap-4">
-        <AddTenantCard title="假日" threeToSix="300" overSix="600" />
+      <div class="flex flex-col md:flex-row justify-around gap-4">
         <AddTenantCard title="平日" threeToSix="300" overSix="600" />
+        <AddTenantCard title="假日" threeToSix="300" overSix="600" />
         <AddTenantCard title="農曆過年" threeToSix="400" overSix="800" />
       </div>
     </section>
