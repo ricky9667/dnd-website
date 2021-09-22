@@ -34,40 +34,40 @@
         <TabPanels>
           <TabPanel>
             <div class="tab-panel">
-              <h4 class="text-center">NT ${{ price.weekday }}</h4>
+              <h4 class="text-center">NT ${{ price.weekday }} (2 人)</h4>
               <div>
                 <UserAddIcon class="h-6 w-6 text-content" />
-                <p class="inline-block align-middle ml-1">3y ~ 6y : $300/人，含早餐</p>
+                <p class="inline-block align-middle ml-1">$300/人: 3-6 歲，含早餐</p>
               </div>
               <div>
                 <UserAddIcon class="h-6 w-6 text-content" />
-                <p class="inline-block align-middle ml-1">6y+ : $600/人，含早餐、寢具</p>
-              </div>
-            </div>
-          </TabPanel>
-          <TabPanel>
-            <div class="tab-panel">
-              <h4 class="text-center">NT ${{ price.weekend }}</h4>
-              <div>
-                <UserAddIcon class="h-6 w-6 text-content" />
-                <p class="inline-block align-middle ml-1">3y ~ 6y : $300/人，含早餐</p>
-              </div>
-              <div>
-                <UserAddIcon class="h-6 w-6 text-content" />
-                <p class="inline-block align-middle ml-1">6y+ : $600/人，含早餐、寢具</p>
+                <p class="inline-block align-middle ml-1">$600/人: 6 歲+，含早餐、寢具</p>
               </div>
             </div>
           </TabPanel>
           <TabPanel>
             <div class="tab-panel">
-              <h4 class="text-center">NT ${{ price.holiday }}</h4>
+              <h4 class="text-center">NT ${{ price.weekend }} (2 人)</h4>
               <div>
                 <UserAddIcon class="h-6 w-6 text-content" />
-                <p class="inline-block align-middle ml-1">3y ~ 6y : $400/人，含早餐</p>
+                <p class="inline-block align-middle ml-1">$300/人: 3-6 歲，含早餐</p>
               </div>
               <div>
                 <UserAddIcon class="h-6 w-6 text-content" />
-                <p class="inline-block align-middle ml-1">6y+ : $800/人，含早餐、寢具</p>
+                <p class="inline-block align-middle ml-1">$600/人: 6 歲+，含早餐、寢具</p>
+              </div>
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div class="tab-panel">
+              <h4 class="text-center">NT ${{ price.holiday }} (2 人)</h4>
+              <div>
+                <UserAddIcon class="h-6 w-6 text-content" />
+                <p class="inline-block align-middle ml-1">$400/人: 3-6 歲，含早餐</p>
+              </div>
+              <div>
+                <UserAddIcon class="h-6 w-6 text-content" />
+                <p class="inline-block align-middle ml-1">$800/人: 6 歲+，含早餐、寢具</p>
               </div>
             </div>
           </TabPanel>
