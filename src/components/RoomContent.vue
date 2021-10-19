@@ -34,7 +34,7 @@
         <TabPanels>
           <TabPanel>
             <div class="tab-panel">
-              <h4 class="text-center">NT ${{ price.weekday }} (2 人)</h4>
+              <h4 class="text-center">NT ${{ price.weekday }} (每間 2 人)</h4>
               <div>
                 <UserAddIcon class="h-6 w-6 text-content" />
                 <p class="inline-block align-middle ml-1">$300/人: 3-6 歲，含早餐</p>
