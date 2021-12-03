@@ -22,13 +22,37 @@
       <TabGroup>
         <TabList>
           <Tab v-slot="{ selected }">
-            <button :class="[selected ? 'tab-button tab-button-selected' : 'tab-button tab-button-normal']">平日</button>
+            <button
+              :class="[
+                selected
+                  ? 'tab-button tab-button-selected'
+                  : 'tab-button tab-button-normal',
+              ]"
+            >
+              平日
+            </button>
           </Tab>
           <Tab v-slot="{ selected }">
-            <button :class="[selected ? 'tab-button tab-button-selected' : 'tab-button tab-button-normal']">假日</button>
+            <button
+              :class="[
+                selected
+                  ? 'tab-button tab-button-selected'
+                  : 'tab-button tab-button-normal',
+              ]"
+            >
+              假日
+            </button>
           </Tab>
           <Tab v-slot="{ selected }">
-            <button :class="[selected ? 'tab-button tab-button-selected' : 'tab-button tab-button-normal']">過年</button>
+            <button
+              :class="[
+                selected
+                  ? 'tab-button tab-button-selected'
+                  : 'tab-button tab-button-normal',
+              ]"
+            >
+              過年
+            </button>
           </Tab>
         </TabList>
         <TabPanels>
@@ -37,37 +61,49 @@
               <h4 class="text-center">NT ${{ price.weekday }} (每間 2 人)</h4>
               <div>
                 <UserAddIcon class="h-6 w-6 text-content" />
-                <p class="inline-block align-middle ml-1">$300/人: 3-6 歲，含早餐</p>
+                <p class="inline-block align-middle ml-1">
+                  $300/人: 3-6 歲，含早餐
+                </p>
               </div>
               <div>
                 <UserAddIcon class="h-6 w-6 text-content" />
-                <p class="inline-block align-middle ml-1">$600/人: 6 歲+，含早餐、寢具</p>
-              </div>
-            </div>
-          </TabPanel>
-          <TabPanel>
-            <div class="tab-panel">
-              <h4 class="text-center">NT ${{ price.weekend }} (2 人)</h4>
-              <div>
-                <UserAddIcon class="h-6 w-6 text-content" />
-                <p class="inline-block align-middle ml-1">$300/人: 3-6 歲，含早餐</p>
-              </div>
-              <div>
-                <UserAddIcon class="h-6 w-6 text-content" />
-                <p class="inline-block align-middle ml-1">$600/人: 6 歲+，含早餐、寢具</p>
+                <p class="inline-block align-middle ml-1">
+                  $600/人: 6 歲+，含早餐、寢具
+                </p>
               </div>
             </div>
           </TabPanel>
           <TabPanel>
             <div class="tab-panel">
-              <h4 class="text-center">NT ${{ price.holiday }} (2 人)</h4>
+              <h4 class="text-center">NT ${{ price.weekend }} (每間 2 人)</h4>
               <div>
                 <UserAddIcon class="h-6 w-6 text-content" />
-                <p class="inline-block align-middle ml-1">$400/人: 3-6 歲，含早餐</p>
+                <p class="inline-block align-middle ml-1">
+                  $300/人: 3-6 歲，含早餐
+                </p>
               </div>
               <div>
                 <UserAddIcon class="h-6 w-6 text-content" />
-                <p class="inline-block align-middle ml-1">$800/人: 6 歲+，含早餐、寢具</p>
+                <p class="inline-block align-middle ml-1">
+                  $600/人: 6 歲+，含早餐、寢具
+                </p>
+              </div>
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div class="tab-panel">
+              <h4 class="text-center">NT ${{ price.holiday }} (每間 2 人)</h4>
+              <div>
+                <UserAddIcon class="h-6 w-6 text-content" />
+                <p class="inline-block align-middle ml-1">
+                  $400/人: 3-6 歲，含早餐
+                </p>
+              </div>
+              <div>
+                <UserAddIcon class="h-6 w-6 text-content" />
+                <p class="inline-block align-middle ml-1">
+                  $800/人: 6 歲+，含早餐、寢具
+                </p>
               </div>
             </div>
           </TabPanel>
@@ -79,12 +115,26 @@
 
 <script>
 import CustomTitle from "./CustomTitle.vue";
-import { HomeIcon, CurrencyDollarIcon, UserAddIcon } from "@heroicons/vue/outline";
+import {
+  HomeIcon,
+  CurrencyDollarIcon,
+  UserAddIcon,
+} from "@heroicons/vue/outline";
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/vue";
 
 export default {
   name: "RoomContent",
-  components: { CustomTitle, HomeIcon, CurrencyDollarIcon, UserAddIcon, TabGroup, TabList, Tab, TabPanels, TabPanel },
+  components: {
+    CustomTitle,
+    HomeIcon,
+    CurrencyDollarIcon,
+    UserAddIcon,
+    TabGroup,
+    TabList,
+    Tab,
+    TabPanels,
+    TabPanel,
+  },
   props: ["title", "descriptions", "price"],
 };
 </script>
