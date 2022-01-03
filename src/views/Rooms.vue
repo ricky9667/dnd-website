@@ -150,7 +150,7 @@ export default {
         "房型 2A 有一張加大雙人床，和 2 張沙發。",
         "4 人住宿時使用一張乳膠墊沙發床，6 人住宿時使用 2 張乳膠墊沙發床。",
       ],
-      price: { weekday: 2980, weekend: 3380, holiday: 4920 },
+      price: { weekday: 2980, weekend: 3480, holiday: 4920 },
     };
 
     const room2B = {
@@ -163,7 +163,7 @@ export default {
       descriptions: [
         "房型 2B 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊。",
       ],
-      price: { weekday: 2780, weekend: 3180, holiday: 4620 },
+      price: { weekday: 2780, weekend: 3280, holiday: 4620 },
     };
 
     const room2C = {
@@ -176,7 +176,7 @@ export default {
       descriptions: [
         "房型 2C 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊，住宿 5 - 6 人使用沙發床。",
       ],
-      price: { weekday: 2880, weekend: 3280, holiday: 4770 },
+      price: { weekday: 2880, weekend: 3380, holiday: 4770 },
     };
 
     return { headerImage, room2F, room2A, room2B, room2C };
