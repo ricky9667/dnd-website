@@ -12,3 +12,4 @@ This is a static website for showing inforamtion of a homestay, this is develope
 - Vue3
 - Yarn
 - TailwindCSS
+- Github Actions
