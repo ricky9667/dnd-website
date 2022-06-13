@@ -133,7 +133,7 @@ export default {
         "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/2F-min_huytqpMAp.jpg?updatedAt=1631443670017",
       ],
       descriptions: [
-        "包層為同時預訂 2F 三間房間，當天不會有其他客人入住。",
+        "包層為同時預訂 2F 三間房間，當天不會有其他客人入住，公共空間為餐廳與客廳，主人自用一樓房間與廚房。",
         "入住人數可為 6 - 12 人，費用依實際人數而有不同。當住宿人數為 6 人時收費如下表。",
       ],
       price: { weekday: 8640, weekend: 10140, holiday: 14310 },
@@ -148,7 +148,7 @@ export default {
       ],
       descriptions: [
         "房型 2A 有一張加大雙人床，和 2 張沙發。",
-        "4 人住宿時使用一張乳膠墊沙發床，6 人住宿時使用 2 張乳膠墊沙發床。",
+        "4 人住宿時使用一張乳膠墊沙發床。",
       ],
       price: { weekday: 2980, weekend: 3480, holiday: 4920 },
     };
@@ -174,7 +174,7 @@ export default {
         "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/2C-2-min_qqPYWaKI4.jpg?updatedAt=1631443798589",
       ],
       descriptions: [
-        "房型 2C 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊，住宿 5 - 6 人使用沙發床。",
+        "房型 2C 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊。",
       ],
       price: { weekday: 2880, weekend: 3380, holiday: 4770 },
     };
