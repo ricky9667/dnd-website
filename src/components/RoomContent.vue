@@ -62,13 +62,13 @@
               <div>
                 <UserAddIcon class="h-6 w-6 text-content" />
                 <p class="inline-block align-middle ml-1">
-                  $300/人: 3-6 歲，含早餐
+                  $300/人: 3-6 歲，含早餐 (每房限一人)
                 </p>
               </div>
               <div>
                 <UserAddIcon class="h-6 w-6 text-content" />
                 <p class="inline-block align-middle ml-1">
-                  $600/人: 6 歲+，含早餐、寢具
+                  $600/人: 6 歲+，含早餐、寢具 (每房限兩人)
                 </p>
               </div>
             </div>
@@ -79,13 +79,13 @@
               <div>
                 <UserAddIcon class="h-6 w-6 text-content" />
                 <p class="inline-block align-middle ml-1">
-                  $300/人: 3-6 歲，含早餐
+                  $300/人: 3-6 歲，含早餐 (每房限一人)
                 </p>
               </div>
               <div>
                 <UserAddIcon class="h-6 w-6 text-content" />
                 <p class="inline-block align-middle ml-1">
-                  $600/人: 6 歲+，含早餐、寢具
+                  $600/人: 6 歲+，含早餐、寢具 (每房限兩人)
                 </p>
               </div>
             </div>
@@ -96,13 +96,13 @@
               <div>
                 <UserAddIcon class="h-6 w-6 text-content" />
                 <p class="inline-block align-middle ml-1">
-                  $400/人: 3-6 歲，含早餐
+                  $400/人: 3-6 歲，含早餐 (每房限一人)
                 </p>
               </div>
               <div>
                 <UserAddIcon class="h-6 w-6 text-content" />
                 <p class="inline-block align-middle ml-1">
-                  $800/人: 6 歲+，含早餐、寢具
+                  $800/人: 6 歲+，含早餐、寢具 (每房限兩人)
                 </p>
               </div>
             </div>
