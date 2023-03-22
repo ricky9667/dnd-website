@@ -38,7 +38,7 @@
     </div>
   </nav>
 
-  <BackToTop class="fixed right-2 bottom-2 sm:right-4 sm:bottom-4 lg:right-8 lg:bottom-8" />
+  <!-- <BackToTop class="fixed right-2 bottom-2 sm:right-4 sm:bottom-4 lg:right-8 lg:bottom-8" /> -->
   <router-view />
 </template>
 
