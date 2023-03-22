@@ -21,6 +21,7 @@ export default {
 
 <style>
 #back-to-top {
+  display: none;
   @apply w-min my-4 z-10;
   @apply transform duration-300 hover:-translate-y-1.5;
 }
