@@ -10,6 +10,7 @@
   "dependencies": {
     "@headlessui/vue": "^1.4.1",
     "@heroicons/vue": "^1.0.4",
+    "@huntersofbook/chatwoot-vue": "^1.2.0",
     "core-js": "^3.6.5",
     "html-minifier": "^4.0.0",
     "node-sass": "^6.0.1",

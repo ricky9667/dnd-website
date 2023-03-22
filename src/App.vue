@@ -2,10 +2,17 @@
   <nav class="flex flex-col md:flex-row justify-between">
     <div class="flex flex-row justify-between">
       <router-link to="/">
-        <img class="h-12 md:h-16 px-4 py-1" src="./assets/logo/dnd_logo_color.png" alt="首頁" />
+        <img
+          class="h-12 md:h-16 px-4 py-1"
+          src="./assets/logo/dnd_logo_color.png"
+          alt="首頁"
+        />
       </router-link>
 
-      <div @click="toggleNavbar" class="md:hidden float-right icon-container nav-item">
+      <div
+        @click="toggleNavbar"
+        class="md:hidden float-right icon-container nav-item"
+      >
         <HamburgerButton ref="hamburger" :open="isOpenNavbar" />
       </div>
     </div>
@@ -23,11 +30,19 @@
         <KeyIcon />
         <div>客房介紹</div>
       </router-link>
-      <router-link to="/reservation" class="nav-item nav-link" @click="closeNavbar">
+      <router-link
+        to="/reservation"
+        class="nav-item nav-link"
+        @click="closeNavbar"
+      >
         <TagIcon />
         <div>訂房資訊</div>
       </router-link>
-      <router-link to="/transportation" class="nav-item nav-link" @click="closeNavbar">
+      <router-link
+        to="/transportation"
+        class="nav-item nav-link"
+        @click="closeNavbar"
+      >
         <LocationMarkerIcon />
         <div>交通資訊</div>
       </router-link>
@@ -38,19 +53,35 @@
     </div>
   </nav>
 
-  <BackToTop class="fixed right-2 bottom-2 sm:right-4 sm:bottom-4 lg:right-8 lg:bottom-8" />
+  <!-- <BackToTop class="fixed right-2 bottom-2 sm:right-4 sm:bottom-4 lg:right-8 lg:bottom-8" /> -->
   <router-view />
 </template>
 
 <script>
 import { onMounted, ref } from "vue";
-import { HomeIcon, InformationCircleIcon, KeyIcon, TagIcon, LocationMarkerIcon, GlobeIcon } from "@heroicons/vue/outline";
+import {
+  HomeIcon,
+  InformationCircleIcon,
+  KeyIcon,
+  TagIcon,
+  LocationMarkerIcon,
+  GlobeIcon,
+} from "@heroicons/vue/outline";
 import HamburgerButton from "./components/HamburgerButton";
-import BackToTop from "./components/BackToTop";
+// import BackToTop from "./components/BackToTop";
 
 export default {
   name: "App",
-  components: { HomeIcon, InformationCircleIcon, KeyIcon, TagIcon, LocationMarkerIcon, GlobeIcon, HamburgerButton, BackToTop },
+  components: {
+    HomeIcon,
+    InformationCircleIcon,
+    KeyIcon,
+    TagIcon,
+    LocationMarkerIcon,
+    GlobeIcon,
+    HamburgerButton,
+    // BackToTop,
+  },
   setup() {
     const navbarItems = [
       { id: 0, path: "/", title: "首頁" },
