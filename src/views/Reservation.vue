@@ -5,7 +5,9 @@
     </CustomHeader>
 
     <h2 class="mb-8">訂房說明</h2>
-    <div class="w-11/12 sm:w-5/6 md:w-4/5 lg:w-3/5 max-w-screen-xl text-left mx-auto">
+    <div
+      class="w-11/12 sm:w-5/6 md:w-4/5 lg:w-3/5 max-w-screen-xl text-left mx-auto"
+    >
       <ol class="list-decimal list-inside">
         <li v-for="(info, index) in reservationInfo" :key="index" class="my-1">
           {{ info }}
@@ -13,21 +15,24 @@
       </ol>
     </div>
 
-    <router-link to="/rooms" class="read-complete-button mt-2 lg:mt-4"> 我知道了啦，帶我去訂房！ </router-link>
+    <router-link to="/rooms" class="read-complete-button mt-2 lg:mt-4">
+      我知道了啦，帶我去訂房！
+    </router-link>
 
     <CustomFooter />
   </div>
 </template>
 
 <script>
-import CustomHeader from "../components/CustomHeader";
-import CustomFooter from "../components/CustomFooter";
+import CustomHeader from "../components/CustomHeader.vue";
+import CustomFooter from "../components/CustomFooter.vue";
 
 export default {
   name: "Reservation",
   components: { CustomHeader, CustomFooter },
   setup() {
-    const headerImage = "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/reservation-min__fdSKobHi.jpg?updatedAt=1631449643827";
+    const headerImage =
+      "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/reservation-min__fdSKobHi.jpg?updatedAt=1631449643827";
 
     const reservationInfo = [
       "民宿房費皆為現金付款或匯款，無法刷卡。民宿入住時間為 15:00 ~ 22:00，退房時間為隔日 11:00。若因故住宿當日抵達時間晚於 22:00，請提前告知我們。",

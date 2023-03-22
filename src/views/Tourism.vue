@@ -11,15 +11,16 @@
 </template>
 
 <script>
-import CustomHeader from "../components/CustomHeader";
-import CustomFooter from "../components/CustomFooter";
-import UnderConstruction from "../components/UnderConstruction";
+import CustomHeader from "../components/CustomHeader.vue";
+import CustomFooter from "../components/CustomFooter.vue";
+import UnderConstruction from "../components/UnderConstruction.vue";
 
 export default {
   name: "Tourism",
   components: { CustomHeader, CustomFooter, UnderConstruction },
   setup() {
-    const headerImage = "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/tourism-min_b7KnlkS6jw.jpg?updatedAt=1631449600838";
+    const headerImage =
+      "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/tourism-min_b7KnlkS6jw.jpg?updatedAt=1631449600838";
 
     return { headerImage };
   },

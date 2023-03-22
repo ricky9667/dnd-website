@@ -115,9 +115,9 @@
 </template>
 
 <script>
-import CustomHeader from "../components/CustomHeader";
-import CustomFooter from "../components/CustomFooter";
-import RoomContent from "../components/RoomContent";
+import CustomHeader from "../components/CustomHeader.vue";
+import CustomFooter from "../components/CustomFooter.vue";
+import RoomContent from "../components/RoomContent.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
 export default {

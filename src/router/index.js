@@ -1,59 +1,58 @@
-import {createRouter, createWebHistory} from 'vue-router'
-import Home from '../views/Home.vue'
-import About from '../views/About.vue'
-import Rooms from '../views/Rooms.vue'
-import Reservation from '../views/Reservation.vue'
-import Transportation from '../views/Transportation.vue'
-import Tourism from '../views/Tourism.vue'
-
+import { createRouter, createWebHistory } from "vue-router";
+import Home from "../views/Home.vue";
+import About from "../views/About.vue";
+import Rooms from "../views/Rooms.vue";
+import Reservation from "../views/Reservation.vue";
+import Transportation from "../views/Transportation.vue";
+import Tourism from "../views/Tourism.vue";
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
+    path: "/",
+    name: "Home",
     component: Home,
-    meta: {title: 'DnD 休閒民宿 - 首頁'}
+    meta: { title: "DnD 休閒民宿 - 首頁" },
   },
   {
-    path: '/about',
-    name: 'About',
+    path: "/about",
+    name: "About",
     component: About,
-    meta: {title: 'DnD 休閒民宿 - 關於我們'}
+    meta: { title: "DnD 休閒民宿 - 關於我們" },
   },
   {
-    path: '/rooms',
-    name: 'Rooms',
+    path: "/rooms",
+    name: "Rooms",
     component: Rooms,
-    meta: {title: 'DnD 休閒民宿 - 客房介紹'}
+    meta: { title: "DnD 休閒民宿 - 客房介紹" },
   },
   {
-    path: '/reservation',
-    name: 'Reservation',
+    path: "/reservation",
+    name: "Reservation",
     component: Reservation,
-    meta: {title: 'DnD 休閒民宿 - 訂房資訊'}
+    meta: { title: "DnD 休閒民宿 - 訂房資訊" },
   },
   {
-    path: '/transportation',
-    name: 'Transportation',
+    path: "/transportation",
+    name: "Transportation",
     component: Transportation,
-    meta: {title: 'DnD 休閒民宿 - 交通資訊'}
+    meta: { title: "DnD 休閒民宿 - 交通資訊" },
   },
   {
-    path: '/tourism',
-    name: 'Tourism',
+    path: "/tourism",
+    name: "Tourism",
     component: Tourism,
-    meta: {title: 'DnD 休閒民宿 - 鄰近景點'}
-  }
-]
+    meta: { title: "DnD 休閒民宿 - 鄰近景點" },
+  },
+];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes,
+});
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title
-  next()
-})
+  document.title = to.meta.title;
+  next();
+});
 
-export default router
+export default router;

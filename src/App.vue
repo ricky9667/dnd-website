@@ -67,7 +67,7 @@ import {
   LocationMarkerIcon,
   GlobeIcon,
 } from "@heroicons/vue/outline";
-import HamburgerButton from "./components/HamburgerButton";
+import HamburgerButton from "./components/HamburgerButton.vue";
 // import BackToTop from "./components/BackToTop";
 
 export default {

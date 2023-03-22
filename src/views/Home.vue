@@ -37,9 +37,9 @@
 </template>
 
 <script>
-import CustomHeader from "../components/CustomHeader";
-import CustomFooter from "../components/CustomFooter";
-import ImageSection from "../components/ImageSection";
+import CustomHeader from "../components/CustomHeader.vue";
+import CustomFooter from "../components/CustomFooter.vue";
+import ImageSection from "../components/ImageSection.vue";
 
 export default {
   name: "Home",
