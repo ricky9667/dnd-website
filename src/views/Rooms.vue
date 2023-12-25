@@ -115,19 +115,30 @@
 </template>
 
 <script>
+import { ref, onBeforeMount } from "vue";
 import CustomHeader from "../components/CustomHeader.vue";
 import CustomFooter from "../components/CustomFooter.vue";
 import RoomContent from "../components/RoomContent.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
+import { fetchPriceData } from "../utils/api.js";
 
 export default {
   name: "Rooms",
   components: { CustomHeader, CustomFooter, RoomContent, Swiper, SwiperSlide },
   setup() {
+    onBeforeMount(async () => {
+      const priceData = await fetchPriceData();
+
+      room2F.value.price = priceData.room2F;
+      room2A.value.price = priceData.room2A;
+      room2B.value.price = priceData.room2B;
+      room2C.value.price = priceData.room2C;
+    });
+
     const headerImage =
       "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/rooms-min_AALKbld4y.jpg?updatedAt=1631449561513";
 
-    const room2F = {
+    const room2F = ref({
       title: "2F 包層",
       images: [
         "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/2F-min_huytqpMAp.jpg?updatedAt=1631443670017",
@@ -136,10 +147,10 @@ export default {
         "包層為同時預訂 2F 三間房間，當天不會有其他客人入住，公共空間為餐廳與客廳，主人自用一樓房間與廚房。",
         "入住人數可為 6 - 12 人，費用依實際人數而有不同。當住宿人數為 6 人時收費如下表。",
       ],
-      price: { weekday: 8640, weekend: 10140, holiday: 15210 },
-    };
+      price: {},
+    });
 
-    const room2A = {
+    const room2A = ref({
       title: "2A 山景房",
       images: [
         "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/2A-min_27Jx4BE4o.jpg?updatedAt=1631443756327",
@@ -150,10 +161,10 @@ export default {
         "房型 2A 有一張加大雙人床，和 2 張沙發。",
         "4 人住宿時使用一張乳膠墊沙發床。",
       ],
-      price: { weekday: 2980, weekend: 3480, holiday: 5220 },
-    };
+      price: {},
+    });
 
-    const room2B = {
+    const room2B = ref({
       title: "2B 樓中樓山景房",
       images: [
         "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/2B-min_YowtIH-uR.jpg?updatedAt=1631443805815",
@@ -163,10 +174,10 @@ export default {
       descriptions: [
         "房型 2B 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊。",
       ],
-      price: { weekday: 2780, weekend: 3280, holiday: 4920 },
-    };
+      price: {},
+    });
 
-    const room2C = {
+    const room2C = ref({
       title: "2C 樓中樓山景房",
       images: [
         "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/2C-min__kD5lO_A2.jpg?updatedAt=1631443801357",
@@ -176,8 +187,8 @@ export default {
       descriptions: [
         "房型 2C 住宿 2 人時使用一張加大雙人床，住宿 3 - 4 人使用樓中樓地板彈簧床墊。",
       ],
-      price: { weekday: 2880, weekend: 3380, holiday: 5070 },
-    };
+      price: {},
+    });
 
     return { headerImage, room2F, room2A, room2B, room2C };
   },
