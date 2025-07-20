@@ -6,7 +6,7 @@
     </section>
 
     <section class="footer-content">
-      <a class="scale-transition" href="tel:0918583517" target="_blank">
+      <a class="scale-transition" href="tel:0970696870" target="_blank">
         <PhoneOutgoingIcon class="footer-icon" />
         <h5 class="footer-text">電話訂房</h5>
       </a>
