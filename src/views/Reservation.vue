@@ -52,6 +52,8 @@ export default {
 </script>
 
 <style>
+@reference "../styles/styles.css";
+
 .read-complete-button {
   @apply text-sm text-primary px-6 py-2 my-2 font-bold;
   @apply md:text-base md:my-4;

@@ -50,6 +50,8 @@ export default {
 </script>
 
 <style>
+@reference "../styles/styles.css";
+
 .google-map {
   @apply w-full md:w-3/5;
   height: 450px;

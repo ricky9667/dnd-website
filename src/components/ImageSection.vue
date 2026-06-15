@@ -21,6 +21,8 @@ export default {
 </script>
 
 <style>
+@reference "../styles/styles.css";
+
 .image-section {
   @apply flex flex-col items-center justify-evenly mx-8 my-8 gap-6;
   @apply lg:flex-row lg:mx-16 lg:my-28;

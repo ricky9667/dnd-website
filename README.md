@@ -10,6 +10,6 @@ This is a static website for showing inforamtion of a homestay, this is develope
 - CSS
 - Javascript
 - Vue3
-- Yarn
+- Bun
 - TailwindCSS
 - Github Actions

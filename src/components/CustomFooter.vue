@@ -29,7 +29,13 @@
 </template>
 
 <script>
-import { MailIcon, PhoneOutgoingIcon, LocationMarkerIcon, FlagIcon, ChatIcon } from "@heroicons/vue/solid";
+import {
+  EnvelopeIcon as MailIcon,
+  PhoneArrowUpRightIcon as PhoneOutgoingIcon,
+  MapPinIcon as LocationMarkerIcon,
+  FlagIcon,
+  ChatBubbleLeftIcon as ChatIcon,
+} from "@heroicons/vue/24/solid";
 
 export default {
   name: "CustomFooter",
@@ -43,6 +49,8 @@ export default {
 </script>
 
 <style>
+@reference "../styles/styles.css";
+
 footer {
   @apply mt-16 py-2 lg:py-4 bg-primary;
 }

@@ -64,9 +64,9 @@ import {
   InformationCircleIcon,
   KeyIcon,
   TagIcon,
-  LocationMarkerIcon,
-  GlobeIcon,
-} from "@heroicons/vue/outline";
+  MapPinIcon as LocationMarkerIcon,
+  GlobeAltIcon as GlobeIcon,
+} from "@heroicons/vue/24/outline";
 import HamburgerButton from "./components/HamburgerButton.vue";
 // import BackToTop from "./components/BackToTop";
 
@@ -117,6 +117,8 @@ export default {
 </script>
 
 <style>
+@reference "./styles/styles.css";
+
 #app {
   font-family: "Open Sans", "Noto Sans TC", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

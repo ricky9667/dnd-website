@@ -13,6 +13,8 @@ export default {
 </script>
 
 <style>
+@reference "../styles/styles.css";
+
 .custom-title {
   @apply mb-2;
 }

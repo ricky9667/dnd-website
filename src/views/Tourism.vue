@@ -153,6 +153,8 @@ export default {
 </script>
 
 <style>
+@reference "../styles/styles.css";
+
 .tourism-content {
   @apply max-w-6xl mx-auto px-4 py-12 space-y-12;
 }

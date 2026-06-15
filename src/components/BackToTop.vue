@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { ArrowSmUpIcon, ArrowUpIcon } from "@heroicons/vue/outline";
+import { ArrowSmallUpIcon as ArrowSmUpIcon, ArrowUpIcon } from "@heroicons/vue/24/outline";
 
 export default {
   name: "BackToTop",
@@ -20,6 +20,8 @@ export default {
 </script>
 
 <style>
+@reference "../styles/styles.css";
+
 #back-to-top {
   @apply w-min my-4 z-10;
   @apply transform duration-300 hover:-translate-y-1.5;

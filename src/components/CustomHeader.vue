@@ -16,6 +16,8 @@ export default {
 </script>
 
 <style>
+@reference "../styles/styles.css";
+
 header {
   position: relative;
   width: 100%;

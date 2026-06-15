@@ -99,4 +99,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+@reference "../styles/styles.css";
+</style>

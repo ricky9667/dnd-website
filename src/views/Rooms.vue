@@ -8,9 +8,10 @@
       <div class="lg:col-span-2 px-4">
         <swiper
           class="rooms-swiper"
+          :modules="swiperModules"
           :effect="'fade'"
           :navigation="true"
-          :loop="true"
+          :loop="room2F.images.length > 1"
           :pagination="{ clickable: true }"
         >
           <swiper-slide
@@ -35,9 +36,10 @@
       <div class="lg:col-span-2 px-4">
         <swiper
           class="rooms-swiper"
+          :modules="swiperModules"
           :effect="'fade'"
           :navigation="true"
-          :loop="true"
+          :loop="room2A.images.length > 1"
           :pagination="{ clickable: true }"
         >
           <swiper-slide
@@ -61,9 +63,10 @@
       <div class="lg:col-span-2 px-4">
         <swiper
           class="rooms-swiper"
+          :modules="swiperModules"
           :effect="'fade'"
           :navigation="true"
-          :loop="true"
+          :loop="room2B.images.length > 1"
           :pagination="{ clickable: true }"
         >
           <swiper-slide
@@ -88,9 +91,10 @@
       <div class="lg:col-span-2 px-4">
         <swiper
           class="rooms-swiper"
+          :modules="swiperModules"
           :effect="'fade'"
           :navigation="true"
-          :loop="true"
+          :loop="room2C.images.length > 1"
           :pagination="{ clickable: true }"
         >
           <swiper-slide
@@ -120,6 +124,7 @@ import CustomHeader from "../components/CustomHeader.vue";
 import CustomFooter from "../components/CustomFooter.vue";
 import RoomContent from "../components/RoomContent.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
+import { EffectFade, Navigation, Pagination } from "swiper/modules";
 import { fetchPriceData } from "../utils/api.js";
 
 export default {
@@ -137,6 +142,7 @@ export default {
 
     const headerImage =
       "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/rooms-min_AALKbld4y.jpg?updatedAt=1631449561513";
+    const swiperModules = [EffectFade, Navigation, Pagination];
 
     const room2F = ref({
       title: "2F 包層",
@@ -190,12 +196,14 @@ export default {
       price: {},
     });
 
-    return { headerImage, room2F, room2A, room2B, room2C };
+    return { headerImage, room2F, room2A, room2B, room2C, swiperModules };
   },
 };
 </script>
 
 <style>
+@reference "../styles/styles.css";
+
 .rooms-section {
   @apply grid grid-cols-1 lg:grid-cols-3 lg:gap-8;
   @apply max-w-screen-2xl mx-auto px-4 md:px-8 lg:px-12 py-8 md:py-12;

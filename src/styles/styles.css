@@ -1,7 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@tailwind screens;
+@import "tailwindcss";
+
+@theme {
+    --breakpoint-xs: 576px;
+
+    --spacing-84: 21rem;
+    --spacing-96: 24rem;
+    --spacing-108: 27rem;
+    --spacing-120: 30rem;
+    --spacing-132: 33rem;
+    --spacing-144: 36rem;
+    --spacing-156: 39rem;
+    --spacing-168: 42rem;
+
+    --color-primary: #335443;
+    --color-secondary: #e5edd3;
+    --color-title: #3e3a39;
+    --color-content: #595757;
+}
 
 @layer base {
     html {

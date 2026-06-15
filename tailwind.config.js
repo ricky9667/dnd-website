@@ -1,9 +1,5 @@
 module.exports = {
-  purge: {
-    'mode': 'layers',
-    content: ['./public/**/*.html', './src/**/*.vue']
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: ['./index.html', './public/**/*.html', './src/**/*.{js,vue}'],
   theme: {
     extend: {
       screens: {
