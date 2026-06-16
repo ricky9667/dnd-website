@@ -10,15 +10,27 @@
         <PhoneOutgoingIcon class="footer-icon" />
         <h5 class="footer-text">電話訂房</h5>
       </a>
-      <a class="scale-transition" href="https://goo.gl/maps/hfuXQBPwAu7CdApa7" target="_blank">
+      <a
+        class="scale-transition"
+        href="https://goo.gl/maps/hfuXQBPwAu7CdApa7"
+        target="_blank"
+      >
         <LocationMarkerIcon class="footer-icon" />
         <h5 class="footer-text">查看位置</h5>
       </a>
-      <a class="scale-transition" href="https://www.facebook.com/daledory" target="_blank">
+      <a
+        class="scale-transition"
+        href="https://www.facebook.com/daledory"
+        target="_blank"
+      >
         <FlagIcon class="footer-icon" />
         <h5 class="footer-text">粉絲專頁</h5>
       </a>
-      <a class="scale-transition" href="https://line.me/R/ti/p/%40661wlbsv" target="_blank">
+      <a
+        class="scale-transition"
+        href="https://line.me/R/ti/p/%40661wlbsv"
+        target="_blank"
+      >
         <ChatIcon class="footer-icon" />
         <h5 class="footer-text">Line 帳號</h5>
       </a>
@@ -39,7 +51,13 @@ import {
 
 export default {
   name: "CustomFooter",
-  components: { MailIcon, PhoneOutgoingIcon, LocationMarkerIcon, FlagIcon, ChatIcon },
+  components: {
+    MailIcon,
+    PhoneOutgoingIcon,
+    LocationMarkerIcon,
+    FlagIcon,
+    ChatIcon,
+  },
   setup() {
     const copyright = "Copyright© DnD B&B Homestay";
 

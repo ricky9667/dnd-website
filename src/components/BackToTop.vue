@@ -11,7 +11,10 @@
 </template>
 
 <script lang="ts">
-import { ArrowSmallUpIcon as ArrowSmUpIcon, ArrowUpIcon } from "@heroicons/vue/24/outline";
+import {
+  ArrowSmallUpIcon as ArrowSmUpIcon,
+  ArrowUpIcon,
+} from "@heroicons/vue/24/outline";
 
 export default {
   name: "BackToTop",

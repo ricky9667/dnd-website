@@ -125,7 +125,8 @@ export default {
 @reference "./styles/styles.css";
 
 #app {
-  font-family: "Open Sans", "Noto Sans TC", Avenir, Helvetica, Arial, sans-serif;
+  font-family:
+    "Open Sans", "Noto Sans TC", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

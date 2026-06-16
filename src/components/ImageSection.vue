@@ -7,7 +7,12 @@
         <p v-for="(info, index) in infos" :key="index" class="my-1">
           {{ info }}
         </p>
-        <router-link v-if="button" class="image-section-button mt-2 lg:mt-4" :to="button.link">{{ button.text }}</router-link>
+        <router-link
+          v-if="button"
+          class="image-section-button mt-2 lg:mt-4"
+          :to="button.link"
+          >{{ button.text }}</router-link
+        >
       </div>
     </div>
   </div>
