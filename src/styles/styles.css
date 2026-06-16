@@ -1,78 +1,79 @@
 @import "tailwindcss";
 
 @theme {
-    --breakpoint-xs: 576px;
+  --breakpoint-xs: 576px;
 
-    --spacing-84: 21rem;
-    --spacing-96: 24rem;
-    --spacing-108: 27rem;
-    --spacing-120: 30rem;
-    --spacing-132: 33rem;
-    --spacing-144: 36rem;
-    --spacing-156: 39rem;
-    --spacing-168: 42rem;
+  --spacing-84: 21rem;
+  --spacing-96: 24rem;
+  --spacing-108: 27rem;
+  --spacing-120: 30rem;
+  --spacing-132: 33rem;
+  --spacing-144: 36rem;
+  --spacing-156: 39rem;
+  --spacing-168: 42rem;
 
-    --color-primary: #335443;
-    --color-secondary: #e5edd3;
-    --color-title: #3e3a39;
-    --color-content: #595757;
+  --color-primary: #335443;
+  --color-secondary: #e5edd3;
+  --color-title: #3e3a39;
+  --color-content: #595757;
 }
 
 @layer base {
-    html {
-        scroll-behavior: smooth;
-    }
+  html {
+    scroll-behavior: smooth;
+  }
 
-    body {
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-    }
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
 
-    h1 {
-        @apply text-3xl font-bold;
-        @apply sm:text-4xl;
-        @apply md:text-5xl;
-        @apply lg:text-6xl;
-    }
+  h1 {
+    @apply text-3xl font-bold;
+    @apply sm:text-4xl;
+    @apply md:text-5xl;
+    @apply lg:text-6xl;
+  }
 
-    h2 {
-        @apply text-2xl font-bold text-title;
-        @apply md:text-3xl;
-        @apply lg:text-4xl;
-    }
+  h2 {
+    @apply text-2xl font-bold text-title;
+    @apply md:text-3xl;
+    @apply lg:text-4xl;
+  }
 
-    h3 {
-        @apply text-lg text-title;
-        @apply sm:text-xl;
-        @apply lg:text-2xl;
-    }
+  h3 {
+    @apply text-lg text-title;
+    @apply sm:text-xl;
+    @apply lg:text-2xl;
+  }
 
-    h4 {
-        @apply text-base font-bold text-title;
-        @apply sm:text-lg;
-        @apply lg:text-xl;
-    }
+  h4 {
+    @apply text-base font-bold text-title;
+    @apply sm:text-lg;
+    @apply lg:text-xl;
+  }
 
-    h5 {
-        @apply text-xs lg:text-sm;
-    }
+  h5 {
+    @apply text-xs lg:text-sm;
+  }
 
-    h6 {
-        font-size: 0.5rem;
-        line-height: 1rem;
-    }
+  h6 {
+    font-size: 0.5rem;
+    line-height: 1rem;
+  }
 
-    p, li {
-        @apply text-left text-content;
-        @apply text-sm md:text-base xl:text-lg;
-    }
-    
-    svg {
-        @apply inline-block h-6 w-6;
-    }
+  p,
+  li {
+    @apply text-left text-content;
+    @apply text-sm md:text-base xl:text-lg;
+  }
 
-    hr {
-        border-top: 1px solid #ccc;
-    }
+  svg {
+    @apply inline-block h-6 w-6;
+  }
+
+  hr {
+    border-top: 1px solid #ccc;
+  }
 }
