@@ -1,4 +1,8 @@
-import { createRouter, createWebHistory } from "vue-router";
+import {
+  createRouter,
+  createWebHistory,
+  type RouteRecordRaw,
+} from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import Rooms from "../views/Rooms.vue";
@@ -6,7 +10,7 @@ import Reservation from "../views/Reservation.vue";
 import Transportation from "../views/Transportation.vue";
 import Tourism from "../views/Tourism.vue";
 
-const routes = [
+const routes: RouteRecordRaw[] = [
   {
     path: "/",
     name: "Home",
@@ -50,9 +54,8 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((to, from, next) => {
-  document.title = to.meta.title;
-  next();
+router.beforeEach((to) => {
+  document.title = String(to.meta.title ?? "DnD 休閒民宿");
 });
 
 export default router;

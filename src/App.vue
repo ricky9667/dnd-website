@@ -57,18 +57,23 @@
   <router-view />
 </template>
 
-<script>
+<script lang="ts">
 import { onMounted, ref } from "vue";
 import {
   HomeIcon,
   InformationCircleIcon,
   KeyIcon,
   TagIcon,
-  LocationMarkerIcon,
-  GlobeIcon,
-} from "@heroicons/vue/outline";
+  MapPinIcon as LocationMarkerIcon,
+  GlobeAltIcon as GlobeIcon,
+} from "@heroicons/vue/24/outline";
 import HamburgerButton from "./components/HamburgerButton.vue";
 // import BackToTop from "./components/BackToTop";
+
+interface HamburgerButtonExpose {
+  toggleClass: () => void;
+  removeClass: () => void;
+}
 
 export default {
   name: "App",
@@ -91,8 +96,8 @@ export default {
       { id: 4, path: "/transportation", title: "交通資訊" },
       { id: 5, path: "/tourism", title: "鄰近景點" },
     ];
-    const navbarRef = ref({});
-    const hamburger = ref({});
+    const navbarRef = ref<Element | null>(null);
+    const hamburger = ref<HamburgerButtonExpose | null>(null);
     const isOpenNavbar = ref(false);
 
     onMounted(() => {
@@ -101,14 +106,14 @@ export default {
     });
 
     const toggleNavbar = () => {
-      navbarRef.value.classList.toggle("active");
+      navbarRef.value?.classList.toggle("active");
       isOpenNavbar.value = !isOpenNavbar.value;
-      hamburger.value.toggleClass();
+      hamburger.value?.toggleClass();
     };
 
     const closeNavbar = () => {
-      navbarRef.value.classList.remove("active");
-      hamburger.value.removeClass();
+      navbarRef.value?.classList.remove("active");
+      hamburger.value?.removeClass();
     };
 
     return { navbarItems, isOpenNavbar, toggleNavbar, closeNavbar, hamburger };
@@ -117,8 +122,11 @@ export default {
 </script>
 
 <style>
+@reference "./styles/styles.css";
+
 #app {
-  font-family: "Open Sans", "Noto Sans TC", Avenir, Helvetica, Arial, sans-serif;
+  font-family:
+    "Open Sans", "Noto Sans TC", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

@@ -8,7 +8,7 @@
   </header>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "CustomHeader",
   props: ["title", "subtitle"],
@@ -16,6 +16,8 @@ export default {
 </script>
 
 <style>
+@reference "../styles/styles.css";
+
 header {
   position: relative;
   width: 100%;

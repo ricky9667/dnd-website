@@ -7,13 +7,18 @@
         <p v-for="(info, index) in infos" :key="index" class="my-1">
           {{ info }}
         </p>
-        <router-link v-if="button" class="image-section-button mt-2 lg:mt-4" :to="button.link">{{ button.text }}</router-link>
+        <router-link
+          v-if="button"
+          class="image-section-button mt-2 lg:mt-4"
+          :to="button.link"
+          >{{ button.text }}</router-link
+        >
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "ImageSection",
   props: ["title", "infos", "button"],
@@ -21,6 +26,8 @@ export default {
 </script>
 
 <style>
+@reference "../styles/styles.css";
+
 .image-section {
   @apply flex flex-col items-center justify-evenly mx-8 my-8 gap-6;
   @apply lg:flex-row lg:mx-16 lg:my-28;

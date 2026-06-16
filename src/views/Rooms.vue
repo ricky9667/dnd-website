@@ -4,127 +4,59 @@
       <img class="header-image" :src="headerImage" alt="Rooms" />
     </CustomHeader>
 
-    <section class="rooms-section">
-      <div class="lg:col-span-2 px-4">
-        <swiper
-          class="rooms-swiper"
-          :effect="'fade'"
-          :navigation="true"
-          :loop="true"
-          :pagination="{ clickable: true }"
-        >
-          <swiper-slide
-            v-for="(image, index) in room2F.images"
-            :key="index"
-            class="rounded-xl overflow-hidden"
-          >
-            <img class="swiper-image rounded-xl" :src="image" alt="2F" />
-          </swiper-slide>
-        </swiper>
-      </div>
+    <RoomSection
+      :title="room2F.title"
+      :images="room2F.images"
+      image-alt="2F"
+      :descriptions="room2F.descriptions"
+      :price="room2F.price"
+      :modules="swiperModules"
+      content-first
+    />
 
-      <room-content
-        class="lg:order-first"
-        :title="room2F.title"
-        :descriptions="room2F.descriptions"
-        :price="room2F.price"
-      />
-    </section>
+    <RoomSection
+      :title="room2A.title"
+      :images="room2A.images"
+      image-alt="2A"
+      :descriptions="room2A.descriptions"
+      :price="room2A.price"
+      :modules="swiperModules"
+    />
 
-    <section class="rooms-section">
-      <div class="lg:col-span-2 px-4">
-        <swiper
-          class="rooms-swiper"
-          :effect="'fade'"
-          :navigation="true"
-          :loop="true"
-          :pagination="{ clickable: true }"
-        >
-          <swiper-slide
-            v-for="(image, index) in room2A.images"
-            :key="index"
-            class="rounded-xl overflow-hidden"
-          >
-            <img class="swiper-image rounded-xl" :src="image" alt="2A" />
-          </swiper-slide>
-        </swiper>
-      </div>
+    <RoomSection
+      :title="room2B.title"
+      :images="room2B.images"
+      image-alt="2B"
+      :descriptions="room2B.descriptions"
+      :price="room2B.price"
+      :modules="swiperModules"
+      content-first
+    />
 
-      <RoomContent
-        :title="room2A.title"
-        :descriptions="room2A.descriptions"
-        :price="room2A.price"
-      />
-    </section>
-
-    <section class="rooms-section">
-      <div class="lg:col-span-2 px-4">
-        <swiper
-          class="rooms-swiper"
-          :effect="'fade'"
-          :navigation="true"
-          :loop="true"
-          :pagination="{ clickable: true }"
-        >
-          <swiper-slide
-            v-for="(image, index) in room2B.images"
-            :key="index"
-            class="rounded-xl overflow-hidden"
-          >
-            <img class="swiper-image rounded-xl" :src="image" alt="2B" />
-          </swiper-slide>
-        </swiper>
-      </div>
-
-      <RoomContent
-        class="lg:order-first"
-        :title="room2B.title"
-        :descriptions="room2B.descriptions"
-        :price="room2B.price"
-      />
-    </section>
-
-    <section class="rooms-section">
-      <div class="lg:col-span-2 px-4">
-        <swiper
-          class="rooms-swiper"
-          :effect="'fade'"
-          :navigation="true"
-          :loop="true"
-          :pagination="{ clickable: true }"
-        >
-          <swiper-slide
-            v-for="(image, index) in room2C.images"
-            :key="index"
-            class="rounded-xl overflow-hidden"
-          >
-            <img class="swiper-image rounded-xl" :src="image" alt="2C" />
-          </swiper-slide>
-        </swiper>
-      </div>
-
-      <RoomContent
-        :title="room2C.title"
-        :descriptions="room2C.descriptions"
-        :price="room2C.price"
-      />
-    </section>
+    <RoomSection
+      :title="room2C.title"
+      :images="room2C.images"
+      image-alt="2C"
+      :descriptions="room2C.descriptions"
+      :price="room2C.price"
+      :modules="swiperModules"
+    />
 
     <CustomFooter />
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { ref, onBeforeMount } from "vue";
 import CustomHeader from "../components/CustomHeader.vue";
 import CustomFooter from "../components/CustomFooter.vue";
-import RoomContent from "../components/RoomContent.vue";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { fetchPriceData } from "../utils/api.js";
+import RoomSection from "../components/RoomSection.vue";
+import { EffectFade, Navigation, Pagination } from "swiper/modules";
+import { fetchPriceData } from "../utils/api";
 
 export default {
   name: "Rooms",
-  components: { CustomHeader, CustomFooter, RoomContent, Swiper, SwiperSlide },
+  components: { CustomHeader, CustomFooter, RoomSection },
   setup() {
     onBeforeMount(async () => {
       const priceData = await fetchPriceData();
@@ -137,6 +69,7 @@ export default {
 
     const headerImage =
       "https://ik.imagekit.io/pxhytijjnsj/tr:w-2400/DnD/rooms-min_AALKbld4y.jpg?updatedAt=1631449561513";
+    const swiperModules = [EffectFade, Navigation, Pagination];
 
     const room2F = ref({
       title: "2F 包層",
@@ -190,16 +123,13 @@ export default {
       price: {},
     });
 
-    return { headerImage, room2F, room2A, room2B, room2C };
+    return { headerImage, room2F, room2A, room2B, room2C, swiperModules };
   },
 };
 </script>
 
 <style>
-.rooms-section {
-  @apply grid grid-cols-1 lg:grid-cols-3 lg:gap-8;
-  @apply max-w-screen-2xl mx-auto px-4 md:px-8 lg:px-12 py-8 md:py-12;
-}
+@reference "../styles/styles.css";
 
 .rooms-content {
   @apply px-4 text-left divide-y divide-gray-300;
@@ -207,17 +137,6 @@ export default {
 
 .rooms-content > * {
   @apply py-4;
-}
-
-.rooms-swiper {
-  @apply w-full lg:w-auto;
-  @apply h-48 sm:h-60 md:h-72 lg:h-108;
-}
-
-.swiper-image {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .price-table {

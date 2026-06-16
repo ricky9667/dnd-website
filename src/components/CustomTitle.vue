@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "CustomTitle",
   props: ["title"],
@@ -13,6 +13,8 @@ export default {
 </script>
 
 <style>
+@reference "../styles/styles.css";
+
 .custom-title {
   @apply mb-2;
 }

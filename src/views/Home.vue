@@ -36,7 +36,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import CustomHeader from "../components/CustomHeader.vue";
 import CustomFooter from "../components/CustomFooter.vue";
 import ImageSection from "../components/ImageSection.vue";
@@ -99,4 +99,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+@reference "../styles/styles.css";
+</style>

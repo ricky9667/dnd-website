@@ -113,13 +113,13 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import CustomTitle from "./CustomTitle.vue";
 import {
   HomeIcon,
   CurrencyDollarIcon,
-  UserAddIcon,
-} from "@heroicons/vue/outline";
+  UserPlusIcon as UserAddIcon,
+} from "@heroicons/vue/24/outline";
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/vue";
 
 export default {
@@ -140,6 +140,8 @@ export default {
 </script>
 
 <style>
+@reference "../styles/styles.css";
+
 .room-content {
   @apply px-2 text-left divide-y divide-gray-300;
 }
