@@ -1,5 +1,5 @@
-module.exports = {
-  content: ['./index.html', './public/**/*.html', './src/**/*.{js,vue}'],
+export default {
+  content: ['./index.html', './public/**/*.html', './src/**/*.{ts,vue}'],
   theme: {
     extend: {
       screens: {

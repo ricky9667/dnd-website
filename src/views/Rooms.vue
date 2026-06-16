@@ -118,14 +118,14 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { ref, onBeforeMount } from "vue";
 import CustomHeader from "../components/CustomHeader.vue";
 import CustomFooter from "../components/CustomFooter.vue";
 import RoomContent from "../components/RoomContent.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { EffectFade, Navigation, Pagination } from "swiper/modules";
-import { fetchPriceData } from "../utils/api.js";
+import { fetchPriceData } from "../utils/api";
 
 export default {
   name: "Rooms",

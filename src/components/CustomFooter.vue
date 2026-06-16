@@ -28,7 +28,7 @@
   </footer>
 </template>
 
-<script>
+<script lang="ts">
 import {
   EnvelopeIcon as MailIcon,
   PhoneArrowUpRightIcon as PhoneOutgoingIcon,

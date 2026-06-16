@@ -8,7 +8,7 @@
   </header>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "CustomHeader",
   props: ["title", "subtitle"],

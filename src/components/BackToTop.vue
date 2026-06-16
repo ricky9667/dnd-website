@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { ArrowSmallUpIcon as ArrowSmUpIcon, ArrowUpIcon } from "@heroicons/vue/24/outline";
 
 export default {

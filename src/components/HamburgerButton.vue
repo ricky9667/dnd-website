@@ -7,25 +7,25 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { ref, onMounted } from "vue";
 
 export default {
   name: "HamburgerButton",
   props: [],
   setup() {
-    const toggleButtonRef = ref({});
+    const toggleButtonRef = ref<HTMLElement | null>(null);
 
     onMounted(() => {
       toggleButtonRef.value = document.getElementById("hamburger-button");
     });
 
     const toggleClass = () => {
-      toggleButtonRef.value.classList.toggle("open");
+      toggleButtonRef.value?.classList.toggle("open");
     };
 
     const removeClass = () => {
-      toggleButtonRef.value.classList.remove("open");
+      toggleButtonRef.value?.classList.remove("open");
     };
 
     return { toggleButtonRef, toggleClass, removeClass };

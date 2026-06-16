@@ -2,12 +2,14 @@
     "name": "dnd-website",
     "version": "1.0.0",
     "private": true,
+    "type": "module",
     "packageManager": "bun@1.3.14",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
         "serve": "vite preview",
-        "lint": "eslint \"src/**/*.{js,vue}\" --fix"
+        "lint": "eslint \"src/**/*.{ts,vue}\" --fix",
+        "typecheck": "vue-tsc --noEmit"
     },
     "dependencies": {
         "@headlessui/vue": "1.7.23",
@@ -20,6 +22,7 @@
     "devDependencies": {
         "@eslint/js": "10.0.1",
         "@tailwindcss/postcss": "4.3.1",
+        "@types/node": "^25.9.3",
         "@vitejs/plugin-vue": "6.0.7",
         "@vue/compiler-sfc": "3.5.38",
         "autoprefixer": "10.5.0",
@@ -29,7 +32,10 @@
         "postcss": "8.5.15",
         "sass": "1.101.0",
         "tailwindcss": "4.3.1",
+        "typescript": "6.0.3",
+        "typescript-eslint": "8.61.0",
         "vite": "8.0.16",
-        "vue-eslint-parser": "10.4.1"
+        "vue-eslint-parser": "10.4.1",
+        "vue-tsc": "3.3.5"
     }
 }

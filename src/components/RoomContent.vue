@@ -113,7 +113,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import CustomTitle from "./CustomTitle.vue";
 import {
   HomeIcon,
