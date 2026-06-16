@@ -2,14 +2,31 @@
 
 ## About
 
-This is a static website for showing inforamtion of a homestay, this is developed to practice web front-end developement skills.
+This is a static website for showing information about a homestay, developed to practice web front-end development skills.
 
-## Used tools and framework
+## Tooling
 
 - HTML
 - CSS
-- Javascript
-- Vue3
+- TypeScript
+- Vue 3
+- Vite
 - Bun
-- TailwindCSS
-- Github Actions
+- Tailwind CSS
+- GitHub Actions
+
+## Development
+
+```sh
+bun install
+bun run dev
+```
+
+## Checks
+
+```sh
+bun run format:check
+bun run lint
+bun run typecheck
+bun run build
+```
