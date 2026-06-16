@@ -12,7 +12,11 @@
       >
         <h2>{{ section.title }}</h2>
         <div class="tourism-card-grid">
-          <article v-for="spot in section.spots" :key="spot.name" class="tourism-card">
+          <article
+            v-for="spot in section.spots"
+            :key="spot.name"
+            class="tourism-card"
+          >
             <h3>{{ spot.name }}</h3>
             <p>{{ spot.description }}</p>
             <a
@@ -93,7 +97,8 @@ export default {
         spots: [
           {
             name: "天送埤車站",
-            description: "復古鐵道風格很強，常被納入三星鄉經典行程，適合拍照與輕旅行。",
+            description:
+              "復古鐵道風格很強，常被納入三星鄉經典行程，適合拍照與輕旅行。",
             mapUrl:
               "https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E9%80%81%E5%9F%A4%E8%BB%8A%E7%AB%99",
           },
